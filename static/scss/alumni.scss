@@ -1,0 +1,378 @@
+.alumni {
+  @apply pt-20;
+  padding-bottom: 7.5rem;
+
+  .tabs-wrapper {
+    .tab {
+      @apply py-6 px-10 text-grey-400 font-medium relative transition-all duration-300;
+      &:after {
+        @apply bottom-0 left-0 absolute h-0.5 bg-black w-full opacity-0 transition-all duration-300;
+        content: '';
+      }
+
+      &.active {
+        @apply text-dark-300;
+        &:after {
+          @apply opacity-100;
+        }
+      }
+    }
+  }
+
+  .heading-wrapper {
+    @apply mt-10 mb-20 flex justify-between items-end;
+    .heading {
+      @apply flex flex-col;
+    }
+
+    .sub-heading {
+      @apply text-right;
+    }
+  }
+
+  .content-wrapper {
+    .team-wrapper {
+      @apply hidden;
+      @apply justify-center flex-wrap;
+      gap: 7.5rem;
+
+      .team {
+        flex: 0 0 calc(25% - 5.625rem);
+
+        .img-wrapper {
+          @apply outline outline-1 outline-grey-100 items-center justify-center flex;
+          border-radius: 1.5rem;
+          padding: 3.125rem 0.5rem;
+
+          .img {
+            @apply overflow-hidden rounded-full;
+            width: 14vw;
+            max-width: 15.625rem;
+            max-height: 15.625rem;
+            height: 14vw;
+          }
+        }
+
+        .content {
+          @apply text-center justify-center items-center flex flex-col gap-2 mt-8;
+        }
+      }
+
+      &.active {
+        @apply flex;
+      }
+    }
+
+    .work-wrapper {
+      @apply hidden;
+      @apply flex-wrap justify-center items-center;
+      .card {
+        flex: 0 0 calc(50% - 5rem);
+        aspect-ratio: 1.428;
+        @apply overflow-hidden rounded-3xl relative;
+        .content {
+          @apply flex p-10 absolute items-end left-0 top-0 w-full h-full;
+          background: linear-gradient(
+            180deg,
+            rgba(0, 0, 0, 0.16) 67.85%,
+            rgba(0, 0, 0, 0.8) 84.19%
+          );
+
+          .info-wrapper {
+            @apply flex items-center gap-4;
+            .profile {
+              @apply rounded-full overflow-hidden;
+              height: 4.5rem;
+              width: 4.5rem;
+            }
+
+            .profile_data {
+              @apply flex gap-1.5 flex-col;
+              .info-text {
+                font-size: 1.125rem;
+                line-height: 100%;
+                text-transform: capitalize;
+              }
+            }
+          }
+        }
+      }
+
+      &.active {
+        @apply flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 96rem) {
+  .alumni {
+    .content-wrapper {
+      .team-wrapper {
+        gap: 6rem;
+
+        .team {
+          flex: 0 0 calc(25% - 4.5rem);
+
+          .img-wrapper {
+            padding: 2.5rem 0.5rem;
+          }
+        }
+      }
+
+      .work-wrapper {
+        row-gap: 3rem;
+        column-gap: 3rem;
+
+        .card {
+          flex: 0 0 calc(50% - 1.5rem);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 87.5rem) {
+  .alumni {
+    @apply pt-16;
+    padding-bottom: 6.25rem;
+
+    .tabs-wrapper {
+      .tab {
+        @apply py-4 px-8;
+      }
+    }
+
+    .content-wrapper {
+      .team-wrapper {
+        gap: 4rem;
+
+        .team {
+          flex: 0 0 calc(25% - 3rem);
+
+          .img-wrapper {
+            border-radius: 1.25rem;
+            padding: 1.5rem 0.5rem;
+          }
+
+          .content {
+            @apply mt-4;
+          }
+        }
+      }
+
+      .work-wrapper {
+        row-gap: 2.5rem;
+        column-gap: 2.5rem;
+
+        .card {
+          flex: 0 0 calc(50% - 1.25rem);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 75rem) {
+  .alumni {
+    .content-wrapper {
+      .team-wrapper {
+        gap: 2.5rem;
+
+        .team {
+          flex: 0 0 calc(33.33% - 1.6875rem);
+
+          .img-wrapper {
+            border-radius: 1.25rem;
+            padding: 1.5rem 0.5rem;
+
+            .img {
+              width: 13.75rem;
+              height: 13.75rem;
+            }
+          }
+
+          .content {
+            @apply mt-4;
+          }
+        }
+      }
+
+      .work-wrapper {
+        row-gap: 1.5rem;
+        column-gap: 1.5rem;
+
+        .card {
+          flex: 0 0 calc(50% - 0.75rem);
+
+          .content {
+            @apply p-6;
+
+            .info-wrapper {
+              .profile {
+                height: 4rem;
+                width: 4rem;
+              }
+
+              .profile_data {
+                @apply flex gap-1.5 flex-col;
+                .info-text {
+                  font-size: 1.125rem;
+                  line-height: 100%;
+                  text-transform: capitalize;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 62rem) {
+  .alumni {
+    @apply pt-10;
+    padding-bottom: 5rem;
+
+    .tabs-wrapper {
+      .tab {
+        @apply py-4 px-8;
+      }
+    }
+
+    .heading-wrapper {
+      @apply mb-16 flex-col flex justify-center items-center gap-6;
+      .heading {
+        @apply text-center;
+      }
+
+      .sub-heading {
+        @apply text-center;
+      }
+    }
+
+    .content-wrapper {
+      .work-wrapper {
+        .card {
+          aspect-ratio: unset;
+          border-radius: 1rem;
+
+          img {
+            aspect-ratio: 1.428;
+            border-radius: 1rem;
+          }
+
+          .content {
+            @apply static;
+            background: unset;
+            @apply mt-2;
+            @apply p-0;
+
+            .info-wrapper {
+              .profile {
+                height: 4rem;
+                width: 4rem;
+              }
+
+              .profile_data {
+                @apply gap-0.5;
+                .description {
+                  @apply text-dark-450;
+                }
+
+                .info-text {
+                  @apply text-grey-450;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .alumni {
+    @apply pt-2;
+    padding-bottom: 48px;
+
+    .tabs-wrapper {
+      @apply flex items-center justify-center w-full;
+      .tab {
+        width: 50%;
+        @apply text-center;
+      }
+    }
+
+    .heading-wrapper {
+      @apply mb-10 gap-4;
+    }
+
+    .content-wrapper {
+      .team-wrapper {
+        row-gap: 32px;
+        column-gap: 24px;
+
+        .team {
+          flex: 0 0 calc(50% - 12px);
+
+          .img-wrapper {
+            border-radius: 16px;
+            padding: 0;
+            aspect-ratio: 1;
+            @apply overflow-hidden;
+
+            .img {
+              width: 100%;
+              height: 100%;
+              max-width: 100%;
+              max-height: 100%;
+              border-radius: unset;
+            }
+          }
+
+          .content {
+            @apply mt-3 gap-0;
+          }
+        }
+      }
+
+      .work-wrapper {
+        column-gap: 12px;
+        row-gap: 32px;
+
+        .card {
+          border-radius: 6px;
+
+          img {
+            border-radius: 6px;
+          }
+
+          .content {
+            .info-wrapper {
+              @apply gap-1.5;
+              .profile {
+                height: 30px;
+                width: 30px;
+                min-width: 30px;
+                min-height: 30px;
+              }
+
+              .profile_data {
+                .description {
+                  font-size: 14px;
+                }
+
+                .info-text {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,454 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock page_css %}
+
+{% block content %}
+    <div id="preloader">
+        <div class="loader" id="loader-container"></div>
+    </div>
+    <section class="hero">
+        <div class="hero-img-wrapper">
+            <img src="{{ self.image.file.url }}" alt="hero image" class="img-full"/>
+        </div>
+        <div class="container hero-wrapper">
+            <div class="content-wrapper" data-aos="fade-up" data-aos-duration="1500" data-gap="2xl">
+                <h1 class="title capitalize" data-color="l-400">{{ self.heading|safe }}</h1>
+                <p class="description" data-color="l-400">{{ self.description }} ad</p>
+                {#                <div class="btn-wrapper z-index-wrapper" data-mt="xxs" data-justify="center">#}
+                {#                    <a href="/" class="btn" data-variant="primary">Enroll now</a>#}
+                {#                </div>#}
+            </div>
+        </div>
+        <div class="icon-wrapper">
+            <div class="container wrapper">
+                <div class="upeer-wrapper">
+                    <div class="sub-wrapper">
+                        <img src="{% static 'images/air_india_express_logo.png' %}" alt="alumni image"
+                             class="img-fluid"/>
+                    </div>
+                    <div class="sub-wrapper">
+                        <img src="{% static 'images/life_at_spotify_logo.png' %}" alt="alumni image" class="img-fluid"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="index-main-wrapper">
+        <div class="company-logo-wrapper">
+            <div class="container relative-10">
+                <div class="grid-wrapper">
+                    {% for image in self.Brand_images %}
+                        <div class="card">
+                            <img class="card-img" src="{{ image.value.file.url }}" alt="{{ image.value.file.name }}"/>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="bg-line-wrapper">
+                <div class="line-sub-wrapper">
+                    <div class="text-wrapper">
+                        <p class="text-name">WORKSHOPS</p>
+                        <div class="dot"></div>
+                        <p class="text-name">Photography Course</p>
+                        <div class="dot"></div>
+                        <p class="text-name">2 Weeks of Intense Learning</p>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="text-wrapper">
+                        <p class="text-name">WORKSHOPS</p>
+                        <div class="dot"></div>
+                        <p class="text-name">Photography Course</p>
+                        <div class="dot"></div>
+                        <p class="text-name">2 Weeks of Intense Learning</p>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="line-wrapper">
+                <div class="line-sub-wrapper">
+                    <div class="text-wrapper">
+                        <p class="text-name">WORKSHOPS</p>
+                        <div class="dot"></div>
+                        <p class="text-name">Photography Course</p>
+                        <div class="dot"></div>
+                        <p class="text-name">2 Weeks of Intense Learning</p>
+                        <div class="dot"></div>
+                    </div>
+                    <div class="text-wrapper">
+                        <p class="text-name">WORKSHOPS</p>
+                        <div class="dot"></div>
+                        <p class="text-name">Photography Course</p>
+                        <div class="dot"></div>
+                        <p class="text-name">2 Weeks of Intense Learning</p>
+                        <div class="dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="course-details-learn">
+        <div class="container ">
+            <div class="heading-wrapper">
+                <div class="marquee-animation">
+                    <div class="name static-name">Who are we</div>
+                    <div class="name ab-name">Who are we</div>
+                </div>
+                <div class="flex-wrapper">
+                    <div class="animation">
+                        <div class="anm_mod left">
+                            <div class="heading capitalize">{{ self.who_are_we_heading|safe }}</div>
+                        </div>
+                        <div class="anm_mod right">
+                            <div class="active-flex">
+                                <div class="learn description" data-color="g-400" data-weight="500">
+                                    {{ self.who_are_we_description|safe }}
+                                </div>
+                                <div class="img-wrapper">
+                                    {% for image in self.who_are_we_images %}
+                                        <img src="{{ image.value.file.url }}" alt="image" class="img-full">
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="who-content-wrapper">
+                <div class="left-content-wrapper">
+                    <div class="content-wrapper">
+                        <img src="{% static 'images/icons/Circular-rest.svg' %}" alt="image" class="img-full">
+                    </div>
+                    <div class="icon-wrapper">
+                        <img src="{% static 'images/icons/Circular-icon.svg' %}" alt="image">
+                    </div>
+                </div>
+                <div class="right-content-wrapper">
+                    <h4 class="sub-title" data-mb="xl">{{ self.who_are_we_subheading|safe }}</h4>
+                    <p class="description" data-color="g-400">{{ self.who_are_we_sub_description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="number-animation-wrapper">
+        <div class="container">
+            <div class="cards-wrapper level">
+                {% for point in self.who_are_we_points %}
+                    <div class="card" data-aos-anchor-placement="top-center" data-aos="fade-up"
+                         data-aos-duration="2000">
+                        {% if point.value.image %}
+                            <div class="absolute-image-wrapper">
+                                <img src="{{ point.value.image.file.url }}" alt="alumni image"
+                                     class="img-fluid"/>
+                            </div>
+                        {% endif %}
+                        <div class="card-content-wrapper">
+                            <p class="note">0{{ forloop.counter }}/</p>
+                            <div class="number-content-wrapper">
+                                <p class="heading"><span class="js-count-up"
+                                                         data-count="{{ point.value.value }}">0</span>+</p>
+                                <p class="description">{{ point.value.heading }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <section class="commiitted-wrapper">
+        <div class="container">
+            <div class="comited-width-wrapper">
+                <h4 class="heading capitalize" data-color="d-500">{{ self.commit_heading|safe }}</h4>
+            </div>
+            <div class="comited-card-wrapper" data-gap="m">
+                {% for card in self.commit_cards %}
+                    <div class="comited-card">
+                        <div class="comited-display-wrapper">
+                            <div class="comited-image-wrapper">
+                                <img src="{{ card.value.image.file.url }}" alt="alumni image"
+                                     class="img-fluid"/>
+                            </div>
+                            <p class="caption display-wrapper" data-color="d-500"
+                               data-weight="600">{{ card.value.heading }}</p>
+                        </div>
+
+                        <div class="comited-content-wrapper">
+                            <h4 class="sub-heading display-wrapper" data-mb="xxs" data-color="d-500"
+                                data-weight="600">{{ card.value.heading }}</h4>
+                            <p class="caption" data-color="g-400" data-weight="500">{{ card.value.description }}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% if courses %}
+        <section class="ourcourse-listing-wrapper">
+            <div class="container">
+                <div class="heading-wrapper" data-mb="xl">
+                    <div class="marquee-animation" data-my="xl">
+                        <div class="name static-name">Courses</div>
+                        <div class="name ab-name">Courses</div>
+                    </div>
+                    <div class="w-heading heading" data-lh="1">
+                        An intensive <br/> <span data-color="p-500">Photography</span> Course
+                    </div>
+                </div>
+                <div class="courses-wrapper">
+                    {% for course in courses %}
+                        <div class="card">
+                            <div class="c-heading-wrapper">
+                                <div class="sub-heading" data-weight="500">{{ course.heading|safe }}</div>
+                                <div class="pill">{{ course.course_type }}</div>
+                            </div>
+                            <a href="{{ course.url }}" class="img-wrapper">
+                                <img src="{{ course.image.file.url }}" alt="workshop image" class="img-full"/>
+                                <div class="pill">{{ course.course_type }}</div>
+                            </a>
+                            <div class="content-wrapper">
+                                <div class="sub-heading" data-weight="500">{{ course.heading|safe }}</div>
+                                <div class="description" data-weight="500"
+                                     data-color="g-400">{{ course.description }}</div>
+                                <div class="flex-wrapper">
+                                    <div class="data">
+                                        <p data-weight="500" class="note" data-color="g-300">Duration</p>
+                                        <p data-weight="500" class="caption">{{ course.course_duration }}</p>
+                                    </div>
+                                    <div class="data">
+                                        <p data-weight="500" class="note" data-color="g-300">Starting From</p>
+                                        <p data-weight="500" class="caption">{{ course.course_stating_date }}</p>
+                                    </div>
+                                    <div class="btn-wrapper">
+                                        <a class="btn" href="{{ course.course_url }}" data-variant="primary">Enroll
+                                            now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    {% endif %}
+    {% if workshops %}
+        <section class="workshop-listing-wrapper">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <div class="marquee-animation" data-my="xl" data-color="l-500">
+                        <div class="name static-name">Workshops</div>
+                        <div class="name ab-name">Workshops</div>
+                    </div>
+                    <div class="display-wrapper">
+                        <div class="w-heading heading capitalize" data-lh="1" data-color="s-500">
+                            Hands-On <br class="hidden-wrapper"/><span data-color="l-500">Photography Workshops</span>
+                        </div>
+                        <div class="btn-wrapper workshop-page-btn">
+                            <a href="{{ workshops_listing.url }}" class="btn">VIEW ALL
+                                <svg viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.1716 11.501L10.8076 6.13699L12.2218 4.72278L20 12.501L12.2218 20.2791L10.8076 18.8649L16.1716 13.501H4V11.501H16.1716Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-wrapper hidden-wrapper">
+                    {% for card in workshops %}
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="{{ card.image.file.url }}" alt="workshop image" class="img-full"/>
+                            </div>
+                            <div class="content-wrapper">
+                                <div class="description" data-weight="500"
+                                     data-color="l-500">{{ card.heading|safe }}</div>
+                                <div class=" flex-wrapper">
+                                    <div class="profile">
+                                        <img src="{{ card.course_mentor_profile.file.url }}" alt="profile image"
+                                             class="img-full"/>
+                                    </div>
+                                    <div class="name description" data-color="l-500">{{ card.course_mentor }}</div>
+                                    <div class="date description" data-color="g-400"
+                                         data-ml="auto">{{ card.course_stating_date }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- Swiper -->
+                <div class="card-wrapper card-swiper-wrapper">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            {% for card in workshops %}
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img src="{{ card.image.file.url }}" alt="workshop image"
+                                                 class="img-full"/>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <div class="description" data-weight="500"
+                                                 data-color="l-500">{{ card.heading|safe }}</div>
+                                            <div class=" flex-wrapper">
+                                                <div class="profile">
+                                                    <img src="{{ card.course_mentor_profile.file.url }}"
+                                                         alt="profile image"
+                                                         class="img-full"/>
+                                                </div>
+                                                <div class="name description"
+                                                     data-color="l-500">{{ card.course_mentor }}</div>
+                                                <div class="date description" data-color="g-400"
+                                                     data-ml="auto">{{ card.course_stating_date }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+    {% if works.student_works %}
+        <section class="selected-works-wrapper">
+            <div class="container">
+                <div class="section-wrapper">
+                    <div class="left-selected-wrapper">
+                        <div class="marquee-animation">
+                            <div class="name static-name">Selected works</div>
+                            <div class="name ab-name">Selected works</div>
+                        </div>
+                        <h4 class="heading capitalize">Our Student <span data-color="p-500">works</span></h4>
+                        <a href="{{ works.url }}" class="description w-description">
+                            BROWSE ALL PROJECTS
+                            <svg viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.1716 11.501L10.8076 6.13699L12.2218 4.72278L20 12.501L12.2218 20.2791L10.8076 18.8649L16.1716 13.501H4V11.501H16.1716Z"
+                                      fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="right-selected-wrapper">
+                        <div class="selected-card-wrapper">
+                            {% for work in works.student_works %}
+                                <div class="selected-card">
+                                    <img src="{{ work.value.work.file.url }}" alt="workshop image" class="img-full"/>
+                                    <div class="selected-content-wrapper">
+                                        <div class="pill" data-color="l-500">{{ work.value.type }}</div>
+                                        <h4 class="sub-heading">Learn from Experts</h4>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+    <section class="course-details-master">
+        <div class="img-wrapper">
+            <img src="{% static 'images/ripple.png' %}" alt="image" class="img-full">
+        </div>
+        <div class="container">
+            <div class="content-wrapper">
+                <div class="heading capitalize"><span data-color="s-500">Master</span>
+                    Photography
+                </div>
+                <div class="btn-wrapper enroll-btn"><a href="/" class="btn" data-variant="success">Enroll now</a></div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
+
+{% block page_script %}
+    <script>
+        const loaderContainer = document.getElementById("loader-container");
+        for (let i = 0; i < 500; i++) {
+            const box = document.createElement("span");
+            box.classList.add("preload-box");
+            box.style.animationDelay = `${(i % 10) * (Math.random() * 0.2)}s`; // stagger waves in rows
+            loaderContainer.appendChild(box);
+        }
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            preloader.classList.add("fade-out");
+            setTimeout(() => {
+                preloader.style.display = "none";
+                preloader.remove();
+            }, 1000);
+        });
+
+        AOS.init();
+        var a = 0;
+        $(window).scroll(function () {
+
+            var oTop = $('.level').offset().top - window.innerHeight;
+            if (a == 0 && $(window).scrollTop() > oTop) {
+                $('.js-count-up').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+                    const nonNumbers = countTo.match(/\D/g)?.join('') || '';
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                            countNum: countTo
+                        },
+
+                        {
+
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum) + nonNumbers);
+                            },
+                            complete: function () {
+                                $this.text(this.countNum + nonNumbers);
+                                //alert('finished');
+                            }
+
+                        });
+                });
+                a = 1;
+            }
+        });
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+
+        $(window).scroll(function () {
+            $(".anm_mod").each(function () {
+                const position = $(this).offset().top;
+                const scroll = $(window).scrollTop();
+                const windowHeight = $(window).height();
+                if (scroll > position - windowHeight) {
+                    $(this).addClass("active");
+                }
+                if (scroll < 100) {
+                    $(this).removeClass("active");
+                }
+            });
+        });
+        $(function () {
+            $('a[href^="#"]').click(function () {
+                const speed = 200;
+                const href = $(this).attr("href");
+                const target = $(href == "#" || href == "" ? "html" : href);
+                const position = target.offset().top;
+                $("html, body").animate({scrollTop: position}, speed, "swing");
+                return false;
+            });
+        });
+
+        {#$(".left_pane").stick_in_parent();#}
+        $("#sidebar-nav").on('click', function (event) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+        });
+
+    </script>
+{% endblock page_script %}

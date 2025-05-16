@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <style>
+        #header {
+            display: none;
+        }
+    </style>
+{% endblock page_css %}
+
+{% block content %}
+    <div class="contactus-wrapper">
+        <a href="/" class="logo-wrapper">
+            <img class="logo" src="{% static 'images/icons/logo.svg' %}" alt="logo"/>
+        </a>
+        <div class="container wrapper">
+            <div class="left-content-wrapper">
+                <h4 class="heading margin-gap capitalize" data-color="d-500">Got <br class="display"><span
+                        data-color="p-500">Questions?</span></h4>
+                <div class="connection-wrapper" data-gap="l">
+                    <div class="connect-wrapper">
+                        <h4 class="description capitalize" data-color="g-150" data-weight="500">Email us your query</h4>
+                        <a href="mailto:{{ self.email }}" class="social-connect-wrapper caption">
+                            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_897)">
+                                    <path d="M4 9.33317C4 8.62593 4.28095 7.94765 4.78105 7.44755C5.28115 6.94746 5.95942 6.6665 6.66667 6.6665H25.3333C26.0406 6.6665 26.7189 6.94746 27.219 7.44755C27.719 7.94765 28 8.62593 28 9.33317V22.6665C28 23.3737 27.719 24.052 27.219 24.5521C26.7189 25.0522 26.0406 25.3332 25.3333 25.3332H6.66667C5.95942 25.3332 5.28115 25.0522 4.78105 24.5521C4.28095 24.052 4 23.3737 4 22.6665V9.33317Z"
+                                          stroke="#EB3B4D" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M4 9.3335L16 17.3335L28 9.3335" stroke="#EB3B4D" stroke-width="2"
+                                          stroke-linecap="round" stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2_897">
+                                        <rect width="32" height="32" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {{ self.email }}
+                        </a>
+                    </div>
+                    <div class="connect-wrapper">
+                        <h4 class="description capitalize" data-color="g-150" data-weight="500">Email us your query</h4>
+                        <a href="tell:{{ self.phone_number }}" class="social-connect-wrapper caption">
+                            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_905)">
+                                    <path d="M6.66667 5.3335H12L14.6667 12.0002L11.3333 14.0002C12.7613 16.8955 15.1046 19.2389 18 20.6668L20 17.3335L26.6667 20.0002V25.3335C26.6667 26.0407 26.3857 26.719 25.8856 27.2191C25.3855 27.7192 24.7072 28.0002 24 28.0002C18.799 27.6841 13.8935 25.4755 10.2091 21.7911C6.52467 18.1066 4.31607 13.2011 4 8.00016C4 7.29292 4.28095 6.61464 4.78105 6.11454C5.28115 5.61445 5.95942 5.3335 6.66667 5.3335Z"
+                                          stroke="#EB3B4D" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2_905">
+                                        <rect width="32" height="32" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {{ self.phone_number }}
+                        </a>
+                    </div>
+                    <div class="connect-wrapper">
+                        <h4 class="description capitalize" data-color="g-150" data-weight="500">Email us your query</h4>
+                        <div class="social-connect-wrapper caption capitalize">
+                            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_913)">
+                                    <path d="M12 14.6665C12 15.7274 12.4214 16.7448 13.1716 17.4949C13.9217 18.2451 14.9391 18.6665 16 18.6665C17.0609 18.6665 18.0783 18.2451 18.8284 17.4949C19.5786 16.7448 20 15.7274 20 14.6665C20 13.6056 19.5786 12.5882 18.8284 11.8381C18.0783 11.0879 17.0609 10.6665 16 10.6665C14.9391 10.6665 13.9217 11.0879 13.1716 11.8381C12.4214 12.5882 12 13.6056 12 14.6665Z"
+                                          stroke="#EB3B4D" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                    <path d="M23.5433 22.2094L17.886 27.8668C17.386 28.3663 16.7081 28.6469 16.0013 28.6469C15.2945 28.6469 14.6167 28.3663 14.1167 27.8668L8.45799 22.2094C6.96628 20.7176 5.95044 18.817 5.53891 16.7479C5.12737 14.6788 5.33864 12.5341 6.14599 10.5851C6.95334 8.63602 8.32052 6.97015 10.0746 5.79811C11.8287 4.62606 13.891 4.00049 16.0007 4.00049C18.1103 4.00049 20.1726 4.62606 21.9267 5.79811C23.6808 6.97015 25.048 8.63602 25.8553 10.5851C26.6627 12.5341 26.8739 14.6788 26.4624 16.7479C26.0509 18.817 25.035 20.7176 23.5433 22.2094Z"
+                                          stroke="#EB3B4D" stroke-width="2" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2_913">
+                                        <rect width="32" height="32" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            {{ self.location }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-content-wrapper">
+                <p class="description" data-color="g-400" data-mb="2xl">Our dedicated team is here to provide the
+                    support you need. Reach out to us by
+                    filling the form below!</p>
+                <form class="form-wrapper" data-gap="m" method="post" novalidate enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    <div class="form-item">
+                        {{ form.name }}
+                        {{ form.name.errors|safe }}
+                        {#                        <input class="input" data-py="m" data-px="l" type="text" name="name" id="name"#}
+                        {#                               placeholder="Your Name">#}
+                    </div>
+                    <div class="form-flex-item" data-gap="m">
+                        <div class="input-wrapper">
+                            {{ form.email }}
+                            {{ form.email.errors|safe }}
+                        </div>
+                        <div class="input-wrapper">
+                            {{ form.phone }}
+                            {{ form.phone.errors|safe }}
+                        </div>
+                        {#                        <input class="input" data-py="m" data-px="l" type="email" name="name" id="email"#}
+                        {#                               placeholder="Email Address">#}
+                        {#                        <input class="input" data-py="m" data-px="l" type="number" name="name" id="number"#}
+                        {#                               placeholder="Phone Number ">#}
+                    </div>
+                    <div class="form-item">
+                        {{ form.msg }}
+                        {{ form.phone.msg|safe }}
+                        {#                        <textarea class="input" rows="10" data-py="m" data-px="l" type="text" name="name" id="text-area"#}
+                        {#                                  placeholder="Anything you’d like to tell us?"></textarea>#}
+                    </div>
+                    <div class="btn-wrapper width-wrapper">
+                        <button type="submit" class="btn" data-variant='primary'>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

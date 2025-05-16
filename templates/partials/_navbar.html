@@ -1,0 +1,29 @@
+{% load static helper %}
+{% block page_css %}
+{% endblock page_css %}
+
+<header id="header">
+    <div class="container wrapper">
+        <ul id="_header_links_wrapper" class="links_wrapper">
+            {% get_site_root as site_root %}
+            {% top_menu parent=site_root calling_page=self %}
+            <li class="link_wrapper btn-wrapper">
+                <button class="link">Login</button>
+                <button class="header_btn btn">Enroll now</button>
+            </li>
+        </ul>
+        <div class="header_bg"></div>
+        <a href="/" class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="logo" class="img-fluid"/>
+        </a>
+        <div class="btn_wrapper">
+            <button class="link" data-color="l-500">Login</button>
+            <button class="header_btn">Enroll now</button>
+        </div>
+        <button class="burger _toggle_header">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z" fill="white"/>
+            </svg>
+        </button>
+    </div>
+</header>

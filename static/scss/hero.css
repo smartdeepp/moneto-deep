@@ -1,0 +1,72 @@
+.hero {
+  @apply h-full w-full relative flex flex-col;
+  min-height: 100vh;
+}
+.hero .z-index-wrapper {
+  z-index: 1;
+}
+.hero .hero-img-wrapper {
+  @apply h-full w-full left-0 top-0 absolute;
+}
+.hero .hero-wrapper {
+  @apply w-full h-full py-20 flex-1 flex justify-center items-center;
+}
+.hero .content-wrapper {
+  @apply text-center items-center justify-center flex-col relative flex;
+}
+.hero .content-wrapper .description {
+  max-width: 43.75rem;
+}
+.hero .date-wrapper {
+  @apply flex flex-col gap-1 justify-center items-center;
+}
+
+@media (max-width: 96rem) {
+  .hero .hero-wrapper {
+    @apply py-24;
+  }
+  .hero .content-wrapper .description {
+    max-width: 50rem;
+  }
+  .hero .date-wrapper {
+    @apply gap-2;
+  }
+}
+@media (max-width: 87.5rem) {
+  .hero .hero-wrapper {
+    @apply py-20;
+  }
+  .hero .content-wrapper .description {
+    max-width: 45rem;
+  }
+}
+@media (max-width: 75rem) {
+  .hero .hero-wrapper {
+    @apply py-16;
+  }
+  .hero .content-wrapper .description {
+    max-width: 40rem;
+  }
+}
+@media (max-width: 62rem) {
+  .hero .hero-wrapper {
+    @apply py-12;
+  }
+  .hero .content-wrapper .description {
+    max-width: 35rem;
+  }
+  .hero .date-wrapper {
+    @apply gap-1;
+  }
+}
+@media (max-width: 35.4375rem) {
+  .hero .hero-wrapper {
+    @apply py-10;
+  }
+  .hero .content-wrapper .description {
+    max-width: 100%;
+    @apply px-4;
+  }
+}
+
+/*# sourceMappingURL=hero.css.map */

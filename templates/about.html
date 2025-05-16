@@ -1,0 +1,212 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/workshop-listing.css' %}">
+{% endblock page_css %}
+
+{% block content %}
+    <section class="hero">
+        <div class="hero-img-wrapper">
+            <img src="{{ self.image.file.url }}" alt="hero image" class="img-full"/>
+        </div>
+        <div class="container hero-wrapper">
+            <div class="content-wrapper" data-gap="2xl">
+                <h1 class="title capitalize" data-color="l-400">{{ self.heading|safe }}</h1>
+                <p class="description" data-color="l-400">{{ self.description }}</p>
+            </div>
+        </div>
+    </section>
+    <section class="about-mission">
+        <div class="container">
+            <div class="marquee-animation">
+                <div class="name static-name">Who are we</div>
+                <div class="name ab-name">Who are we</div>
+            </div>
+            <div class="content-wrapper">
+                <div class="flex-wrapper">
+                    <div class="heading capitalize" data-color="g-500">{{ self.mission_heading|safe }}</div>
+                </div>
+                <div class="grid-wrapper">
+                    <div class="font-number" data-color="p-500">{{ self.since_experience }}
+                        <div class="plus">+</div>
+                    </div>
+                    <div class="pill">Years Experience</div>
+                    <p class="description" data-weight="500" data-color="g-400">{{ self.mission_description }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-exp">
+        <div class="container">
+            <div class="marquee-animation">
+                <div class="name static-name">Our Mission</div>
+                <div class="name ab-name">Our Mission</div>
+            </div>
+            <div class="content-wrapper">
+                <div class="flex-wrapper">
+                    <div class="heading capitalize" data-color="g-500">{{ self.evolution_heading|safe }}</div>
+                </div>
+                <div class="grid-wrapper">
+                    <div class="img-wrapper">
+                        <img src="{{ self.evolution_image.file.url }}" alt="hero image" class="img-fluid"/>
+                    </div>
+                    <div class="content">
+                        {% for point in self.evolution_points %}
+                            <div class="point">
+                                <svg viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="21" cy="21" r="20.3115" stroke="#EB3B4D" stroke-width="1.37705"/>
+                                    <circle cx="21" cy="21" r="6" fill="#EB3B4D"/>
+                                </svg>
+                                <p class="year" data-color="p-500">{{ point.value.year }}</p>
+                                <div class="wrapper">
+                                    <p class="name">{{ point.value.heading }}</p>
+                                    <p class="description" data-weight="500"
+                                       data-color="g-400">{{ point.value.description }}</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="about-exp-swiper">
+                    <div class="swiper c-swiper">
+                        <div class="swiper-wrapper">
+                            {% for card in self.evolution_points %}
+                                <div class="swiper-slide">
+                                    <div class="card">
+                                        <div class="img-wrapper">
+                                            <img src="{{ self.evolution_image.file.url }}" alt="workshop image"
+                                                 class="img-full"/>
+                                        </div>
+                                        <div class="content-wrapper">
+                                            <div class=" flex-wrapper">
+                                                <div class="name sub-heading">{{ card.value.heading }}</div>
+                                                <div class="date sub-heading" data-color="p-500"
+                                                     data-ml="auto">{{ card.value.year }}</div>
+                                            </div>
+                                            <div class="description" data-color="g-400"
+                                                 data-weight="500">{{ card.value.description }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-founder">
+        <div class="container wrapper">
+            <div class="left-content">
+                <div class="data-wrapper">
+                    <div class="heading-wrapper">
+                        <svg viewBox="0 0 134 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M76.3488 111V72.1888C76.3488 53.5594 81.0233 37.6468 90.3721 24.451C99.7209 11.2552 114.264 3.10489 134 0V24.0629C122.574 25.6154 114.783 29.6259 110.628 36.0944C106.733 42.3042 104.785 51.2308 104.785 62.8741L85.6977 58.993L133.221 58.993V111H76.3488ZM0 111L0 72.1888C0 53.5594 4.67442 37.6468 14.0233 24.451C23.3721 11.2552 37.9147 3.10489 57.6512 0V24.0629C46.2248 25.6154 38.4341 29.6259 34.2791 36.0944C30.3837 42.3042 28.4361 51.2308 28.4361 62.8741L9.34884 58.993L56.8721 58.993L56.8721 111H0Z"
+                                  fill="#4BF1C5"/>
+                        </svg>
+                        <div class="heading capitalize">{{ self.founders_heading|safe }}</div>
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="{{ self.founder_image.file.url }}" alt="founder image" class="img-full"/>
+                    </div>
+                </div>
+                <div class="info-data">{{ self.founders_sub_heading|safe }}</div>
+                <div class="description" data-color="g-400">{{ self.founders_description }}</div>
+            </div>
+            <div class="right-content">
+                <img src="{{ self.founder_image.file.url }}" alt="founder image" class="img-full"/>
+            </div>
+        </div>
+    </section>
+    <section class="about-brand">
+        <div class="container">
+            <div class="marquee-animation">
+                <div class="name static-name"> Industry Affiliations</div>
+                <div class="name ab-name"> Industry Affiliations</div>
+            </div>
+            <div class="content-wrapper">
+                <div class="flex-wrapper">
+                    <div class="heading capitalize" data-color="g-500">{{ self.brand_heading|safe }}</div>
+                    <div class="sub-heading" data-color="g-600">{{ self.brand_description }}</div>
+                </div>
+                <div class="grid-wrapper">
+                    {% for image in self.brand_image %}
+                        <div class="card">
+                            <img class="card-img" src="{{ image.value.file.url }}" alt="alumni image"/>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% if self.articles %}
+        <section class="about-media">
+            <div class="container">
+                <div class="marquee-animation">
+                    <div class="name static-name"> Media Recognition</div>
+                    <div class="name ab-name"> Media Recognition</div>
+                </div>
+                <div class="content">
+                    <div class="flex-wrapper">
+                        <div class="heading capitalize" data-color="g-500">{{ self.article_heading|safe }}</div>
+                        <div class="sub-heading" data-color="g-600">{{ self.article_description }}</div>
+                    </div>
+                    <div class="about-swiper">
+                        <div class="swiper c-swiper">
+                            <div class="swiper-wrapper">
+                                {% for article in self.articles %}
+                                    <div class="swiper-slide">
+                                        <a href="{{ article.value.url }}" target="_blank" class="card">
+                                            <div class="img-wrapper">
+                                                <img src="{{ article.value.image.file.url }}" alt="workshop image"
+                                                     class="img-full"/>
+                                            </div>
+                                            <div class="content-wrapper">
+                                                <div class="description"
+                                                     data-weight="500">{{ article.value.heading }}</div>
+                                                <div class=" flex-wrapper">
+                                                    <div class="profile">
+                                                        <img src="{{ article.value.image.file.url }}"
+                                                             alt="profile image"
+                                                             class="img-full"/>
+                                                    </div>
+                                                    <div class="name description"
+                                                         data-color="g-400">{{ article.value.publisher }}</div>
+                                                    <div class="date description" data-color="g-400"
+                                                         data-ml="auto">{{ article.value.date }}</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endif %}
+{% endblock content %}
+
+{% block page_script %}
+    <script>
+        var swiper = new Swiper(".c-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                1400: {
+                    slidesPerView: 2,
+                    spaceBetween: 56,
+                }
+            }
+        });
+    </script>
+{% endblock page_script %}

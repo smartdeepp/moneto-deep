@@ -1,0 +1,177 @@
+.footer {
+  @apply bg-black pt-20 pb-10;
+  .copy-wrapper {
+    margin-top: 10.625rem;
+    @apply flex items-center justify-between gap-10 flex-wrap;
+    .c-link {
+      @apply flex items-stretch justify-center gap-2 text-grey-200;
+      .c-line {
+        @apply h-full min-h-full flex-1 bg-grey-200;
+        width: 0.0625rem;
+      }
+    }
+  }
+
+  .f-wrapper {
+    @apply flex justify-between flex-wrap gap-20;
+  }
+
+  .f-left {
+    @apply w-full;
+    max-width: 33.75rem;
+  }
+
+  .f-center {
+    @apply flex flex-col gap-16 w-full;
+    max-width: 26.25rem;
+
+    .link {
+      line-height: 2.75rem;
+    }
+
+    .a-link {
+      @apply flex flex-col gap-2;
+    }
+
+    .link-wrapper {
+      @apply flex justify-between;
+    }
+
+    .width-wrapper {
+      @apply w-full;
+      max-width: 22.125rem;
+    }
+  }
+
+  .f-right {
+    @apply flex flex-col gap-16 w-full;
+    max-width: 18.75rem;
+
+    .d-main-wrapper {
+      .social-link-wrapper {
+        @apply flex items-center gap-6;
+        .social-link {
+          svg {
+            @apply w-12 h-12;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1536px) {
+  .footer {
+    .copy-wrapper {
+      margin-top: 8.75rem;
+    }
+
+    .f-left {
+      max-width: 31.25rem;
+    }
+
+    .f-center {
+      max-width: 25rem;
+
+      .width-wrapper {
+        max-width: 21rem;
+      }
+    }
+
+    .f-right {
+      max-width: 17.5rem;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .footer {
+    .copy-wrapper {
+      margin-top: 6.25rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    @apply pt-16;
+    .copy-wrapper {
+      margin-top: 5rem;
+    }
+
+    .f-left {
+      @apply w-full;
+      max-width: 28.125rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    @apply pt-12;
+    .copy-wrapper {
+      margin-top: 2.5rem;
+      @apply gap-3;
+    }
+
+    .f-wrapper {
+      gap: 3.625rem;
+    }
+
+    .f-left {
+      max-width: 100%;
+
+      .width-wrapper {
+        max-width: 20rem;
+        @apply text-center mx-auto pb-10;
+      }
+
+      .btn-wrapper {
+        @apply justify-center;
+      }
+    }
+
+    .f-center {
+      @apply gap-10;
+
+      .link {
+        line-height: 1.5;
+      }
+
+      .a-link {
+        @apply flex flex-col gap-2;
+      }
+
+      .link-wrapper {
+        @apply flex justify-between;
+      }
+
+      .width-wrapper {
+        @apply w-full;
+        max-width: 22.125rem;
+      }
+    }
+
+    .text {
+      line-height: 1.5;
+    }
+
+    .f-right {
+      @apply gap-10;
+      .d-main-wrapper {
+        .letter-wrapper {
+          @apply mb-4;
+        }
+
+        .social-link-wrapper {
+          @apply gap-3;
+          .social-link {
+            svg {
+              @apply w-8 h-8;
+            }
+          }
+        }
+      }
+    }
+  }
+}

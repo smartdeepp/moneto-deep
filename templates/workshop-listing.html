@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/workshop-listing.css' %}">
+{% endblock page_css %}
+{% block content %}
+    <section class="hero">
+        <div class="hero-img-wrapper">
+            <img src="{{ self.image.file.url }}" alt="hero image" class="img-full"/>
+        </div>
+        <div class="container hero-wrapper">
+            <div class="content-wrapper" data-gap="2xl">
+                <h1 class="title capitalize" data-color="l-400">{{ self.heading|safe }}</h1>
+                <p class="description" data-color="l-400">{{ self.description }}</p>
+            </div>
+        </div>
+    </section>
+    <section class="workshop-listing-wrapper">
+        <div class="container">
+            <div class="heading-wrapper">
+                <div class="marquee-animation">
+                    <div class="name static-name">Workshops</div>
+                    <div class="name ab-name">Workshops</div>
+                </div>
+                <div class="w-heading heading capitalize" data-lh="1">
+                    Upcoming <span data-color="p-500">Workshops</span>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                {% for d in detail %}
+                    <a href="{{ d.url }}" class="card">
+                        <div class="img-wrapper">
+                            <img src="{% static 'images/alumni.png' %}" alt="workshop image" class="img-full"/>
+                            <div class="pill">{{ d.course_type }}</div>
+                        </div>
+                        <div class="content-wrapper">
+                            <div class="description" data-weight="500">{{ d.info_heading|safe }}</div>
+                            <div class=" flex-wrapper">
+                                <div class="profile">
+                                    <img src="{{ d.course_mentor_profile.file.url }}" alt="profile image"
+                                         class="img-full"/>
+                                </div>
+                                <div class="name description" data-color="g-400">{{ d.course_mentor }}</div>
+                                <div class="date description" data-color="g-400"
+                                     data-ml="auto">{{ d.course_stating_date }}</div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock content %}

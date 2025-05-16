@@ -1,0 +1,455 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/course-details.css' %}">
+{% endblock page_css %}
+{% block content %}
+    <section class="hero">
+        <div class="hero-img-wrapper">
+            <img src="{{ self.image.file.url }}" alt="hero image" class="img-full"/>
+        </div>
+        <div class="container hero-wrapper">
+            <div class="content-wrapper" data-gap="2xl">
+                <div class="breadcrumb">
+                    <a class="caption" data-color="l-500" href="{{ home_page.url }}">Home</a>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.4912 13.5332L16.5673 9.67145C16.6415 9.59427 16.7313 9.53198 16.8313 9.48825C16.9314 9.44453 17.0396 9.42027 17.1498 9.41691C17.2599 9.41355 17.3696 9.43115 17.4724 9.46868C17.5752 9.5062 17.6691 9.56289 17.7483 9.63539C17.8276 9.70788 17.8907 9.79471 17.934 9.89073C17.9772 9.98674 17.9996 10.09 18 10.1944C18.0003 10.2988 17.9786 10.4022 17.936 10.4984C17.8934 10.5947 17.8309 10.6819 17.7521 10.7549L17.7321 10.7739L13.0741 15.188C12.9196 15.3343 12.7102 15.4165 12.4917 15.4165C12.2733 15.4165 12.0638 15.3343 11.9093 15.188L7.25138 10.775C7.17359 10.7038 7.11136 10.6187 7.06825 10.5247C7.02513 10.4307 7.00199 10.3296 7.00012 10.2271C6.99826 10.1247 7.01772 10.0229 7.05739 9.92751C7.09706 9.83217 7.15616 9.74516 7.23132 9.67145C7.30648 9.59775 7.39623 9.53879 7.49545 9.49794C7.59466 9.4571 7.70139 9.43517 7.80955 9.4334C7.91771 9.43164 8.02518 9.45007 8.12581 9.48765C8.22645 9.52524 8.31829 9.58123 8.39609 9.65244L8.41615 9.67145L12.4912 13.5332Z"
+                              stroke-width="0.75"/>
+                    </svg>
+                    <a class="caption" data-color="l-500" href="{{ listing_page.url }}">Course Listing</a>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.4912 13.5332L16.5673 9.67145C16.6415 9.59427 16.7313 9.53198 16.8313 9.48825C16.9314 9.44453 17.0396 9.42027 17.1498 9.41691C17.2599 9.41355 17.3696 9.43115 17.4724 9.46868C17.5752 9.5062 17.6691 9.56289 17.7483 9.63539C17.8276 9.70788 17.8907 9.79471 17.934 9.89073C17.9772 9.98674 17.9996 10.09 18 10.1944C18.0003 10.2988 17.9786 10.4022 17.936 10.4984C17.8934 10.5947 17.8309 10.6819 17.7521 10.7549L17.7321 10.7739L13.0741 15.188C12.9196 15.3343 12.7102 15.4165 12.4917 15.4165C12.2733 15.4165 12.0638 15.3343 11.9093 15.188L7.25138 10.775C7.17359 10.7038 7.11136 10.6187 7.06825 10.5247C7.02513 10.4307 7.00199 10.3296 7.00012 10.2271C6.99826 10.1247 7.01772 10.0229 7.05739 9.92751C7.09706 9.83217 7.15616 9.74516 7.23132 9.67145C7.30648 9.59775 7.39623 9.53879 7.49545 9.49794C7.59466 9.4571 7.70139 9.43517 7.80955 9.4334C7.91771 9.43164 8.02518 9.45007 8.12581 9.48765C8.22645 9.52524 8.31829 9.58123 8.39609 9.65244L8.41615 9.67145L12.4912 13.5332Z"
+                              stroke-width="0.75"/>
+                    </svg>
+                    <p class="caption" data-color="l-500">Course Details</p>
+                </div>
+                <h1 class="heading capitalize" data-color="l-500">{{ self.heading|safe }}</h1>
+                <div class="btn-wrapper">
+                    <a href="{{ self.course_url }}" class="btn" data-variant="primary">ENROLL NOW</a>
+                </div>
+                <div class="date-wrapper">
+                    <div class="description" data-color="g-250">Start Date</div>
+                    <div data-weight="600" data-color="l-500" class="sub-heading">{{ self.course_stating_date }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="icon-wrapper">
+            <div class="container wrapper">
+                <div class="sub-wrapper">
+                    <div class="icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.66699 4L2.66699 8M29.3337 8L25.3337 4M8.00033 25.3333L5.33366 28M24.0003 25.3333L26.667 28M16.0003 28C18.8293 28 21.5424 26.8762 23.5428 24.8758C25.5432 22.8754 26.667 20.1623 26.667 17.3333C26.667 14.5044 25.5432 11.7912 23.5428 9.79086C21.5424 7.79047 18.8293 6.66667 16.0003 6.66667C13.1713 6.66667 10.4582 7.79047 8.45785 9.79086C6.45747 11.7912 5.33366 14.5044 5.33366 17.3333C5.33366 20.1623 6.45747 22.8754 8.45785 24.8758C10.4582 26.8762 13.1713 28 16.0003 28Z"
+                                  stroke="#B9B9B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 21.3335V13.3335M12 17.3335H20" stroke="#EB3B4D" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="data-wrapper">
+                        <div class="description" data-color="g-250">Duration</div>
+                        <div class="sub-heading" data-color="l-500">{{ self.course_duration }}</div>
+                    </div>
+                </div>
+                <div class="sub-wrapper">
+                    <div class="icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.66699 4L2.66699 8M29.3337 8L25.3337 4M8.00033 25.3333L5.33366 28M24.0003 25.3333L26.667 28M16.0003 28C18.8293 28 21.5424 26.8762 23.5428 24.8758C25.5432 22.8754 26.667 20.1623 26.667 17.3333C26.667 14.5044 25.5432 11.7912 23.5428 9.79086C21.5424 7.79047 18.8293 6.66667 16.0003 6.66667C13.1713 6.66667 10.4582 7.79047 8.45785 9.79086C6.45747 11.7912 5.33366 14.5044 5.33366 17.3333C5.33366 20.1623 6.45747 22.8754 8.45785 24.8758C10.4582 26.8762 13.1713 28 16.0003 28Z"
+                                  stroke="#B9B9B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 21.3335V13.3335M12 17.3335H20" stroke="#EB3B4D" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="data-wrapper">
+                        <div class="description" data-color="g-250">Platform</div>
+                        <div class="sub-heading" data-color="l-500">{{ self.course_type }}</div>
+                    </div>
+                </div>
+                <div class="sub-wrapper">
+                    <div class="icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.66699 4L2.66699 8M29.3337 8L25.3337 4M8.00033 25.3333L5.33366 28M24.0003 25.3333L26.667 28M16.0003 28C18.8293 28 21.5424 26.8762 23.5428 24.8758C25.5432 22.8754 26.667 20.1623 26.667 17.3333C26.667 14.5044 25.5432 11.7912 23.5428 9.79086C21.5424 7.79047 18.8293 6.66667 16.0003 6.66667C13.1713 6.66667 10.4582 7.79047 8.45785 9.79086C6.45747 11.7912 5.33366 14.5044 5.33366 17.3333C5.33366 20.1623 6.45747 22.8754 8.45785 24.8758C10.4582 26.8762 13.1713 28 16.0003 28Z"
+                                  stroke="#B9B9B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 21.3335V13.3335M12 17.3335H20" stroke="#EB3B4D" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="data-wrapper">
+                        <div class="description" data-color="g-250">Level</div>
+                        <div class="sub-heading" data-color="l-500">{{ self.course_level }}</div>
+                    </div>
+                </div>
+                <div class="sub-wrapper">
+                    <div class="icon">
+                        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.66699 4L2.66699 8M29.3337 8L25.3337 4M8.00033 25.3333L5.33366 28M24.0003 25.3333L26.667 28M16.0003 28C18.8293 28 21.5424 26.8762 23.5428 24.8758C25.5432 22.8754 26.667 20.1623 26.667 17.3333C26.667 14.5044 25.5432 11.7912 23.5428 9.79086C21.5424 7.79047 18.8293 6.66667 16.0003 6.66667C13.1713 6.66667 10.4582 7.79047 8.45785 9.79086C6.45747 11.7912 5.33366 14.5044 5.33366 17.3333C5.33366 20.1623 6.45747 22.8754 8.45785 24.8758C10.4582 26.8762 13.1713 28 16.0003 28Z"
+                                  stroke="#B9B9B9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 21.3335V13.3335M12 17.3335H20" stroke="#EB3B4D" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="data-wrapper">
+                        <div class="description" data-color="g-250">Ratings</div>
+                        <div class="sub-heading" data-color="l-500">{{ self.course_rating }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="course-main-wrapper">
+        <div class="floating-tabs-wrapper">
+            <a href="#1" class="tab active">Takeaways</a>
+            <a href="#2" class="tab">Alumni</a>
+            <a href="#3" class="tab">Perks</a>
+            <a href="#4" class="tab">Certification</a>
+            <a href="#5" class="tab">Course</a>
+        </div>
+        <div class="btn-wrapper floating-btn-wrapper">
+            <a href="{{ self.course_url }}" class="btn" data-variant="primary">ENROLL NOW</a>
+        </div>
+        <section class="course-details" id="1">
+            <div class="container wrapper">
+                <div class="content-wrapper">
+                    <div class="heading-wrapper heading capitalize">Key <span data-color="p-500">Takeaways</span></div>
+                    <div class="points-wrapper">
+                        {% for point in self.points %}
+                            <div class="point description">
+                                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M26.6672 13.333V8.33301L31.6672 3.33301L33.3339 6.66634L36.6672 8.33301L31.6672 13.333H26.6672ZM26.6672 13.333L20.0006 19.9996M36.6673 19.9997C36.6673 29.2044 29.2054 36.6663 20.0007 36.6663C10.7959 36.6663 3.33398 29.2044 3.33398 19.9997C3.33398 10.7949 10.7959 3.33301 20.0007 3.33301M28.334 19.9997C28.334 24.602 24.603 28.333 20.0007 28.333C15.3983 28.333 11.6673 24.602 11.6673 19.9997C11.6673 15.3973 15.3983 11.6663 20.0007 11.6663"
+                                          stroke="#6C33D9" stroke-width="2.5" stroke-linecap="round"
+                                          stroke-linejoin="round"/>
+                                </svg>
+                                {{ point.value }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="img-wrapper">
+                    <img src="{{ self.key_image.file.url }}" alt="image" class="img-full">
+                </div>
+            </div>
+        </section>
+        <section class="course-details-work">
+            <div class="container wrapper">
+                <div class="img-wrapper">
+                    {% for logo in self.brand_images %}
+                        <div class="img">
+                            <img src="{{ logo.value.file.url }}" class="img-fluid" alt="image"/>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="content-wrapper heading capitalize">Our <span data-color="w-500">Alumni</span> Work With the
+                    Best
+                </div>
+            </div>
+        </section>
+        <section class="course-details-exclusive">
+            <div class="container">
+                <div class="heading capitalize" data-color="g-500">{{ self.from_heading|safe }}</div>
+                <div class="card-wrapper">
+                    {% for point in self.key_highlight %}
+                        <div class="card">
+                            <div class="img">
+                                <img src="{{ point.value.icon.file.url }}" alt="image" class="img-fluid">
+                            </div>
+                            <div class="text" data-color="g-500" data-weight="500">{{ point.value.heading }}</div>
+                            <div class="description" data-color="g-400">{{ point.value.description }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <section class="course-details-certification">
+            <div class="container wrapper">
+                <div class="marquee-animation">
+                    <div class="name static-name">certification</div>
+                    <div class="name ab-name">certification</div>
+                </div>
+                <div class="content-wrapper">
+                    <div class="left-content">
+                        <div class="heading capitalize">{{ self.certificate_heading|safe }}</div>
+                        <div class="description" data-color="g-400">{{ self.certificate_description }}</div>
+                        <div class="img-wrapper">
+                            {% for image in self.certificate_icons %}
+                                <img src="{{ image.value.file.url }}" alt="img" class="img-fluid">
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="right-content">
+                        <div class="img-wrapper">
+                            <img src="{{ self.certificate_image.file.url }}" alt="image" class="img-full">
+                        </div>
+                        <div class="img">
+                            {% for image in self.certificate_icons %}
+                                <img src="{{ image.value.file.url }}" alt="img">
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="course-details-mentorship">
+            <div class="container wrapper">
+                <div class="profile-data">
+                    <div class="profile">
+                        <img class="img-full" src="{{ self.mentor_image.file.url }}" alt="image"/>
+                    </div>
+                    <div class="heading-wrapper">
+                        <div class="heading capitalize">Mentorship From A
+                            <span data-color="p-500">{{ self.mentor_name }}</span>
+                        </div>
+                        <div class="link-wrapper">
+                            {% if self.mentor_instagram %}
+                                <a href="{{ self.mentor_instagram }}">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.6 4H32.4C38.8 4 44 9.2 44 15.6V32.4C44 35.4765 42.7779 38.427 40.6024 40.6024C38.427 42.7779 35.4765 44 32.4 44H15.6C9.2 44 4 38.8 4 32.4V15.6C4 12.5235 5.22214 9.57298 7.39756 7.39756C9.57298 5.22214 12.5235 4 15.6 4ZM15.2 8C13.2904 8 11.4591 8.75857 10.1088 10.1088C8.75857 11.4591 8 13.2904 8 15.2V32.8C8 36.78 11.22 40 15.2 40H32.8C34.7096 40 36.5409 39.2414 37.8912 37.8912C39.2414 36.5409 40 34.7096 40 32.8V15.2C40 11.22 36.78 8 32.8 8H15.2ZM34.5 11C35.163 11 35.7989 11.2634 36.2678 11.7322C36.7366 12.2011 37 12.837 37 13.5C37 14.163 36.7366 14.7989 36.2678 15.2678C35.7989 15.7366 35.163 16 34.5 16C33.837 16 33.2011 15.7366 32.7322 15.2678C32.2634 14.7989 32 14.163 32 13.5C32 12.837 32.2634 12.2011 32.7322 11.7322C33.2011 11.2634 33.837 11 34.5 11ZM24 14C26.6522 14 29.1957 15.0536 31.0711 16.9289C32.9464 18.8043 34 21.3478 34 24C34 26.6522 32.9464 29.1957 31.0711 31.0711C29.1957 32.9464 26.6522 34 24 34C21.3478 34 18.8043 32.9464 16.9289 31.0711C15.0536 29.1957 14 26.6522 14 24C14 21.3478 15.0536 18.8043 16.9289 16.9289C18.8043 15.0536 21.3478 14 24 14ZM24 18C22.4087 18 20.8826 18.6321 19.7574 19.7574C18.6321 20.8826 18 22.4087 18 24C18 25.5913 18.6321 27.1174 19.7574 28.2426C20.8826 29.3679 22.4087 30 24 30C25.5913 30 27.1174 29.3679 28.2426 28.2426C29.3679 27.1174 30 25.5913 30 24C30 22.4087 29.3679 20.8826 28.2426 19.7574C27.1174 18.6321 25.5913 18 24 18Z"
+                                              fill="#A8A8A8"/>
+                                    </svg>
+                                </a>
+                            {% endif %}
+                            {% if self.mentor_linkedin %}
+                                <a href="{{ self.mentor_instagram }}">
+                                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.881 9.99986C13.8802 11.6285 12.8922 13.094 11.3827 13.7055C9.8732 14.3169 8.14374 13.9521 7.0098 12.7831C5.87586 11.6141 5.5639 9.8743 6.221 8.38414C6.87812 6.89398 8.37308 5.951 10.001 5.99986C12.1631 6.06476 13.8819 7.83674 13.881 9.99986ZM14.001 16.9599H6.00096V41.9998H14.001V16.9599ZM26.641 16.9599H18.681V41.9998H26.561V28.8598C26.561 21.5398 36.101 20.8598 36.101 28.8598V41.9998H44.001V26.1398C44.001 13.7999 29.881 14.2599 26.561 20.3198L26.641 16.9599Z"
+                                              fill="#A8A8A8"/>
+                                    </svg>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    `
+                </div>
+                <div class="content-wrapper">
+                    <div class="heading">Mentorship from
+                        a <span data-color="p-500">{{ self.mentor_name }}</span></div>
+                    <p class="description" data-color="g-400">{{ self.mentor_description }}</p>
+                    <div class="link-wrapper">
+                        {% if self.mentor_instagram %}
+                            <a href="{{ self.mentor_instagram }}">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.6 4H32.4C38.8 4 44 9.2 44 15.6V32.4C44 35.4765 42.7779 38.427 40.6024 40.6024C38.427 42.7779 35.4765 44 32.4 44H15.6C9.2 44 4 38.8 4 32.4V15.6C4 12.5235 5.22214 9.57298 7.39756 7.39756C9.57298 5.22214 12.5235 4 15.6 4ZM15.2 8C13.2904 8 11.4591 8.75857 10.1088 10.1088C8.75857 11.4591 8 13.2904 8 15.2V32.8C8 36.78 11.22 40 15.2 40H32.8C34.7096 40 36.5409 39.2414 37.8912 37.8912C39.2414 36.5409 40 34.7096 40 32.8V15.2C40 11.22 36.78 8 32.8 8H15.2ZM34.5 11C35.163 11 35.7989 11.2634 36.2678 11.7322C36.7366 12.2011 37 12.837 37 13.5C37 14.163 36.7366 14.7989 36.2678 15.2678C35.7989 15.7366 35.163 16 34.5 16C33.837 16 33.2011 15.7366 32.7322 15.2678C32.2634 14.7989 32 14.163 32 13.5C32 12.837 32.2634 12.2011 32.7322 11.7322C33.2011 11.2634 33.837 11 34.5 11ZM24 14C26.6522 14 29.1957 15.0536 31.0711 16.9289C32.9464 18.8043 34 21.3478 34 24C34 26.6522 32.9464 29.1957 31.0711 31.0711C29.1957 32.9464 26.6522 34 24 34C21.3478 34 18.8043 32.9464 16.9289 31.0711C15.0536 29.1957 14 26.6522 14 24C14 21.3478 15.0536 18.8043 16.9289 16.9289C18.8043 15.0536 21.3478 14 24 14ZM24 18C22.4087 18 20.8826 18.6321 19.7574 19.7574C18.6321 20.8826 18 22.4087 18 24C18 25.5913 18.6321 27.1174 19.7574 28.2426C20.8826 29.3679 22.4087 30 24 30C25.5913 30 27.1174 29.3679 28.2426 28.2426C29.3679 27.1174 30 25.5913 30 24C30 22.4087 29.3679 20.8826 28.2426 19.7574C27.1174 18.6321 25.5913 18 24 18Z"
+                                          fill="#A8A8A8"/>
+                                </svg>
+                            </a>
+                        {% endif %}
+                        {% if self.mentor_linkedin %}
+                            <a href="{{ self.mentor_linkedin }}">
+                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.881 9.99986C13.8802 11.6285 12.8922 13.094 11.3827 13.7055C9.8732 14.3169 8.14374 13.9521 7.0098 12.7831C5.87586 11.6141 5.5639 9.8743 6.221 8.38414C6.87812 6.89398 8.37308 5.951 10.001 5.99986C12.1631 6.06476 13.8819 7.83674 13.881 9.99986ZM14.001 16.9599H6.00096V41.9998H14.001V16.9599ZM26.641 16.9599H18.681V41.9998H26.561V28.8598C26.561 21.5398 36.101 20.8598 36.101 28.8598V41.9998H44.001V26.1398C44.001 13.7999 29.881 14.2599 26.561 20.3198L26.641 16.9599Z"
+                                          fill="#A8A8A8"/>
+                                </svg>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="course-details-learn">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <div class="marquee-animation">
+                        <div class="name static-name">Course Breakdown</div>
+                        <div class="name ab-name">Course Breakdown</div>
+                    </div>
+                    <div class="flex-wrapper">
+                        <div class="heading capitalize">{{ self.breakdown_heading|safe }}</div>
+                        <div class="active-flex">
+                            <div class="learn description" data-color="g-400" data-weight="500">
+                                {{ self.breakdown_description }}
+                            </div>
+                            <div class="img-wrapper">
+                                {% for image in self.breakdown_images %}
+                                    <img src="{{ image.value.file.url }}" alt="image" class="img-full">
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-wrapper">
+                    {% for point in self.breakdown_points %}
+                        <div class="faq __faq">
+                            <div class="left-content">
+                                <div class="sub-heading" data-color="g-350" data-weight="600">
+                                    Day {{ forloop.counter }}</div>
+                                <div class="c-heading capitalize">{{ point.value.heading }}
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.4912 13.5332L16.5673 9.67145C16.6415 9.59427 16.7313 9.53198 16.8313 9.48825C16.9314 9.44453 17.0396 9.42027 17.1498 9.41691C17.2599 9.41355 17.3696 9.43115 17.4724 9.46868C17.5752 9.5062 17.6691 9.56289 17.7483 9.63539C17.8276 9.70788 17.8907 9.79471 17.934 9.89073C17.9772 9.98674 17.9996 10.09 18 10.1944C18.0003 10.2988 17.9786 10.4022 17.936 10.4984C17.8934 10.5947 17.8309 10.6819 17.7521 10.7549L17.7321 10.7739L13.0741 15.188C12.9196 15.3343 12.7102 15.4165 12.4917 15.4165C12.2733 15.4165 12.0638 15.3343 11.9093 15.188L7.25138 10.775C7.17359 10.7038 7.11136 10.6187 7.06825 10.5247C7.02513 10.4307 7.00199 10.3296 7.00012 10.2271C6.99826 10.1247 7.01772 10.0229 7.05739 9.92751C7.09706 9.83217 7.15616 9.74516 7.23132 9.67145C7.30648 9.59775 7.39623 9.53879 7.49545 9.49794C7.59466 9.4571 7.70139 9.43517 7.80955 9.4334C7.91771 9.43164 8.02518 9.45007 8.12581 9.48765C8.22645 9.52524 8.31829 9.58123 8.39609 9.65244L8.41615 9.67145L12.4912 13.5332Z"
+                                              stroke-width="0.75"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="right-content">
+                                <div class="description" data-color="g-400"
+                                     data-weight="500">{{ point.value.description }}</div>
+
+                                {% if point.value.points %}
+                                    <div class="points-wrapper">
+                                        {% for p in point.value.points %}
+                                            <div class="point description" data-color="g-400" data-weight="500">
+                                                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M26.6672 13.333V8.33301L31.6672 3.33301L33.3339 6.66634L36.6672 8.33301L31.6672 13.333H26.6672ZM26.6672 13.333L20.0006 19.9996M36.6673 19.9997C36.6673 29.2044 29.2054 36.6663 20.0007 36.6663C10.7959 36.6663 3.33398 29.2044 3.33398 19.9997C3.33398 10.7949 10.7959 3.33301 20.0007 3.33301M28.334 19.9997C28.334 24.602 24.603 28.333 20.0007 28.333C15.3983 28.333 11.6673 24.602 11.6673 19.9997C11.6673 15.3973 15.3983 11.6663 20.0007 11.6663"
+                                                          stroke="#000000" stroke-width="2.5" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                </svg>
+                                                {{ p }}</div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {% if self.testimonials %}
+            <section class="course-details-testimonials">
+                <div class="container">
+                    <div class="marquee-animation">
+                        <div class="name static-name">Testimonials</div>
+                        <div class="name ab-name">Testimonials</div>
+                    </div>
+                    <div class="content-wrapper">
+                        <div class="heading capitalize">{{ self.testimonial_heading|safe }}</div>
+                        <div class="flex-wrapper">
+                            {% for card in self.testimonials %}
+                                <div class="_hover_card card {% if forloop.counter0 == 0 %}active{% endif %}">
+                                    <div class="img">
+                                        <img src="{{ card.value.profile.file.url }}" alt="images" class="img-full"/>
+                                    </div>
+                                    <div class="content">
+                                        <div class="f-heading">{{ card.value.content }}</div>
+                                        <div class="data-wrapper">
+                                            <div class="info-wrapper">
+                                                <p class="f-heading">{{ card.value.name }}</p>
+                                                <p data-color="l-100" class="description">{{ card.value.role }}</p>
+                                            </div>
+                                            <div class="icon">
+                                                <img src="{{ card.value.logo.file.url }}" class="img-fluid"
+                                                     alt="icon-1"/>
+                                            </div>
+                                            <div class="icon-hover">
+                                                <img src="{{ card.value.logo.file.url }}" class="img-fluid"
+                                                     alt="icon-1"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-js">
+                            <div class="swiper c-swiper">
+                                <div class="swiper-wrapper">
+                                    {% for card in self.testimonials %}
+                                        <div class="swiper-slide">
+                                            <div class="card">
+                                                <div class="img">
+                                                    <img src="{{ card.value.profile.file.url }}" alt="images"
+                                                         class="img-full"/>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="f-heading">{{ card.value.content }}</div>
+                                                    <div class="data-wrapper">
+                                                        <div class="info-wrapper">
+                                                            <p class="f-heading">{{ card.value.name }}</p>
+                                                            <p data-color="l-100"
+                                                               class="description">{{ card.value.role }}</p>
+                                                        </div>
+                                                        <div class="icon">
+                                                            <img src="{{ card.value.logo.file.url }}"
+                                                                 class="img-fluid"
+                                                                 alt="icon-1"/>
+                                                        </div>
+                                                        <div class="icon-hover">
+                                                            <img src="{{ card.value.logo.file.url }}"
+                                                                 class="img-fluid"
+                                                                 alt="icon-1"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        {% endif %}
+        <Section class="course-details-faq">
+            <div class="container wrapper">
+                <div class="content-wrapper">
+                    <div class="heading capitalize" data-color="l-500">Frequently Asked Questions</div>
+                    <div class="description" data-color="g-200">You can Contact Us if your question isn’t listed here
+                    </div>
+                </div>
+                <div class="faq-wrapper">
+                    {% for faq in self.faqs %}
+                        <div class="faq _faq">
+                            <div class="heading-wrapper">
+                                <div class="question description" data-color="l-500">{{ faq.value.question }}</div>
+                                <div class="icon">
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.4912 13.5332L16.5673 9.67145C16.6415 9.59427 16.7313 9.53198 16.8313 9.48825C16.9314 9.44453 17.0396 9.42027 17.1498 9.41691C17.2599 9.41355 17.3696 9.43115 17.4724 9.46868C17.5752 9.5062 17.6691 9.56289 17.7483 9.63539C17.8276 9.70788 17.8907 9.79471 17.934 9.89073C17.9772 9.98674 17.9996 10.09 18 10.1944C18.0003 10.2988 17.9786 10.4022 17.936 10.4984C17.8934 10.5947 17.8309 10.6819 17.7521 10.7549L17.7321 10.7739L13.0741 15.188C12.9196 15.3343 12.7102 15.4165 12.4917 15.4165C12.2733 15.4165 12.0638 15.3343 11.9093 15.188L7.25138 10.775C7.17359 10.7038 7.11136 10.6187 7.06825 10.5247C7.02513 10.4307 7.00199 10.3296 7.00012 10.2271C6.99826 10.1247 7.01772 10.0229 7.05739 9.92751C7.09706 9.83217 7.15616 9.74516 7.23132 9.67145C7.30648 9.59775 7.39623 9.53879 7.49545 9.49794C7.59466 9.4571 7.70139 9.43517 7.80955 9.4334C7.91771 9.43164 8.02518 9.45007 8.12581 9.48765C8.22645 9.52524 8.31829 9.58123 8.39609 9.65244L8.41615 9.67145L12.4912 13.5332Z"
+                                              stroke-width="0.75"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="answer note" data-color="l-500">{{ faq.value.answer }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </Section>
+        <section class="course-details-master">
+            <div class="img-wrapper">
+                <img src="{% static 'images/ripple.png' %}" alt="image" class="img-full">
+            </div>
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="heading capitalize"><span data-color="s-500">Master</span>
+                        Photography
+                    </div>
+                    <div class="btn-wrapper enroll-btn"><a href="/" class="btn" data-variant="success">Enroll now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock content %}
+
+{% block page_script %}
+    <script>
+        var swiper = new Swiper(".c-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+        $('._faq').click(function () {
+            $('._faq').not(this).removeClass('active');
+            $('._faq').not(this).find('.answer').slideUp();
+            $(this).toggleClass('active');
+            $(this).find('.answer').slideToggle();
+        })
+
+        $('.__faq').click(function () {
+            $('.__faq').not(this).removeClass('active');
+            $('.__faq').not(this).find('.answer').slideUp();
+            $(this).toggleClass('active');
+        })
+
+        $('._hover_card').hover(function () {
+            $('._hover_card').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+{% endblock page_script %}

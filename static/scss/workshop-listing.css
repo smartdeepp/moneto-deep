@@ -1,0 +1,266 @@
+.workshop-listing-wrapper {
+  @apply mt-20;
+  margin-bottom: 7.5rem;
+}
+.workshop-listing-wrapper .heading-wrapper .pill {
+  @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
+}
+.workshop-listing-wrapper .heading-wrapper .w-heading {
+  @apply mt-10 border-t border-t-grey-700 pt-10 mb-20;
+}
+.workshop-listing-wrapper .card-wrapper {
+  @apply flex flex-wrap justify-center items-center gap-x-8 gap-y-20;
+}
+.workshop-listing-wrapper .card-wrapper .card {
+  flex: 0 0 calc(33.33% - 1.375rem);
+}
+.workshop-listing-wrapper .card-wrapper .card .img-wrapper {
+  @apply w-full overflow-hidden rounded-3xl relative;
+  aspect-ratio: 1.6;
+}
+.workshop-listing-wrapper .card-wrapper .card .img-wrapper .pill {
+  @apply rounded-full bg-primary text-white absolute w-max left-8 top-8 py-3 px-6 uppercase text-base;
+}
+.workshop-listing-wrapper .card-wrapper .card .content-wrapper {
+  @apply mt-6 flex flex-col gap-10;
+}
+.workshop-listing-wrapper .card-wrapper .card .content-wrapper .description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.workshop-listing-wrapper .card-wrapper .card .content-wrapper .description b {
+  @apply font-medium;
+}
+.workshop-listing-wrapper .card-wrapper .card .content-wrapper .flex-wrapper {
+  @apply flex items-center gap-4;
+}
+.workshop-listing-wrapper .card-wrapper .card .content-wrapper .flex-wrapper .profile {
+  @apply rounded-full overflow-hidden w-14 h-14;
+}
+.workshop-listing-wrapper .c-heading-wrapper {
+  @apply hidden;
+}
+.workshop-listing-wrapper .courses-wrapper {
+  @apply flex flex-col gap-14;
+}
+.workshop-listing-wrapper .courses-wrapper .card {
+  @apply grid grid-cols-2 gap-10;
+}
+.workshop-listing-wrapper .courses-wrapper .card .sub-heading {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.workshop-listing-wrapper .courses-wrapper .card .pill {
+  @apply rounded-full bg-light-300 text-dark-400 absolute w-max left-8 top-8 py-3 px-6 uppercase text-base;
+}
+.workshop-listing-wrapper .courses-wrapper .card .img-wrapper {
+  @apply w-full overflow-hidden rounded-3xl relative;
+  max-height: 34.375rem;
+}
+.workshop-listing-wrapper .courses-wrapper .card .content-wrapper {
+  @apply flex flex-col gap-6;
+}
+.workshop-listing-wrapper .courses-wrapper .card .content-wrapper .description {
+  line-height: 1.5;
+}
+.workshop-listing-wrapper .courses-wrapper .card .content-wrapper .flex-wrapper {
+  @apply mt-auto flex items-center gap-14;
+}
+.workshop-listing-wrapper .courses-wrapper .card .content-wrapper .flex-wrapper .btn-wrapper {
+  @apply ml-auto;
+}
+
+@media (max-width: 1536px) {
+  .workshop-listing-wrapper {
+    margin-bottom: 6.875rem;
+  }
+  .workshop-listing-wrapper .heading-wrapper .w-heading {
+    @apply mb-16;
+  }
+  .workshop-listing-wrapper .card-wrapper {
+    @apply gap-x-6 gap-y-16;
+  }
+  .workshop-listing-wrapper .card-wrapper .card {
+    flex: 0 0 calc(33.33% - 1rem);
+  }
+  .workshop-listing-wrapper .card-wrapper .card .img-wrapper .pill {
+    @apply left-6 top-6;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper {
+    @apply mt-5 gap-8;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper .description {
+    font-size: 1.25rem;
+  }
+  .workshop-listing-wrapper .courses-wrapper {
+    @apply gap-12;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card {
+    @apply gap-8;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .img-wrapper {
+    max-height: 31.25rem;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .sub-heading {
+    font-size: 2rem;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .description {
+    font-size: 1.375rem;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .flex-wrapper {
+    @apply gap-12;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .flex-wrapper .btn-wrapper .btn {
+    font-size: 1.25rem;
+    height: 3.25rem;
+    width: 13.75rem;
+  }
+}
+@media (max-width: 1400px) {
+  .workshop-listing-wrapper {
+    @apply mt-12 mb-20;
+  }
+  .workshop-listing-wrapper .heading-wrapper .w-heading {
+    @apply mb-14;
+  }
+  .workshop-listing-wrapper .card-wrapper {
+    @apply gap-x-4 gap-y-10;
+  }
+  .workshop-listing-wrapper .card-wrapper .card {
+    flex: 0 0 calc(33.33% - 0.6875rem);
+  }
+  .workshop-listing-wrapper .card-wrapper .card .img-wrapper {
+    @apply rounded-2xl;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .img-wrapper .pill {
+    @apply left-4 top-4 py-2.5 px-5 text-sm;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper {
+    @apply mt-4 gap-6;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper .description {
+    font-size: 1.125rem;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper .flex-wrapper {
+    @apply gap-2;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper .flex-wrapper .profile {
+    @apply w-12 h-12;
+    min-width: 3rem;
+  }
+  .workshop-listing-wrapper .courses-wrapper {
+    @apply gap-10;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card {
+    @apply gap-6;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .pill {
+    @apply left-4 top-4 py-2.5 px-5 text-sm;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .img-wrapper {
+    @apply rounded-2xl;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .sub-heading {
+    font-size: 1.75rem;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .description {
+    font-size: 1.25rem;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .flex-wrapper {
+    @apply gap-10;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .flex-wrapper .btn-wrapper .btn {
+    font-size: 1.125rem;
+    height: 3rem;
+    width: 12.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .workshop-listing-wrapper {
+    @apply mt-10;
+  }
+  .workshop-listing-wrapper .heading-wrapper .w-heading {
+    @apply mt-8 pt-6 mb-10;
+  }
+  .workshop-listing-wrapper .card-wrapper .card {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper .flex-wrapper {
+    @apply flex-wrap;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper .flex-wrapper .date {
+    @apply ml-0;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card {
+    @apply grid-cols-1;
+  }
+}
+@media (max-width: 568px) {
+  .workshop-listing-wrapper {
+    @apply mt-8;
+  }
+  .workshop-listing-wrapper .heading-wrapper .pill {
+    @apply mx-auto text-sm px-4 py-2;
+  }
+  .workshop-listing-wrapper .heading-wrapper .w-heading {
+    @apply text-center border-t-0 pt-0 mb-8;
+  }
+  .workshop-listing-wrapper .card-wrapper {
+    @apply gap-12;
+  }
+  .workshop-listing-wrapper .card-wrapper .card {
+    flex: 0 0 100%;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper {
+    @apply mt-5 gap-4;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper .description {
+    font-size: 1rem;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper .flex-wrapper {
+    @apply gap-3;
+  }
+  .workshop-listing-wrapper .card-wrapper .card .content-wrapper .flex-wrapper .profile {
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+  }
+  .workshop-listing-wrapper .courses-wrapper {
+    @apply gap-16;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card {
+    @apply grid-cols-1;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .pill {
+    @apply static;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .c-heading-wrapper {
+    @apply flex items-center gap-2;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .img-wrapper {
+    aspect-ratio: 1.786;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .img-wrapper .pill {
+    @apply hidden;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .sub-heading {
+    @apply hidden;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .flex-wrapper {
+    @apply flex-wrap gap-y-6;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .flex-wrapper .btn-wrapper {
+    @apply w-full min-w-full;
+  }
+  .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .flex-wrapper .btn-wrapper .btn {
+    @apply w-full flex-1 max-w-full;
+  }
+}
+
+/*# sourceMappingURL=workshop-listing.css.map */

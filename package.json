@@ -1,0 +1,19 @@
+{
+  "name": "moneta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./static/scss/workshop-details.css -o ./static/css/workshop-details.css --watch",
+    "common": "npx tailwindcss -i ./static/scss/form.css -o ./static/css/form.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "sass": "^1.88.0"
+  }
+}

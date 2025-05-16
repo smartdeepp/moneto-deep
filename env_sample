@@ -1,0 +1,16 @@
+DJANGO_SECRET_KEY
+DJANGO_DEBUG                     # OPTIONAL | Default: False
+DJANGO_ALLOWED_HOST              # NEEDED IF DJANGO_DEBUG False | comma separated string without space in between
+DATABASE_URL                     # OPTIONAL | Default: sqlite:///db.sqlite | eg: psql://<user>:<password>@<host>:<port>/<db_name>
+
+AWS_STORAGE_BUCKET_NAME          # OPTIONAL | your bucket name | Default: ''
+AWS_ACCESS_KEY_ID                # OPTIONAL | your ACCESS_KEY_ID | NEEDED if AWS_STORAGE_BUCKET_NAME
+AWS_SECRET_ACCESS_KEY            # OPTIONAL | your SECRET_ACCESS_KEY | NEEDED if AWS_STORAGE_BUCKET_NAME
+AWS_REGION_NAME                  # OPTIONAL | your selected S3 region | NEEDED if AWS_STORAGE_BUCKET_NAME
+AWS_S3_ENDPOINT_URL              # OPTIONAL | your selected endpoint url | NEEDED if AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN             # OPTIONAL | your selected space object custom domain | NEEDED if AWS_STORAGE_BUCKET_NAME
+
+DEFAULT_FROM_EMAIL               # OPTIONAL | Default emails address from which mails will be send | Default: 'noreply@ausfreightsolutions.com.au'
+EMAIL_HOST_USER                  # NEEDED IF want to send emails | email from which the mail will me sent
+EMAIL_HOST_PASSWORD              # NEEDED IF want to send emails | password for the EMAIL_HOST_USER
+

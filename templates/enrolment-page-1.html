@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <style>
+        #header {
+            display: none;
+        }
+    </style>
+{% endblock page_css %}
+
+{% block content %}
+    <div class="enrolment-wrapper">
+        <a href="/" class="logo-wrapper">
+            <img class="logo" src="{% static 'images/icons/logo.svg' %}" alt="logo"/>
+        </a>
+        <div class="container wrapper">
+            <div class="left-content-wrapper">
+                <div class="card-heading capitalize" data-color="d-300"><span data-color="w-500">Photography</span>
+                    Power Week
+                </div>
+                <div class="content-wrapper">
+                    <p class="description capitalize">7 Days <span
+                            data-color="g-600">On-Ground Training Starts from</span> 16th March,
+                        2025</p>
+                </div>
+                <div class="card-wrapper" data-gap="xl">
+                    <div class="card" data-px="xl" data-pt="xl">
+                        <p class="card-info capitalize" data-color="p-500" data-mb="l">Pay Upfront</p>
+                        <p class="sub-title" data-color="g-750" data-mb="xxs">₹85,000</p>
+                        <p class="note" data-color="g-420">+ 18% GST = ₹1.12 L via Razorpay</p>
+                    </div>
+                    <div class="card" data-px="xl" data-pt="xl">
+                        <p class="card-info capitalize" data-color="p-500" data-mb="l">Pay via EMI</p>
+                        <p class="sub-title" data-color="g-750" data-mb="xxs">₹15,916/mo*</p>
+                        <p class="note" data-color="g-420">*charges & taxes applicable based on bank & card</p>
+                    </div>
+                </div>
+                <p class="note flex-wrapper" data-gap="xxs" data-color="g-420" data-mt="m">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 16.5C12.1427 16.5 12.2617 16.452 12.357 16.356C12.4523 16.26 12.5 16.1413 12.5 16V11.5C12.5 11.358 12.452 11.2393 12.356 11.144C12.26 11.0487 12.141 11.0007 11.999 11C11.857 10.9993 11.7383 11.0473 11.643 11.144C11.5477 11.2407 11.5 11.3593 11.5 11.5V16C11.5 16.142 11.548 16.2607 11.644 16.356C11.74 16.4513 11.859 16.4993 12.001 16.5M12 9.577C12.1747 9.577 12.321 9.518 12.439 9.4C12.557 9.282 12.6157 9.136 12.615 8.962C12.6143 8.788 12.5553 8.64167 12.438 8.523C12.3207 8.40433 12.1747 8.34533 12 8.346C11.8253 8.34667 11.6793 8.40567 11.562 8.523C11.4447 8.64033 11.3857 8.78667 11.385 8.962C11.3843 9.13733 11.4433 9.28333 11.562 9.4C11.6807 9.51667 11.8267 9.57567 12 9.577ZM12.003 21C10.7583 21 9.58833 20.764 8.493 20.292C7.39767 19.8193 6.44467 19.178 5.634 18.368C4.82333 17.558 4.18167 16.606 3.709 15.512C3.23633 14.418 3 13.2483 3 12.003C3 10.7577 3.23633 9.58767 3.709 8.493C4.181 7.39767 4.82133 6.44467 5.63 5.634C6.43867 4.82333 7.391 4.18167 8.487 3.709C9.583 3.23633 10.753 3 11.997 3C13.241 3 14.411 3.23633 15.507 3.709C16.6023 4.181 17.5553 4.82167 18.366 5.631C19.1767 6.44033 19.8183 7.39267 20.291 8.488C20.7637 9.58333 21 10.753 21 11.997C21 13.241 20.764 14.411 20.292 15.507C19.82 16.603 19.1787 17.556 18.368 18.366C17.5573 19.176 16.6053 19.8177 15.512 20.291C14.4187 20.7643 13.249 21.0007 12.003 21ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.875 17.675 6.325C16.125 4.775 14.2333 4 12 4C9.76667 4 7.875 4.775 6.325 6.325C4.775 7.875 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z"
+                              fill="#8E8E8E"/>
+                    </svg>
+                    Select your preferred payment method and ensure you review the terms before proceeding
+                    payment.
+                </p>
+            </div>
+            <div class="right-content-wrapper">
+                <p class="sub-heading capitalize" data-color="d-500" data-mb="l">Fill in Your Details to Get
+                    Enrolled!</p>
+                <form class="form-wrapper" data-gap="m">
+                    <div class="form-item">
+                        <input class="input" data-py="m" data-px="l" type="text" name="name" id="name"
+                               placeholder="Your Name">
+                    </div>
+                    <div class="form-flex-item" data-gap="m">
+                        <input class="input" data-py="m" data-px="l" type="email" name="name" id="email"
+                               placeholder="Email Address">
+                        <input class="input" data-py="m" data-px="l" type="number" name="name" id="number"
+                               placeholder="Phone Number ">
+                    </div>
+                    <div class="form-flex-item" data-gap="m">
+                        <input class="input" data-py="m" data-px="l" type="text" name="name" id="city"
+                               placeholder="City">
+                        <input class="input" data-py="m" data-px="l" type="text" name="name" id="state"
+                               placeholder="State ">
+                    </div>
+                    <div class="form-item">
+                    <textarea class="input" rows="10" data-py="m" data-px="l" type="text" name="name" id="text-area"
+                              placeholder="Anything you’d like to tell us?"></textarea>
+                    </div>
+                    <div class="info-wrapper">
+                        <p class="note" data-color="g-450" data-mb="l">By Continuing, you agree to the Terms of Services
+                            and
+                            the Privacy Policy</p>
+                        <div class="btn-wrapper width-wrapper">
+                            <a href="#" class="btn" data-variant='primary'>Proceed</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

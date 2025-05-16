@@ -1,0 +1,16 @@
+@import "colors";
+@import "commonMixin";
+@import "padding";
+@import "margin";
+@import "gap";
+
+@mixin mixin {
+  @include colors;
+  @include margin-mixin;
+  @include padding-mixin;
+  @include gap-mixin;
+  @include weight;
+  @include justify;
+  @include align;
+  @include line-height;
+}

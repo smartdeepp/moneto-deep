@@ -1,0 +1,227 @@
+@mixin p-100 {
+  &[data-color='p-100'] {
+    @apply text-primary-100;
+  }
+}
+
+@mixin p-500 {
+  &[data-color='p-500'] {
+    @apply text-primary;
+  }
+}
+
+@mixin s-500 {
+  &[data-color='s-500'] {
+    @apply text-success;
+  }
+}
+
+@mixin w-500 {
+  &[data-color='w-500'] {
+    @apply text-warning;
+  }
+}
+
+@mixin l-100 {
+  &[data-color='l-100'] {
+    @apply text-light-100;
+  }
+}
+
+@mixin l-200 {
+  &[data-color='l-200'] {
+    @apply text-light-200;
+  }
+}
+
+@mixin l-300 {
+  &[data-color='l-300'] {
+    @apply text-light-300;
+  }
+}
+
+@mixin l-400 {
+  &[data-color='l-400'] {
+    @apply text-light-400;
+  }
+}
+
+@mixin l-450 {
+  &[data-color='l-450'] {
+    @apply text-light-450;
+  }
+}
+
+@mixin l-500 {
+  &[data-color='l-500'] {
+    @apply text-light;
+  }
+}
+
+@mixin d-300 {
+  &[data-color='d-300'] {
+    @apply text-dark-300;
+  }
+}
+
+@mixin d-400 {
+  &[data-color='d-400'] {
+    @apply text-dark-400;
+  }
+}
+
+@mixin d-500 {
+  &[data-color='d-500'] {
+    @apply text-dark;
+  }
+}
+
+@mixin g-100 {
+  &[data-color='g-100'] {
+    @apply text-grey-100;
+  }
+}
+
+@mixin g-150 {
+  &[data-color='g-150'] {
+    @apply text-grey-150;
+  }
+}
+
+@mixin g-200 {
+  &[data-color='g-200'] {
+    @apply text-grey-200;
+  }
+}
+
+@mixin g-250 {
+  &[data-color='g-250'] {
+    @apply text-grey-250;
+  }
+}
+
+@mixin g-300 {
+  &[data-color='g-300'] {
+    @apply text-grey-300;
+  }
+}
+
+@mixin g-350 {
+  &[data-color='g-350'] {
+    @apply text-grey-350;
+  }
+}
+
+@mixin g-400 {
+  &[data-color='g-400'] {
+    @apply text-grey-400;
+  }
+}
+
+@mixin g-420 {
+  &[data-color='g-420'] {
+    @apply text-grey-420;
+  }
+}
+
+@mixin g-450 {
+  &[data-color='g-450'] {
+    @apply text-grey-450;
+  }
+}
+
+@mixin g-500 {
+  &[data-color='g-500'] {
+    @apply text-grey;
+  }
+}
+
+@mixin g-600 {
+  &[data-color='g-600'] {
+    @apply text-grey-600;
+  }
+}
+
+@mixin g-700 {
+  &[data-color='g-700'] {
+    @apply text-grey-700;
+  }
+}
+
+@mixin g-750 {
+  &[data-color='g-750'] {
+    @apply text-grey-750;
+  }
+}
+
+@mixin g-800 {
+  &[data-color='g-800'] {
+    @apply text-grey-800;
+  }
+}
+
+@mixin n-500 {
+  &[data-color='n-500'] {
+    @apply text-nyon;
+  }
+}
+
+//for use All
+@mixin primary {
+  @include p-500;
+  @include p-100;
+}
+
+@mixin success {
+  @include s-500;
+}
+
+@mixin warning {
+  @include w-500;
+}
+
+@mixin light {
+  @include l-100;
+  @include l-200;
+  @include l-300;
+  @include l-400;
+  @include l-450;
+  @include l-500;
+}
+
+@mixin dark {
+  @include d-300;
+  @include d-400;
+  @include d-500;
+}
+
+@mixin grey {
+  @include g-100;
+  @include g-150;
+  @include g-200;
+  @include g-250;
+  @include g-300;
+  @include g-350;
+  @include g-400;
+  @include g-420;
+  @include g-450;
+  @include g-500;
+  @include g-600;
+  @include g-700;
+  @include g-750;
+  @include g-800;
+}
+
+@mixin nyon {
+  @include n-500;
+}
+
+@mixin colors {
+  @include grey;
+  @include nyon;
+  @include dark;
+  @include primary;
+  @include light;
+  @include warning;
+  @include success;
+}

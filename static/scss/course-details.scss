@@ -1,0 +1,1351 @@
+.course-details {
+  @apply py-20 bg-light-300;
+  .wrapper {
+    @apply flex items-stretch justify-between;
+    gap: 7.5rem;
+
+    .content-wrapper {
+      @apply flex-1;
+      .points-wrapper {
+        @apply mt-24 flex flex-col gap-10;
+        .point {
+          @apply gap-10 flex items-center;
+          svg {
+            @apply w-10 h-10 min-w-10;
+          }
+        }
+      }
+    }
+
+    .img-wrapper {
+      @apply overflow-hidden rounded-3xl;
+      max-width: 43.375rem;
+    }
+  }
+}
+
+.course-details-work {
+  padding: 7.5rem 0;
+
+  .wrapper {
+    @apply flex justify-between items-center gap-10;
+    .img-wrapper {
+      @apply flex flex-wrap;
+      .img {
+        @apply outline p-9 outline-1 outline-grey-100 flex items-center justify-center;
+        height: 14.625rem;
+        flex: 1 0 calc(25%);
+      }
+    }
+
+    .content-wrapper {
+      @apply text-right ml-auto;
+      max-width: 39.8125rem;
+      min-width: 26.25rem;
+    }
+  }
+}
+
+.course-details-exclusive {
+  @apply py-20 bg-light-300;
+  .heading {
+    max-width: 56.25rem;
+  }
+
+  .card-wrapper {
+    @apply flex flex-wrap items-stretch justify-center gap-5;
+    margin-top: 5rem;
+
+    .card {
+      @apply bg-white rounded-3xl px-10 py-14 transition-all duration-300;
+      flex: 1 0 calc(33.33% - 0.875rem);
+
+      .img {
+        @apply w-16;
+      }
+
+      .text {
+        @apply mt-6 mb-8;
+      }
+
+      .description {
+        @apply transition-all duration-300;
+      }
+
+      &:hover {
+        @apply bg-success;
+        .description {
+          @apply text-grey-800;
+        }
+      }
+    }
+  }
+}
+
+.course-details-learn {
+  @apply py-20 bg-light-300;
+  .pill {
+    @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
+  }
+
+  .flex-wrapper {
+    @apply mt-10 pt-10 border-t border-t-grey-100 flex items-start justify-between;
+    margin-bottom: 6.25rem;
+    gap: 4rem;
+
+    .heading {
+      max-width: 41.25rem;
+    }
+
+    .active-flex {
+      @apply flex justify-end items-center gap-14;
+      .learn {
+        @apply flex flex-col items-end justify-end text-right;
+      }
+
+      .img-wrapper {
+        @apply flex items-center;
+        img {
+          @apply w-16 h-16 rounded-full;
+          margin-left: -1rem;
+        }
+      }
+    }
+  }
+
+  .faq-wrapper {
+    @apply flex flex-col gap-12;
+    .faq {
+      @apply pt-12 border-t border-t-grey-350 grid grid-cols-2 gap-5;
+      .left-content {
+        @apply flex-col flex gap-3;
+        .c-heading {
+          @apply flex items-center justify-between;
+        }
+      }
+
+      .right-content {
+        @apply flex-col flex gap-10;
+        .points-wrapper {
+          @apply flex-col gap-6 hidden;
+          .point {
+            @apply flex gap-4 items-center;
+            svg {
+              @apply w-6 h-6;
+            }
+          }
+        }
+      }
+
+      &:first-child {
+        @apply border-none;
+      }
+
+      &.active {
+        .left-content {
+          .c-heading {
+            @apply text-warning;
+          }
+        }
+
+        .right-content {
+          .points-wrapper {
+            @apply flex;
+          }
+        }
+      }
+    }
+  }
+}
+
+.course-details-faq {
+  @apply bg-dark-400;
+  padding: 6rem 0;
+  .wrapper {
+    @apply grid grid-cols-2 gap-10;
+    .content-wrapper {
+      @apply flex flex-col gap-8;
+    }
+
+    .faq-wrapper {
+      .faq {
+        @apply px-6 py-5 border-b border-b-grey-850 cursor-pointer;
+        .heading-wrapper {
+          @apply flex items-center justify-between gap-6;
+          .question {
+            @apply transition-all duration-300;
+          }
+        }
+
+        .answer {
+          @apply mt-3 hidden transition-colors duration-300;
+        }
+
+        .icon {
+          @apply transition-all duration-300;
+          svg {
+            @apply fill-white stroke-white transition-all duration-300;
+          }
+        }
+
+        &.active {
+          .answer {
+            @apply text-grey-400;
+          }
+
+          .icon {
+            @apply -rotate-180;
+            svg {
+              @apply fill-warning stroke-warning;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.course-details-master {
+  padding: 10.5rem 0;
+  @apply relative;
+  .img-wrapper {
+    @apply absolute -z-10 left-0 top-0 w-full h-full;
+  }
+
+  .content-wrapper {
+    @apply flex mx-auto items-center justify-center text-center flex-col;
+    max-width: 44.125rem;
+    gap: 4.5rem;
+
+    .enroll-btn {
+      .btn {
+        @apply text-grey font-bold;
+      }
+    }
+  }
+}
+
+.course-details-mentorship {
+  padding: 7.5rem 0;
+  @apply bg-white;
+  .wrapper {
+    @apply flex items-center;
+    gap: 2.5rem;
+
+    .profile-data {
+      width: 30rem;
+      height: 40.625rem;
+      min-width: 40.625rem;
+
+      .heading-wrapper {
+        @apply hidden;
+      }
+    }
+
+    .profile {
+      @apply rounded-full h-full w-full overflow-hidden;
+    }
+
+    .content-wrapper {
+      @apply flex flex-col gap-14;
+      .link-wrapper {
+        @apply flex items-center gap-8;
+      }
+    }
+  }
+}
+
+.course-details-testimonials {
+  @apply py-20;
+  .pill {
+    @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
+  }
+
+  .content-wrapper {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    @apply border-t border-t-grey-100 flex-col flex items-stretch gap-16;
+  }
+
+  .card {
+    height: 40rem;
+    @apply flex-1 transition-all duration-300 rounded-3xl flex gap-5 overflow-hidden relative;
+    .img {
+      @apply h-full w-full;
+    }
+
+    .content {
+      @apply absolute flex p-10 flex-col gap-14 justify-end left-0 top-0 h-full w-full;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.8) 100%
+      );
+
+      .f-heading {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 120%;
+        @apply text-white hidden;
+        overflow: hidden;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+
+      .data-wrapper {
+        @apply flex items-center justify-center;
+        .info-wrapper {
+          @apply flex-col gap-1 hidden;
+        }
+
+        .icon {
+          max-width: 4.625rem;
+          @apply block;
+        }
+
+        .icon-hover {
+          max-width: 12.5rem;
+          @apply hidden;
+        }
+      }
+    }
+
+    &.active {
+      flex: 10;
+
+      .content {
+        .f-heading {
+          display: -webkit-box;
+        }
+
+        .data-wrapper {
+          @apply justify-between;
+          .info-wrapper {
+            @apply flex;
+          }
+
+          .icon {
+            @apply hidden;
+          }
+
+          .icon-hover {
+            @apply block;
+          }
+        }
+      }
+    }
+  }
+
+  .flex-wrapper {
+    @apply flex gap-5;
+  }
+
+  .swiper-js {
+    @apply h-full w-full overflow-hidden hidden;
+  }
+}
+
+.course-details-certification {
+  @apply py-20;
+  .pill {
+    @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-primary;
+  }
+
+  .content-wrapper {
+    @apply mt-10 pt-10 border-t border-t-grey-100 flex items-stretch gap-16;
+    .left-content {
+      max-width: 43.75rem;
+      @apply flex-col flex gap-14;
+      .img-wrapper {
+        @apply flex items-center justify-around mt-24;
+        img {
+          max-height: 3.5rem;
+          max-width: unset;
+          width: auto;
+        }
+      }
+    }
+
+    .right-content {
+      @apply flex-1;
+      .img-wrapper {
+        @apply overflow-hidden rounded-3xl h-full;
+      }
+
+      .img {
+        @apply hidden items-center justify-around h-full;
+      }
+    }
+  }
+}
+
+.hero {
+  .hero-wrapper {
+    @apply flex-col;
+
+    .content-wrapper {
+      @apply h-full flex-1;
+      .btn-wrapper {
+        @apply hidden;
+      }
+    }
+  }
+
+  .icon-wrapper {
+    @apply mt-auto relative bg-dark-400;
+    padding: 4rem 0;
+
+    .wrapper {
+      @apply flex justify-between items-center gap-6;
+      .sub-wrapper {
+        @apply flex items-center gap-4;
+        .icon {
+          @apply flex items-center justify-center w-16 h-16 border border-grey-250 rounded-full;
+          svg {
+            @apply w-8 h-8 min-w-8;
+          }
+        }
+
+        .data-wrapper {
+          @apply flex-col flex gap-1;
+        }
+      }
+    }
+  }
+}
+
+.breadcrumb {
+  @apply flex items-center gap-4;
+  svg {
+    @apply fill-white stroke-white -rotate-90;
+  }
+}
+
+.course-main-wrapper {
+  @apply relative;
+  .floating-btn-wrapper {
+    @apply sticky hidden left-0 z-10 bg-white;
+    padding: 0.5rem 1.5rem;
+    top: calc(100% - 5.25rem);
+
+    .btn {
+      flex: 1;
+      max-width: unset;
+    }
+  }
+
+  .floating-tabs-wrapper {
+    @apply sticky hidden z-10 left-0 bg-white w-full overflow-auto items-center justify-start;
+    top: 0;
+
+    &::-webkit-scrollbar {
+      @apply hidden;
+    }
+
+    .tab {
+      font-family: Inter, serif;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 100%;
+      @apply relative text-grey-400;
+      padding: 1.5rem 1.75rem;
+      &:after {
+        @apply left-0 bottom-0 w-0 absolute h-0.5 bg-black;
+        content: '';
+      }
+
+      &.active {
+        @apply text-black font-semibold;
+        &:after {
+          @apply w-full;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 96rem) {
+  .course-details {
+    .wrapper {
+      gap: 5rem;
+
+      .content-wrapper {
+        .points-wrapper {
+          @apply mt-16 gap-8;
+          .point {
+            @apply gap-8;
+            svg {
+              @apply w-9 h-9 min-w-9;
+            }
+          }
+        }
+      }
+
+      .img-wrapper {
+        max-width: 37.5rem;
+      }
+    }
+  }
+
+  .course-details-work {
+    .wrapper {
+      .img-wrapper {
+        .img {
+          height: 13.75rem;
+        }
+      }
+
+      .content-wrapper {
+        max-width: 35rem;
+        min-width: 23.75rem;
+      }
+    }
+  }
+
+  .course-details-exclusive {
+    .card-wrapper {
+      margin-top: 6.25rem;
+      .card {
+        @apply rounded-2xl px-8 py-12;
+        .img {
+          @apply w-14;
+        }
+      }
+    }
+  }
+
+  .course-details-learn {
+    .flex-wrapper {
+      margin-bottom: 6.875rem;
+      .heading {
+        max-width: 53.125rem;
+      }
+    }
+  }
+
+  .course-details-mentorship {
+    .wrapper {
+      gap: 5rem;
+      .profile-data {
+        width: 35rem;
+        height: 35rem;
+        min-width: 35rem;
+      }
+
+      .content-wrapper {
+        @apply gap-12;
+      }
+    }
+  }
+
+  .course-details-testimonials {
+    .card {
+      height: 37.5rem;
+    }
+  }
+
+  .course-details-certification {
+    .content-wrapper {
+      .left-content {
+        max-width: 40.625rem;
+      }
+    }
+  }
+
+  .hero {
+    .icon-wrapper {
+      padding: 5.5rem 0;
+      .wrapper {
+        .sub-wrapper {
+          .icon {
+            @apply w-14 h-14;
+            svg {
+              @apply w-7 h-7 min-w-7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 87.5rem) {
+  .course-details {
+    .wrapper {
+      gap: 2.5rem;
+
+      .content-wrapper {
+        .points-wrapper {
+          @apply mt-10 gap-6;
+          .point {
+            @apply gap-6;
+            svg {
+              @apply w-8 h-8 min-w-8;
+            }
+          }
+        }
+      }
+
+      .img-wrapper {
+        @apply rounded-2xl;
+        max-width: 26.25rem;
+      }
+    }
+  }
+  .course-details-work {
+    .wrapper {
+      .img-wrapper {
+        @apply flex flex-wrap;
+        .img {
+          @apply p-8;
+          height: 12.5rem;
+        }
+      }
+
+      .content-wrapper {
+        font-size: 4rem;
+      }
+    }
+  }
+  .course-details-exclusive {
+    .card-wrapper {
+      margin-top: 80px;
+
+      .card {
+        @apply rounded-2xl p-10;
+        .img {
+          @apply w-12;
+        }
+
+        .text {
+          @apply mt-4 mb-6;
+        }
+      }
+    }
+  }
+  .course-details-faq {
+    .wrapper {
+      @apply gap-6;
+      .content-wrapper {
+        @apply gap-6;
+        .heading {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+  .course-details-master {
+    padding: 7.5rem 0;
+
+    .content-wrapper {
+      gap: 64px;
+    }
+  }
+  .course-details-learn {
+    .flex-wrapper {
+      margin-bottom: 100px;
+
+      .heading {
+        max-width: 660px;
+        font-size: 4rem;
+      }
+
+      .active-flex {
+        @apply gap-10;
+        .img-wrapper {
+          img {
+            @apply w-12 h-12 -ml-2.5;
+          }
+        }
+      }
+    }
+
+    .faq-wrapper {
+      @apply gap-10;
+      .faq {
+        @apply pt-10;
+
+        .right-content {
+          @apply gap-8;
+          .points-wrapper {
+            @apply gap-5;
+          }
+        }
+      }
+    }
+  }
+  .course-details-mentorship {
+    padding: 7.5rem 0;
+
+    .wrapper {
+      gap: 40px;
+
+      .profile-data {
+        width: 20rem;
+        height: 20rem;
+        min-width: 20rem;
+      }
+
+      .content-wrapper {
+        @apply gap-10;
+        .heading {
+          font-size: 4rem;
+        }
+
+        .link-wrapper {
+          @apply gap-4;
+        }
+      }
+    }
+  }
+  .course-details-certification {
+    .content-wrapper {
+      @apply gap-6;
+      .left-content {
+        max-width: 480px;
+        @apply gap-8;
+        .heading {
+          font-size: 4rem;
+        }
+
+        .img-wrapper {
+          @apply mt-16;
+        }
+      }
+
+      .right-content {
+        .img-wrapper {
+          @apply rounded-2xl;
+        }
+      }
+    }
+  }
+  .hero {
+    .icon-wrapper {
+      padding: 4rem 0;
+
+      .wrapper {
+        @apply gap-4;
+        .sub-wrapper {
+          @apply gap-2.5;
+          .icon {
+            @apply w-12 h-12 min-w-12;
+            svg {
+              @apply w-6 h-6 min-w-6;
+            }
+          }
+
+          .data-wrapper {
+            .description {
+              font-size: 1rem;
+            }
+
+            .sub-heading {
+              font-size: 1.125rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .course-details-testimonials {
+    .content-wrapper {
+      .heading {
+        font-size: 4rem;
+      }
+    }
+
+    .card {
+      height: 35rem;
+      @apply rounded-2xl;
+
+      .content {
+        @apply p-8 gap-10;
+
+        .f-heading {
+          font-size: 32px;
+        }
+
+        .data-wrapper {
+          .icon-hover {
+            max-width: 10rem;
+          }
+        }
+      }
+
+      &:hover {
+        flex: 10;
+
+        .content {
+          .f-heading {
+            @apply block;
+          }
+
+          .data-wrapper {
+            @apply justify-between;
+            .info-wrapper {
+              @apply flex;
+            }
+
+            .icon {
+              @apply hidden;
+            }
+
+            .icon-hover {
+              @apply block;
+            }
+          }
+        }
+      }
+    }
+
+    .flex-wrapper {
+      @apply gap-3;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .course-details {
+    @apply py-16;
+
+    .wrapper {
+      gap: 1.5rem;
+
+      .content-wrapper {
+        .points-wrapper {
+          @apply mt-8 gap-4;
+          .point {
+            @apply gap-4;
+          }
+        }
+      }
+    }
+  }
+  .course-details-work {
+    @apply py-20;
+    .wrapper {
+      .img-wrapper {
+        .img {
+          flex: 1 0 calc(33%);
+        }
+      }
+    }
+  }
+  .course-details-exclusive {
+    @apply py-16;
+    .card-wrapper {
+      margin-top: 4rem;
+
+      .card {
+        @apply p-8;
+        .img {
+          @apply w-10;
+        }
+      }
+    }
+  }
+  .course-details-faq {
+    @apply py-16;
+  }
+  .course-details-master {
+    padding: 6.25rem 0;
+
+    .content-wrapper {
+      gap: 3.5rem;
+      max-width: 30rem;
+    }
+  }
+  .course-details-learn {
+    @apply py-16;
+
+    .flex-wrapper {
+      margin-bottom: 5rem;
+    }
+  }
+  .course-details-mentorship {
+    padding: 6.25rem 0;
+
+    .wrapper {
+      gap: 1.5rem;
+
+      .profile-data {
+        width: 20rem;
+        height: 20rem;
+        min-width: 20rem;
+      }
+
+      .content-wrapper {
+        @apply gap-10;
+        .heading {
+          font-size: 4rem;
+        }
+
+        .link-wrapper {
+          @apply gap-4;
+        }
+      }
+    }
+  }
+  .course-details-certification {
+    @apply py-16;
+    .content-wrapper {
+      .left-content {
+        max-width: 28.125rem;
+
+        .img-wrapper {
+          @apply mt-6;
+        }
+      }
+    }
+  }
+  .course-details-testimonials {
+    @apply py-16;
+    .card {
+      height: 30rem;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .course-details {
+    @apply py-12;
+    .wrapper {
+      @apply flex-col;
+      .content-wrapper {
+        .points-wrapper {
+          @apply mt-10;
+        }
+      }
+
+      .img-wrapper {
+        @apply mx-auto;
+        max-width: 35rem;
+      }
+    }
+  }
+  .course-details-work {
+    @apply py-16;
+    .wrapper {
+      @apply flex-col;
+      .content-wrapper {
+        @apply text-center justify-center items-center order-first mx-auto;
+      }
+
+      .img-wrapper {
+        .img {
+          flex: 1 0 calc(33%);
+          height: 10rem;
+        }
+
+        img {
+          max-height: 100%;
+          width: auto;
+        }
+      }
+    }
+  }
+  .course-details-exclusive {
+    @apply py-12;
+    .card-wrapper {
+      margin-top: 3rem;
+
+      .card {
+        flex: 1 0 calc(50% - 0.625rem);
+        @apply p-6;
+      }
+    }
+  }
+  .course-details-faq {
+    @apply py-12;
+    .wrapper {
+      @apply grid-cols-1;
+      .content-wrapper {
+        @apply gap-4 text-center;
+        .heading {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  .course-details-learn {
+    @apply py-12;
+    .pill {
+      @apply mx-auto;
+    }
+
+    .flex-wrapper {
+      @apply mt-10 pt-0 border-0 text-center gap-6 flex-col items-center justify-center;
+      margin-bottom: 4rem;
+
+      .heading {
+        font-size: 3rem;
+      }
+
+      .active-flex {
+        @apply flex-col-reverse gap-4;
+        .learn {
+          @apply flex-row text-center items-center justify-center;
+        }
+
+        .img-wrapper {
+          img {
+            @apply w-10 h-10 -ml-2;
+          }
+        }
+      }
+    }
+
+    .faq-wrapper {
+      @apply gap-2;
+      .faq {
+        @apply pt-3 grid-cols-1 gap-2;
+        .left-content {
+          @apply flex-col flex gap-3;
+          .c-heading {
+            svg {
+              @apply fill-primary;
+            }
+          }
+        }
+
+        .right-content {
+          @apply gap-6 hidden;
+          .points-wrapper {
+            @apply gap-3 flex;
+            .point {
+              @apply gap-2;
+            }
+          }
+        }
+
+        &.active {
+          .left-content {
+            .c-heading {
+              svg {
+                @apply fill-warning rotate-180;
+              }
+            }
+          }
+
+          .right-content {
+            @apply flex;
+          }
+        }
+      }
+    }
+  }
+  .course-details-mentorship {
+    padding: 6.25rem 0;
+
+    .wrapper {
+      gap: 1.5rem;
+
+      .profile-data {
+        width: 15rem;
+        height: 15rem;
+        min-width: 15rem;
+      }
+
+      .content-wrapper {
+        @apply gap-6;
+        .heading {
+          font-size: 3rem;
+        }
+
+        .link-wrapper {
+          @apply gap-4;
+          svg {
+            @apply w-8 h-8;
+          }
+        }
+      }
+    }
+  }
+  .course-details-certification {
+    @apply py-12;
+    .pill {
+      @apply mx-auto;
+    }
+
+    .content-wrapper {
+      @apply pt-0 border-t-0 flex-col gap-10;
+      .left-content {
+        max-width: 100%;
+        @apply text-center;
+        .heading {
+          font-size: 4rem;
+        }
+
+        .img-wrapper {
+          @apply hidden;
+        }
+      }
+
+      .right-content {
+        .img {
+          @apply flex mt-10;
+          img {
+            max-height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+  .hero {
+    .icon-wrapper {
+      padding: 3rem 0;
+
+      .wrapper {
+        @apply items-center justify-center flex-wrap;
+        .sub-wrapper {
+          @apply w-max;
+        }
+      }
+    }
+  }
+  .course-details-testimonials {
+    @apply py-12;
+    .pill {
+      @apply mx-auto;
+    }
+
+    .content-wrapper {
+      @apply pt-0 border-t-0 flex-col justify-center items-center text-center gap-10;
+    }
+
+    .flex-wrapper {
+      @apply hidden;
+    }
+
+    .card {
+      height: 35rem;
+      @apply rounded-2xl;
+
+      .content {
+        padding: 2rem;
+        gap: 2.5rem;
+      }
+    }
+
+    .swiper-js {
+      @apply block;
+      .c-swiper {
+        @apply pb-9;
+        .swiper-pagination-bullet-active {
+          @apply bg-warning;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .course-details-mentorship {
+    padding: 3.375rem 0;
+
+    .wrapper {
+      @apply flex-col;
+      gap: 1.5rem;
+
+      .profile-data {
+        width: 6.25rem;
+        height: unset;
+        min-width: 100%;
+      }
+
+      .content-wrapper {
+        @apply gap-6;
+        .heading,
+        .link-wrapper {
+          @apply hidden;
+        }
+
+        .description {
+          @apply text-center;
+        }
+      }
+    }
+  }
+  .course-details-testimonials {
+    .card {
+      height: 30rem;
+    }
+  }
+  .course-main-wrapper {
+    .floating-btn-wrapper,
+    .floating-tabs-wrapper {
+      @apply flex;
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .course-details {
+    @apply py-10;
+    .wrapper {
+      @apply flex-col;
+      .content-wrapper {
+        .heading-wrapper {
+          @apply flex flex-col justify-center items-center text-center;
+        }
+
+        .points-wrapper {
+          .point {
+            @apply gap-2;
+            svg {
+              @apply w-6 h-6 min-w-6;
+            }
+          }
+        }
+      }
+
+      .img-wrapper {
+        @apply hidden;
+      }
+    }
+  }
+  .course-details-work {
+    @apply py-12;
+    .wrapper {
+      @apply flex-col;
+      .content-wrapper {
+        font-size: 2rem;
+        max-width: 17.5rem;
+        min-width: auto;
+      }
+
+      .img-wrapper {
+        .img {
+          @apply p-6;
+          height: 7.5rem;
+        }
+      }
+    }
+  }
+  .course-details-exclusive {
+    @apply py-10;
+    .heading {
+      @apply text-center;
+    }
+
+    .card-wrapper {
+      margin-top: 2.5rem;
+
+      .card {
+        flex: 1 0 calc(100%);
+        @apply p-4;
+      }
+    }
+  }
+  .course-details-faq {
+    padding: 2.5rem 0;
+    .wrapper {
+      .content-wrapper {
+        .heading {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .course-details-master {
+    padding: 6rem 0;
+
+    .content-wrapper {
+      gap: 2rem;
+      max-width: 17.5rem;
+    }
+  }
+  .course-details-learn {
+    @apply py-10;
+    .pill {
+      @apply mx-auto text-sm px-4 py-2;
+    }
+
+    .flex-wrapper {
+      @apply mt-8;
+      margin-bottom: 3rem;
+
+      .heading {
+        font-size: 2rem;
+      }
+    }
+
+    .faq-wrapper {
+      .faq {
+        .left-content {
+          @apply flex-col flex gap-3;
+          .c-heading {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  .course-details-certification {
+    @apply py-10;
+    .pill {
+      @apply mx-auto text-sm px-4 py-2;
+    }
+
+    .content-wrapper {
+      @apply mt-8;
+      .left-content {
+        @apply gap-6;
+        .heading {
+          font-size: 4rem;
+        }
+
+        .img-wrapper {
+          @apply hidden;
+        }
+      }
+
+      .right-content {
+        .img {
+          @apply flex mt-10;
+          img {
+            max-height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+  .breadcrumb {
+    @apply hidden;
+  }
+  .course-details-testimonials {
+    @apply py-10;
+    .pill {
+      @apply mx-auto text-sm px-4 py-2;
+    }
+
+    .content-wrapper {
+      margin-top: 2rem;
+      gap: 1.5rem;
+    }
+
+    .card {
+      height: 16.625rem;
+
+      .content {
+        padding: 1rem;
+        gap: 2rem;
+      }
+    }
+  }
+  .hero {
+    .hero-wrapper {
+      .content-wrapper {
+        .btn-wrapper {
+          @apply flex;
+        }
+      }
+    }
+  }
+  .course-main-wrapper {
+    .floating-btn-wrapper {
+      top: calc(100% - 3.75rem);
+    }
+  }
+}

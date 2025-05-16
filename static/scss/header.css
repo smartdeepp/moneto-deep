@@ -1,0 +1,165 @@
+.active_body {
+  @apply overflow-hidden;
+}
+
+img {
+  user-select: none;
+}
+
+#header {
+  @apply fixed left-0 top-0 z-50 w-full transition-all duration-300 bg-transparent;
+}
+#header .wrapper {
+  @apply flex justify-between items-center gap-x-6 py-6 relative;
+}
+#header .wrapper .header_bg {
+  @apply hidden;
+}
+#header .wrapper .logo {
+  @apply order-first relative;
+  max-width: 11.5rem;
+}
+#header .wrapper .header_btn {
+  @apply bg-transparent border-0 outline-0 px-8 py-4 bg-white rounded-full text-black text-xl transition-all duration-300 font-medium;
+  line-height: 1;
+}
+#header .wrapper .btn_wrapper {
+  @apply flex items-center gap-6;
+}
+#header .wrapper .btn_wrapper .link {
+  @apply block no-underline text-xl font-medium text-white transition-all duration-300 py-4 px-4 relative;
+  line-height: 1;
+}
+#header .wrapper .links_wrapper {
+  @apply flex items-center justify-center gap-x-6;
+}
+#header .wrapper .links_wrapper .link_wrapper {
+  @apply list-none;
+}
+#header .wrapper .links_wrapper .link_wrapper .link {
+  @apply block no-underline text-xl font-medium text-white transition-all duration-300 py-4 px-4 relative;
+  line-height: 1;
+}
+#header .wrapper .links_wrapper .link_wrapper .link:after {
+  content: "";
+  @apply w-0 transition-all duration-300 absolute left-0 bottom-0;
+  height: 0.3125rem;
+  background: url("../images/Layer 2.png") repeat-x;
+  background-size: contain;
+}
+#header .wrapper .links_wrapper .link_wrapper .link.active:after {
+  @apply w-full;
+}
+#header .wrapper .links_wrapper .btn-wrapper {
+  @apply hidden;
+}
+#header .wrapper .burger {
+  @apply h-6 w-6 hidden;
+}
+
+@media (max-width: 1536px) {
+  #header .wrapper .logo {
+    max-width: 10.75rem;
+  }
+  #header .wrapper .btn_wrapper {
+    @apply gap-6;
+  }
+  #header .wrapper .btn_wrapper .link {
+    @apply text-lg;
+  }
+  #header .wrapper .links_wrapper {
+    @apply gap-x-5;
+  }
+  #header .wrapper .links_wrapper .link_wrapper .link {
+    @apply text-lg px-3 py-3;
+  }
+}
+@media (max-width: 87.5rem) {
+  #header .wrapper .logo {
+    max-width: 10rem;
+  }
+  #header .wrapper .btn_wrapper {
+    @apply gap-6;
+  }
+  #header .wrapper .links_wrapper {
+    @apply gap-x-4;
+  }
+  #header .wrapper .links_wrapper .link_wrapper .link {
+    @apply text-lg p-2;
+  }
+}
+@media (max-width: 75rem) {
+  #header .wrapper .logo {
+    max-width: 8.75rem;
+  }
+  #header .wrapper .btn_wrapper {
+    @apply gap-4;
+  }
+  #header .wrapper .links_wrapper {
+    @apply gap-x-4;
+  }
+  #header .wrapper .links_wrapper .link_wrapper .link {
+    @apply text-lg p-2;
+  }
+}
+@media (max-width: 62rem) {
+  #header .wrapper .logo {
+    @apply relative;
+    order: unset;
+  }
+  #header .wrapper .btn_wrapper {
+    @apply hidden;
+  }
+  #header .wrapper .links_wrapper {
+    @apply fixed left-0 top-0 w-full h-screen bg-black flex-col overflow-auto gap-y-4 py-20 justify-start pt-28;
+    transform: translateY(-300%);
+    z-index: -2;
+    transition: all 0.5s ease-in-out;
+  }
+  #header .wrapper .links_wrapper .link_wrapper .link {
+    @apply text-2xl;
+  }
+  #header .wrapper .links_wrapper .btn-wrapper {
+    @apply flex flex-col items-center justify-center gap-4;
+  }
+  #header .wrapper .links_wrapper.active {
+    transform: translateY(0);
+  }
+  #header .wrapper .burger {
+    @apply flex relative;
+  }
+  #header .wrapper .header_bg {
+    @apply fixed w-full h-full left-0 top-0 block;
+    z-index: -1;
+    height: 5.875rem;
+    transition: all 0.7s ease-in-out;
+  }
+  #header .wrapper .header_bg.active {
+    @apply bg-black;
+  }
+}
+@media (max-width: 35.4375rem) {
+  #header .wrapper .logo {
+    max-width: 8.75rem;
+  }
+  #header .wrapper .links_wrapper {
+    @apply pt-24 gap-y-3;
+  }
+  #header .wrapper .links_wrapper .link_wrapper .link {
+    @apply text-xl;
+  }
+  #header .wrapper .burger {
+    @apply w-6 h-4;
+  }
+  #header .wrapper .burger .icon {
+    height: 0.125rem;
+  }
+  #header .wrapper .burger:before, #header .wrapper .burger:after {
+    height: 0.125rem;
+  }
+  #header .wrapper .burger.active:before {
+    top: 48%;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

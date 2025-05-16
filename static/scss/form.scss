@@ -1,0 +1,361 @@
+.contactus-wrapper {
+  .left-content-wrapper {
+    @apply w-full;
+    max-width: 44rem;
+
+    .margin-gap {
+      @apply mb-20;
+    }
+
+    .connection-wrapper {
+      @apply flex flex-col;
+      .connect-wrapper {
+        @apply flex flex-col gap-5 border-b border-solid border-grey-100 pb-8;
+        &:last-child {
+          @apply border-none pb-0;
+        }
+      }
+
+      .social-connect-wrapper {
+        @apply flex gap-4 items-center w-full;
+        max-width: 34.625rem;
+
+        svg {
+          @apply w-8 h-8;
+        }
+      }
+    }
+  }
+}
+
+.enrolment-wrapper {
+  .wrapper {
+    @apply items-start grid grid-cols-2;
+  }
+
+  .left-content-wrapper {
+    .card-wrapper {
+      @apply flex gap-10 flex-wrap;
+    }
+
+    .card-heading {
+      font-weight: 500;
+      font-size: 4.5rem;
+      line-height: 100%;
+      max-width: 41.125rem;
+      @apply mb-10;
+    }
+
+    .content-wrapper {
+      @apply mb-24;
+    }
+
+    .card {
+      @apply rounded-3xl flex-1 border-grey-100 border border-solid;
+      padding-bottom: 3.5625rem;
+      min-width: calc(50% - 1.25rem);
+
+      .sub-title {
+        word-break: break-all;
+      }
+    }
+
+    .flex-wrapper {
+      @apply flex w-full;
+      max-width: 41.5rem;
+
+      svg {
+        @apply w-6 h-6;
+      }
+    }
+  }
+}
+
+.wrapper {
+  @apply flex justify-between items-center gap-14;
+  padding-bottom: 10.5625rem;
+}
+
+.logo-wrapper {
+  @apply w-full flex ml-10 mt-10;
+  max-width: 11.5rem;
+  padding-bottom: 6.2325rem;
+}
+
+.right-content-wrapper {
+  @apply w-full;
+  max-width: 53.625rem;
+
+  .form-wrapper {
+    @apply flex flex-col w-full;
+  }
+
+  .form-flex-item {
+    @apply flex justify-center;
+  }
+
+  .input-wrapper {
+    @apply flex-1;
+  }
+
+  .input {
+    @apply w-full border-none outline-none rounded-2xl bg-light-300;
+    ::placeholder {
+      font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 150%;
+    }
+  }
+}
+
+.errorlist {
+  @apply text-warning text-sm;
+}
+
+@media (max-width: 96rem) {
+  .contactus-wrapper {
+    .left-content-wrapper {
+      max-width: 48rem;
+
+      .margin-gap {
+        @apply mb-24;
+      }
+
+      .connection-wrapper {
+        .social-connect-wrapper {
+          max-width: 37.5rem;
+
+          svg {
+            @apply w-9 h-9;
+          }
+        }
+      }
+    }
+  }
+
+  .enrolment-wrapper {
+    .wrapper {
+      @apply gap-16;
+    }
+
+    .left-content-wrapper {
+      .card-wrapper {
+        @apply gap-12;
+      }
+
+      .card-heading {
+        font-size: 5rem;
+        max-width: 45rem;
+        @apply mb-12;
+      }
+
+      .content-wrapper {
+        @apply mb-28;
+      }
+
+      .card {
+        padding-bottom: 4rem;
+        min-width: calc(50% - 1.5rem);
+
+        .sub-title {
+          font-size: 2.75rem;
+        }
+      }
+
+      .flex-wrapper {
+        max-width: 45rem;
+
+        svg {
+          @apply w-7 h-7;
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    padding-bottom: 12rem;
+  }
+
+  .logo-wrapper {
+    max-width: 13rem;
+    padding-bottom: 7.5rem;
+  }
+
+  .right-content-wrapper {
+    max-width: 60rem;
+
+    .input {
+      ::placeholder {
+        font-size: 1.375rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .enrolment-wrapper {
+    .wrapper {
+      @apply gap-10;
+    }
+
+    .left-content-wrapper {
+      .card-wrapper {
+        @apply gap-6;
+      }
+
+      .card-heading {
+        font-size: 4rem;
+        @apply mb-8;
+      }
+
+      .content-wrapper {
+        @apply mb-16;
+      }
+
+      .card {
+        @apply rounded-2xl;
+        padding: 1.5rem;
+        min-width: calc(50% - 0.75rem);
+
+        .sub-title {
+          font-size: 2.25rem;
+        }
+      }
+
+      .flex-wrapper {
+        @apply flex w-full;
+        max-width: 41.5rem;
+
+        svg {
+          @apply w-6 h-6;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contactus-wrapper {
+    .left-content-wrapper {
+      max-width: 50%;
+
+      .margin-gap {
+        @apply mb-12;
+      }
+    }
+  }
+  .wrapper {
+    padding-bottom: 3rem;
+  }
+
+  .logo-wrapper {
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .contactus-wrapper {
+    .left-content-wrapper {
+      max-width: 100%;
+
+      .margin-gap {
+        @apply mb-10;
+      }
+
+      .social-connect-wrapper {
+        @apply max-w-full;
+        svg {
+          @apply w-8 h-8;
+        }
+      }
+    }
+  }
+  .form-flex-item {
+    @apply flex-col w-full;
+  }
+  .wrapper {
+    padding-bottom: 2.5rem;
+  }
+
+  .display {
+    @apply hidden;
+  }
+
+  .wrapper {
+    @apply flex-col;
+    padding-bottom: 2.5rem;
+  }
+
+  .logo-wrapper {
+    padding-bottom: 2.5rem;
+  }
+  .right-content-wrapper {
+    max-width: 100%;
+
+    .input {
+      @apply rounded-lg;
+    }
+
+    .width-wrapper {
+      .btn {
+        @apply max-w-full text-xl;
+      }
+    }
+  }
+  .enrolment-wrapper {
+    .wrapper {
+      @apply grid-cols-1 gap-10;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contactus-wrapper {
+    .left-content-wrapper {
+      .margin-gap {
+        @apply mb-8;
+      }
+    }
+  }
+  .wrapper,
+  .logo-wrapper {
+    padding-bottom: 2rem;
+  }
+  .enrolment-wrapper {
+    .left-content-wrapper {
+      .card-heading {
+        font-size: 2.5rem;
+        @apply mb-4;
+      }
+
+      .content-wrapper {
+        @apply mb-10;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .contactus-wrapper {
+    .left-content-wrapper {
+      .margin-gap {
+        @apply mb-6;
+      }
+    }
+  }
+  .wrapper,
+  .logo-wrapper {
+    padding-bottom: 1.5rem;
+  }
+  .enrolment-wrapper {
+    .left-content-wrapper {
+      .card {
+        min-width: 100%;
+
+        .sub-title {
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}

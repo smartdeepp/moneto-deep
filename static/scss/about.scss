@@ -1,0 +1,993 @@
+.about-brand {
+  @apply py-20;
+  .pill {
+    @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
+  }
+
+  .content-wrapper {
+    @apply mt-10 pt-10 border-t border-t-grey-100 flex flex-col items-stretch gap-16;
+    .flex-wrapper {
+      @apply flex items-end justify-between gap-10 w-full;
+    }
+
+    .sub-heading {
+      @apply text-right;
+    }
+  }
+
+  .grid-wrapper {
+    @apply flex flex-wrap justify-center;
+    .card {
+      flex: 0 0 calc(16.6666666667%);
+      @apply outline outline-1 outline-grey-100 flex items-center justify-center p-8;
+      aspect-ratio: 1;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}
+
+.about-media {
+  .pill {
+    @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-primary;
+  }
+
+  .content {
+    @apply mt-10 pt-10 border-t border-t-grey-100 flex flex-col items-stretch gap-16;
+    .flex-wrapper {
+      @apply flex items-end justify-between gap-10 w-full;
+    }
+
+    .sub-heading {
+      @apply text-right;
+    }
+
+    .about-swiper {
+      @apply w-full h-full overflow-hidden;
+      .card {
+        flex: 0 0 calc(33.33% - 1.375rem);
+
+        .img-wrapper {
+          @apply w-full overflow-hidden rounded-3xl relative;
+          aspect-ratio: 2.06;
+
+          .pill {
+            @apply rounded-full bg-primary text-white absolute w-max uppercase text-base;
+            left: 2rem;
+            top: 2rem;
+            padding: 0.75rem 1.5rem;
+          }
+        }
+
+        .content-wrapper {
+          @apply mt-6 flex flex-col gap-10;
+          .description {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .flex-wrapper {
+            @apply flex items-center gap-4;
+            .profile {
+              @apply rounded-full overflow-hidden;
+              width: 3.5rem;
+              height: 3.5rem;
+            }
+          }
+        }
+      }
+
+      .c-swiper {
+        @apply pb-9;
+        .swiper-pagination-bullet-active {
+          @apply bg-warning;
+        }
+      }
+    }
+  }
+}
+
+.about-founder {
+  @apply bg-light-300;
+  padding: 7.5rem 0;
+
+  .wrapper {
+    @apply flex items-stretch justify-between;
+    gap: 4.3125rem;
+
+    .left-content {
+      @apply w-full;
+      max-width: 44.5rem;
+
+      .data-wrapper {
+        .heading-wrapper {
+          @apply flex flex-col gap-6;
+          svg {
+            width: 8.375rem;
+          }
+        }
+
+        .img-wrapper {
+          @apply hidden overflow-hidden aspect-square rounded-full;
+        }
+      }
+
+      .info-data {
+        font-family: Inter Tight, serif;
+        font-weight: 600;
+        font-size: 2.25rem;
+        line-height: 1;
+        @apply mb-3.5 mt-32;
+      }
+    }
+
+    .right-content {
+      @apply flex-1 overflow-hidden rounded-3xl;
+    }
+  }
+}
+
+.about-mission {
+  @apply py-20;
+  .pill {
+    @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
+  }
+
+  .content-wrapper {
+    @apply mt-10 pt-10 border-t border-t-grey-100 flex flex-col items-stretch gap-16;
+    .flex-wrapper {
+      @apply flex items-end justify-between gap-10 w-full;
+      .heading {
+        max-width: 62.5rem;
+      }
+    }
+
+    .grid-wrapper {
+      @apply flex items-center justify-end;
+      .font-number {
+        @apply flex items-start gap-1 -mr-12;
+        font-size: 15.625rem;
+        line-height: 1;
+        font-family: Inter Tight, serif;
+        font-weight: 600;
+
+        .plus {
+          font-size: 7.5rem;
+          font-weight: 900;
+        }
+      }
+
+      .pill {
+        @apply -rotate-90;
+      }
+
+      .description {
+        max-width: 40.5rem;
+      }
+    }
+  }
+}
+
+.about-exp {
+  @apply py-20;
+  .pill {
+    @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
+  }
+
+  .content-wrapper {
+    @apply mt-10 pt-10 border-t border-t-grey-100 flex flex-col items-stretch gap-12;
+
+    .flex-wrapper {
+      @apply flex items-end justify-between gap-10 w-full;
+      .heading {
+        max-width: 62.5rem;
+      }
+    }
+
+    .grid-wrapper {
+      @apply flex items-start justify-between gap-20;
+      .img-wrapper {
+        @apply flex-1 overflow-hidden rounded-3xl;
+      }
+
+      .content {
+        max-width: 46.75rem;
+        @apply relative flex flex-col;
+        gap: 10.3125rem;
+
+        &:before {
+          @apply bg-warning w-0.5 h-full absolute top-6 -z-10;
+          left: 1.375rem;
+          content: '';
+        }
+
+        .point {
+          @apply flex items-start gap-16 relative;
+          svg {
+            @apply w-12 h-12 min-w-12;
+          }
+
+          .year {
+            font-family: Inter Tight, serif;
+            font-weight: 500;
+            font-size: 3.125rem;
+            line-height: 1;
+            @apply text-primary;
+          }
+
+          .wrapper {
+            .name {
+              font-family: Inter Tight, serif;
+              font-weight: 600;
+              font-size: 2.25rem;
+              line-height: 1;
+              margin-bottom: 0.875rem;
+            }
+          }
+
+          &:last-child {
+            &:before {
+              @apply bg-white w-0.5 h-full absolute top-6;
+              z-index: -1;
+              left: 1.375rem;
+              content: '';
+            }
+          }
+        }
+      }
+    }
+
+    .about-exp-swiper {
+      @apply w-full h-full hidden overflow-hidden;
+      .card {
+        flex: 0 0 calc(33.33% - 1.375rem);
+
+        .img-wrapper {
+          @apply w-full overflow-hidden rounded-3xl relative;
+          aspect-ratio: 2.413;
+        }
+
+        .content-wrapper {
+          @apply mt-6 flex flex-col gap-10;
+          .description {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          .flex-wrapper {
+            @apply flex items-center gap-4;
+            .profile {
+              @apply rounded-full overflow-hidden w-14 h-14;
+            }
+          }
+        }
+      }
+
+      .c-swiper {
+        @apply pb-9;
+        .swiper-pagination-bullet-active {
+          @apply bg-warning;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1536px) {
+  .about-brand {
+    .content-wrapper {
+      .flex-wrapper {
+        .heading {
+          font-size: 4.5rem;
+        }
+      }
+    }
+  }
+  .about-media {
+    .content {
+      .flex-wrapper {
+        .heading {
+          font-size: 4.5rem;
+        }
+      }
+
+      .about-swiper {
+        .card {
+          .img-wrapper {
+            @apply rounded-3xl;
+          }
+
+          .content-wrapper {
+            @apply mt-5 gap-8;
+            .description {
+              font-size: 1.25rem;
+            }
+
+            .flex-wrapper {
+              @apply gap-3;
+              .profile {
+                width: 4rem;
+                height: 4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .about-founder {
+    padding: 7rem 0;
+
+    .wrapper {
+      gap: 3.5rem;
+
+      .left-content {
+        max-width: 37.5rem;
+
+        .data-wrapper {
+          .heading-wrapper {
+            @apply gap-5;
+            .heading {
+              font-size: 4.5rem;
+            }
+
+            svg {
+              width: 7rem;
+            }
+          }
+        }
+
+        .info-data {
+          font-size: 2rem;
+          @apply mb-3 mt-28;
+        }
+      }
+    }
+  }
+  .about-mission {
+    .content-wrapper {
+      .flex-wrapper {
+        .heading {
+          font-size: 4.5rem;
+        }
+      }
+
+      .grid-wrapper {
+        .font-number {
+          font-size: 14rem;
+
+          .plus {
+            font-size: 7rem;
+          }
+        }
+
+        .description {
+          max-width: 37.5rem;
+        }
+      }
+    }
+  }
+  .about-exp {
+    .content-wrapper {
+      .flex-wrapper {
+        .heading {
+          font-size: 4.5rem;
+        }
+      }
+
+      .grid-wrapper {
+        @apply gap-16;
+        .content {
+          max-width: 50%;
+          gap: 8rem;
+
+          .point {
+            @apply gap-12;
+
+            .year {
+              font-size: 3rem;
+            }
+
+            .wrapper {
+              .name {
+                font-size: 2.25rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .about-brand {
+    .content-wrapper {
+      .flex-wrapper {
+        .heading {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+  .about-media {
+    .content {
+      .flex-wrapper {
+        .heading {
+          font-size: 4rem;
+        }
+      }
+
+      .about-swiper {
+        .card {
+          .img-wrapper {
+            @apply rounded-2xl;
+          }
+
+          .content-wrapper {
+            @apply mt-4 gap-6;
+            .description {
+              font-size: 1.125rem;
+            }
+
+            .flex-wrapper {
+              @apply gap-2;
+              .profile {
+                @apply w-12 h-12;
+                min-width: 3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .about-founder {
+    padding: 6.25rem 0;
+
+    .wrapper {
+      gap: 1.5rem;
+
+      .left-content {
+        max-width: 32.5rem;
+
+        .data-wrapper {
+          .heading-wrapper {
+            @apply gap-4;
+            .heading {
+              font-size: 4rem;
+            }
+
+            svg {
+              width: 5rem;
+            }
+          }
+        }
+
+        .info-data {
+          font-size: 1.75rem;
+          @apply mb-2 mt-20;
+        }
+      }
+
+      .right-content {
+        @apply rounded-2xl;
+      }
+    }
+  }
+  .about-mission {
+    .content-wrapper {
+      .flex-wrapper {
+        .heading {
+          font-size: 4rem;
+        }
+      }
+
+      .grid-wrapper {
+        .font-number {
+          font-size: 12.5rem;
+
+          .plus {
+            font-size: 6.25rem;
+          }
+        }
+
+        .pill {
+          @apply flex-shrink-0;
+        }
+
+        .description {
+          max-width: 35rem;
+        }
+      }
+    }
+  }
+  .about-exp {
+    .content-wrapper {
+      .flex-wrapper {
+        .heading {
+          font-size: 4rem;
+        }
+      }
+
+      .grid-wrapper {
+        @apply gap-6;
+        .img-wrapper {
+          @apply rounded-2xl;
+        }
+
+        .content {
+          max-width: 55%;
+          gap: 4rem;
+
+          .point {
+            @apply gap-8;
+
+            .year {
+              font-size: 2.5rem;
+            }
+
+            .wrapper {
+              .name {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-brand {
+    @apply py-16;
+    .content-wrapper {
+      .flex-wrapper {
+        .heading {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  .about-media {
+    @apply py-16;
+    .content {
+      .flex-wrapper {
+        .heading {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+  .about-founder {
+    padding: 5rem 0;
+
+    .wrapper {
+      .left-content {
+        max-width: 25.625rem;
+
+        .data-wrapper {
+          .heading-wrapper {
+            .heading {
+              font-size: 3rem;
+            }
+
+            svg {
+              width: 4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about-mission {
+    @apply py-16;
+    .content-wrapper {
+      .flex-wrapper {
+        .heading {
+          font-size: 3rem;
+        }
+      }
+
+      .grid-wrapper {
+        .font-number {
+          font-size: 10rem;
+
+          .plus {
+            font-size: 4rem;
+          }
+        }
+
+        .description {
+          max-width: 32.5rem;
+        }
+      }
+    }
+  }
+  .about-exp {
+    @apply py-16;
+    .content-wrapper {
+      .flex-wrapper {
+        .heading {
+          font-size: 3rem;
+        }
+      }
+
+      .grid-wrapper {
+        .content {
+          gap: 2.5rem;
+
+          &:before {
+            left: 1.1875rem;
+          }
+
+          .point {
+            svg {
+              @apply w-10 h-10 min-w-10;
+            }
+
+            .year {
+              font-size: 2.25rem;
+            }
+
+            .wrapper {
+              .name {
+                font-size: 1.75rem;
+              }
+            }
+
+            &:last-child {
+              &:before {
+                left: 1.1875rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about-brand {
+    @apply py-12;
+    .pill {
+      @apply mx-auto;
+    }
+
+    .content-wrapper {
+      @apply pt-0 border-t-0 mt-8 flex-col gap-10;
+      .flex-wrapper {
+        @apply flex-col items-center justify-center text-center gap-4;
+        .sub-heading {
+          @apply text-center;
+        }
+      }
+
+      .grid-wrapper {
+        @apply flex flex-wrap;
+        .card {
+          flex: 0 0 calc(20%);
+          @apply p-6;
+        }
+      }
+    }
+  }
+  .about-media {
+    @apply py-12;
+    .pill {
+      @apply mx-auto;
+    }
+
+    .content {
+      @apply pt-0 border-t-0 mt-8 flex-col gap-10;
+      .flex-wrapper {
+        @apply flex-col items-center justify-center text-center gap-4;
+        .sub-heading {
+          @apply text-center;
+        }
+      }
+
+      .about-swiper {
+        .card {
+          .content-wrapper {
+            .flex-wrapper {
+              @apply flex-wrap flex-row justify-start;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about-founder {
+    padding: 4rem 0;
+
+    .wrapper {
+      .left-content {
+        max-width: 100%;
+
+        .data-wrapper {
+          @apply grid grid-cols-2 items-center gap-6 mb-8;
+          .heading-wrapper {
+            .heading {
+              font-size: 4rem;
+            }
+
+            svg {
+              width: 64px;
+            }
+          }
+
+          .img-wrapper {
+            @apply flex;
+          }
+        }
+
+        .info-data {
+          @apply hidden;
+        }
+      }
+
+      .right-content {
+        @apply hidden;
+      }
+    }
+  }
+  .about-mission {
+    @apply py-12;
+    .pill {
+      @apply mx-auto;
+    }
+
+    .content-wrapper {
+      @apply pt-0 border-t-0 mt-8 flex-col gap-10;
+      .flex-wrapper {
+        @apply flex-col items-center justify-center text-center gap-4;
+        .sub-heading {
+          @apply text-center;
+        }
+      }
+
+      .grid-wrapper {
+        @apply flex-col;
+        .font-number {
+          @apply items-center text-black mr-0;
+          font-size: 4rem;
+
+          .plus {
+            font-size: 32px;
+          }
+        }
+
+        .pill {
+          @apply rotate-0 border-0 outline-0 p-0 text-grey-400;
+        }
+
+        .description {
+          @apply mx-auto text-center mt-14;
+        }
+      }
+    }
+  }
+  .about-exp {
+    @apply py-12;
+    .pill {
+      @apply mx-auto;
+    }
+
+    .content-wrapper {
+      @apply pt-0 border-t-0 mt-8 flex-col gap-10;
+      .flex-wrapper {
+        @apply flex-col items-center justify-center text-center gap-4;
+        .sub-heading {
+          @apply text-center;
+        }
+      }
+
+      .grid-wrapper {
+        @apply hidden;
+      }
+
+      .about-exp-swiper {
+        @apply block;
+        .card {
+          .content-wrapper {
+            .flex-wrapper {
+              @apply flex-wrap flex-row justify-start;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-brand {
+    .content-wrapper {
+      .grid-wrapper {
+        @apply flex flex-wrap;
+        .card {
+          flex: 0 0 calc(20%);
+          @apply p-3.5;
+        }
+      }
+    }
+  }
+  .about-founder {
+    padding: 2.5rem 0;
+  }
+}
+
+@media (max-width: 568px) {
+  .about-brand {
+    @apply py-10;
+    .pill {
+      @apply mx-auto text-sm px-4 py-2;
+    }
+
+    .content-wrapper {
+      .flex-wrapper {
+        .heading {
+          font-size: 2rem;
+        }
+      }
+
+      .grid-wrapper {
+        .card {
+          flex: 0 0 calc(33%);
+          @apply p-3;
+        }
+      }
+    }
+  }
+  .about-media {
+    @apply py-10;
+    .pill {
+      @apply mx-auto text-sm px-4 py-2;
+    }
+
+    .content {
+      @apply pt-0 border-t-0 mt-8 flex-col gap-10;
+      .flex-wrapper {
+        .heading {
+          font-size: 2rem;
+        }
+      }
+
+      .about-swiper {
+        .card {
+          .img-wrapper {
+            aspect-ratio: 1.4;
+          }
+
+          .content-wrapper {
+            @apply mt-5 gap-4;
+            .description {
+              font-size: 1rem;
+            }
+
+            .flex-wrapper {
+              @apply gap-3;
+              .profile {
+                width: 2rem;
+                height: 2rem;
+                min-width: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .about-founder {
+    padding: 40px 0;
+
+    .wrapper {
+      .left-content {
+        .data-wrapper {
+          @apply grid grid-cols-2 items-center gap-6 mb-8;
+          .heading-wrapper {
+            .heading {
+              font-size: 2rem;
+            }
+
+            svg {
+              width: 40px;
+            }
+          }
+
+          .img-wrapper {
+            @apply flex;
+          }
+        }
+
+        .info-data {
+          @apply hidden;
+        }
+      }
+
+      .right-content {
+        @apply hidden;
+      }
+    }
+  }
+  .about-mission {
+    @apply py-10;
+    .pill {
+      @apply mx-auto text-sm px-4 py-2;
+    }
+
+    .content-wrapper {
+      @apply pt-0 border-t-0 mt-8 flex-col gap-10;
+      .flex-wrapper {
+        .heading {
+          font-size: 2rem;
+        }
+      }
+
+      .grid-wrapper {
+        .font-number {
+          font-size: 32px;
+
+          .plus {
+            font-size: 32px;
+          }
+        }
+
+        .description {
+          @apply mt-8;
+        }
+      }
+    }
+  }
+  .about-exp {
+    @apply py-10;
+    .pill {
+      @apply mx-auto text-sm px-4 py-2;
+    }
+
+    .content-wrapper {
+      @apply pt-0 border-t-0 mt-8 flex-col gap-4;
+      .flex-wrapper {
+        .heading {
+          font-size: 2rem;
+        }
+      }
+
+      .about-exp-swiper {
+        .card {
+          .img-wrapper {
+            aspect-ratio: 1.4;
+          }
+
+          .content-wrapper {
+            @apply mt-5 gap-4;
+            .description {
+              font-size: 1rem;
+            }
+
+            .flex-wrapper {
+              @apply gap-3;
+              .profile {
+                width: 2rem;
+                height: 2rem;
+                min-width: 2rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

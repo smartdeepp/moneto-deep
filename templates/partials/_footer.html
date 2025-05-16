@@ -1,0 +1,88 @@
+{% load static helper %}
+
+{% block page_css %}
+{% endblock page_css %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="f-wrapper">
+            <div class="f-left">
+                <div class="c-heading bottom-gap width-wrapper" data-color="l-500">Learn Photography
+                    <span data-color="s-500">The Right Way.</span>
+                </div>
+                <div class="btn-wrapper">
+                    <a class="btn" data-smaill data-variant="primary" href="/">Enroll now</a>
+                    <a class="btn" data-variant="outline" href="/">Learn More</a>
+                </div>
+            </div>
+            <div class="f-center">
+                <div class="u-main-wrapper">
+                    <h2 class="caption letter-wrapper" data-color="g-250" data-lh="1" data-mb="s">Location</h2>
+                    <p class="text width-wrapper" data-color="l-200">2972 Westheimer Rd. Santa Ana, Illinois</p>
+                </div>
+                <div class="d-main-wrapper">
+                    <p class="caption letter-wrapper" data-color="g-250" data-lh="1" data-mb="s">USEFUL LINKS</p>
+                    <div class="link-wrapper">
+                        <div class="a-link">
+                            {% get_site_root as site_root %}
+                            {% bottom_menu parent=site_root calling_page=self %}
+                        </div>
+                        <div class="a-link">
+                            <a href="#" class="link description" data-color="l-200">Courses</a>
+                            <a href="#" class="link description" data-color="l-200">Offline Course</a>
+                            <a href="#" class="link description" data-color="l-200">Online Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="f-right">
+                <div class="u-main-wrapper">
+                    <h2 class="caption letter-wrapper" data-color="g-250" data-lh="1" data-mb="s">Contact</h2>
+                    <a href="/" class="text" data-color="l-200">+ (406) 555-0120
+                    </a>
+                    <a href="/" class="text" data-color="l-200">support@example.com</a>
+                </div>
+                <div class="d-main-wrapper">
+                    <p class="caption letter-wrapper" data-color="g-250" data-lh="1" data-mb="l">Connect with us</p>
+                    <div class="social-link-wrapper">
+                        <a href="#" class="social-link" data-color="l-200">
+                            <svg viewBox="0 0 48 48" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.6 4H32.4C38.8 4 44 9.2 44 15.6V32.4C44 35.4765 42.7779 38.427 40.6024 40.6024C38.427 42.7779 35.4765 44 32.4 44H15.6C9.2 44 4 38.8 4 32.4V15.6C4 12.5235 5.22214 9.57298 7.39756 7.39756C9.57298 5.22214 12.5235 4 15.6 4ZM15.2 8C13.2904 8 11.4591 8.75857 10.1088 10.1088C8.75857 11.4591 8 13.2904 8 15.2V32.8C8 36.78 11.22 40 15.2 40H32.8C34.7096 40 36.5409 39.2414 37.8912 37.8912C39.2414 36.5409 40 34.7096 40 32.8V15.2C40 11.22 36.78 8 32.8 8H15.2ZM34.5 11C35.163 11 35.7989 11.2634 36.2678 11.7322C36.7366 12.2011 37 12.837 37 13.5C37 14.163 36.7366 14.7989 36.2678 15.2678C35.7989 15.7366 35.163 16 34.5 16C33.837 16 33.2011 15.7366 32.7322 15.2678C32.2634 14.7989 32 14.163 32 13.5C32 12.837 32.2634 12.2011 32.7322 11.7322C33.2011 11.2634 33.837 11 34.5 11ZM24 14C26.6522 14 29.1957 15.0536 31.0711 16.9289C32.9464 18.8043 34 21.3478 34 24C34 26.6522 32.9464 29.1957 31.0711 31.0711C29.1957 32.9464 26.6522 34 24 34C21.3478 34 18.8043 32.9464 16.9289 31.0711C15.0536 29.1957 14 26.6522 14 24C14 21.3478 15.0536 18.8043 16.9289 16.9289C18.8043 15.0536 21.3478 14 24 14ZM24 18C22.4087 18 20.8826 18.6321 19.7574 19.7574C18.6321 20.8826 18 22.4087 18 24C18 25.5913 18.6321 27.1174 19.7574 28.2426C20.8826 29.3679 22.4087 30 24 30C25.5913 30 27.1174 29.3679 28.2426 28.2426C29.3679 27.1174 30 25.5913 30 24C30 22.4087 29.3679 20.8826 28.2426 19.7574C27.1174 18.6321 25.5913 18 24 18Z"
+                                      fill="#A8A8A8"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" data-color="l-200">
+                            <svg viewBox="0 0 48 48" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M44 24C44 12.96 35.04 4 24 4C12.96 4 4 12.96 4 24C4 33.68 10.88 41.74 20 43.6V30H16V24H20V19C20 15.14 23.14 12 27 12H32V18H28C26.9 18 26 18.9 26 20V24H32V30H26V43.9C36.1 42.9 44 34.38 44 24Z"
+                                      fill="#A8A8A8"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" target="_blank" data-color="l-200">
+                            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <mask id="mask0_2_175" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                      y="0" width="48" height="48">
+                                    <path d="M0 0H48V48H0V0Z" fill="white"/>
+                                </mask>
+                                <g mask="url(#mask0_2_175)">
+                                    <path d="M37.8 2.24902H45.1611L29.0811 20.6742L48 45.7507H33.1886L21.5794 30.545L8.31086 45.7507H0.942857L18.1406 26.0365L0 2.25245H15.1886L25.6663 16.1485L37.8 2.24902ZM35.2114 41.3347H39.2914L12.96 6.43531H8.58514L35.2114 41.3347Z"
+                                          fill="#A8A8A8"/>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-wrapper">
+            <div class="c-link caption">Copyright @ 2025 Moneta Academy</div>
+            <div class="c-link">
+                <a class="caption" href="">Privacy Policy</a>
+                <div class="c-line"></div>
+                <a class="caption" href="">Terms & Conditions</a>
+            </div>
+            <div class="c-link caption">Design by WhatMatters.design</div>
+        </div>
+    </div>
+</footer>

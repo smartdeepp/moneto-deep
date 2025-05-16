@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_css %}
+    <link rel="stylesheet" href="{% static 'css/alumni.css' %}">
+{% endblock page_css %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-img-wrapper">
+        <img src="{{ self.image.file.url }}" alt="hero image" class="img-full"/>
+    </div>
+    <div class="container hero-wrapper">
+        <div class="content-wrapper" data-gap="2xl">
+            <h1 class="title capitalize" data-color="l-400">{{ self.heading|safe }}</h1>
+            <p class="description" data-color="l-400">{{ self.description }}</p>
+        </div>
+    </div>
+</section>
+<section class="alumni">
+    <div class="container">
+        <div class="tabs-wrapper">
+            <button data-value="team" class="_alumni_tabs tab sub-heading active capitalize">Students</button>
+            <button data-value="work" class="_alumni_tabs tab sub-heading capitalize">Work</button>
+        </div>
+        <div class="heading-wrapper">
+            <div class="heading capitalize" data-color="g-500">
+                <span data-color="p-500">Faces Behinds</span>
+                The Frames
+            </div>
+            <div class="sub-heading" data-color="g-600">Leading brands who trust <br/>
+                us to shape the future of photography
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div data-value="team" class="_alumni_content_wrapper team-wrapper active">
+                {% for work in self.student_works  %}
+                    <div class="team">
+                        <div class="img-wrapper">
+                            <div class="img">
+                                <img src="{{ work.value.profile.file.url }}" alt="team image" class="img-full"/>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="sub-heading capitalize" data-weight="500">{{ work.value.name }}</div>
+                            <div class="description capitalize" data-color="g-400">{{ work.value.role }}</div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div data-value="work" data-gap="xl" class="_alumni_content_wrapper work-wrapper">
+                {% for work in self.student_works  %}
+                    <div class="card">
+                    <img src="{{ work.value.work.file.url }}" alt="work image" class="img-full"/>
+                    <div class="content">
+                        <div class="info-wrapper">
+                            <div class="profile">
+                                <img src="{{ work.value.profile.file.url }}" alt="work image" class="img-full"/>
+                            </div>
+                            <div class="profile_data">
+                                <div class="description" data-color="l-450">{{ work.value.name }}</div>
+                                <div class="info-text" data-color="g-100">{{ work.value.role }}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+
+{% block page_script %}
+<script>
+    $('._alumni_tabs').click(function () {
+        $('._alumni_tabs').removeClass('active');
+        $('._alumni_content_wrapper').removeClass('active');
+        $(this).addClass('active');
+        const value = $(this).data('value');
+        $(`._alumni_content_wrapper[data-value="${value}"]`).addClass('active');
+    });
+</script>
+{% endblock page_script %}
+

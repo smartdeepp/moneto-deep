@@ -1,0 +1,772 @@
+.lighting-wrapper {
+  padding-top: 9.75rem;
+  padding-bottom: 9.75rem;
+
+  .wrapper {
+    @apply flex justify-between items-center gap-10;
+  }
+
+  .right-content-wrapper {
+    @apply w-full flex flex-col;
+    gap: 6rem;
+    max-width: 56.25rem;
+
+    .up-wrapper {
+      @apply flex flex-col gap-14;
+    }
+  }
+
+  .down-wrapper {
+    @apply border-t border-solid border-grey-100;
+    padding: 4rem 5rem 1.5rem 5rem;
+
+    .cards-wrapper {
+      @apply flex justify-between items-center;
+      gap: 10.5rem;
+
+      .card {
+        .number-content-wrapper {
+          @apply flex flex-col;
+          gap: 3.5rem;
+
+          .font-number {
+            @apply flex items-start gap-1 -mr-12;
+            font-weight: 600;
+            font-size: 6.25rem;
+            line-height: 1;
+
+            .plus {
+              font-size: 3.5rem;
+              font-weight: 800;
+            }
+          }
+        }
+
+        &:first-child {
+          @apply border-r border-solid border-grey-100;
+          padding-right: 10.5rem;
+        }
+      }
+    }
+  }
+
+  .left-content-wrapper {
+    @apply relative w-full;
+    max-width: 44rem;
+    height: 44.0625rem;
+
+    .card-img-wrapper {
+      @apply absolute w-full rounded-2xl overflow-hidden;
+      &.card-img-wrapper-1 {
+        @apply w-full bottom-0 aspect-square overflow-hidden right-0;
+        z-index: 1;
+        max-width: 33.75rem;
+      }
+
+      &.card-img-wrapper-2 {
+        @apply aspect-square w-full overflow-hidden top-0 left-0;
+        max-width: 23.125rem;
+      }
+    }
+  }
+}
+
+.m-lighting-wrapper {
+  @apply hidden;
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+
+  .img-wrapper {
+    @apply w-full my-8 mx-auto overflow-hidden rounded-xl;
+    max-width: 21.4375rem;
+    height: 15rem;
+  }
+
+  .info {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0;
+    text-align: center;
+    padding-bottom: 3.5rem;
+  }
+
+  .number-wrapper {
+    @apply flex flex-col;
+    gap: 4.5rem;
+
+    .card {
+      @apply mx-auto;
+      .font-number,
+      .plus {
+        @apply flex gap-1 justify-center;
+        font-family: Inter Tight, serif;
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 1;
+      }
+
+      .font-number {
+        @apply mb-6;
+      }
+
+      .description {
+        font-family: Inter;
+        font-weight: 500;
+        font-size: 1.25rem;
+        line-height: 150%;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
+.course-details-exclusive {
+  @apply py-20 bg-light-300;
+  .heading {
+    max-width: 56.25rem;
+  }
+
+  .card-wrapper {
+    @apply flex flex-wrap items-stretch justify-center gap-5;
+    margin-top: 7.5rem;
+
+    .card {
+      @apply bg-white rounded-3xl px-10 py-14 transition-all duration-300;
+      flex: 1 0 calc(33.33% - 0.875rem);
+
+      .img {
+        @apply w-16;
+      }
+
+      .text {
+        @apply mt-6 mb-8;
+      }
+
+      .description {
+        @apply transition-all duration-300;
+      }
+
+      &:hover {
+        @apply bg-success;
+        .description {
+          @apply text-grey-800;
+        }
+      }
+    }
+  }
+}
+
+.course-details-master {
+  padding: 10.5rem 0;
+  @apply relative;
+  .img-wrapper {
+    @apply absolute -z-10 left-0 top-0  w-full h-full;
+  }
+
+  .content-wrapper {
+    @apply flex mx-auto items-center justify-center text-center flex-col;
+    max-width: 44.125rem;
+    gap: 4.5rem;
+
+    .enroll-btn {
+      .btn {
+        @apply text-grey font-bold;
+      }
+    }
+  }
+}
+
+.workshop-reviews {
+  @apply py-20 bg-light-300;
+  .workshop-swiper {
+    @apply w-full h-full overflow-hidden;
+    margin-top: 7.5rem;
+
+    .c-workshop-swiper {
+      @apply pb-9;
+      .swiper-pagination-bullet-active {
+        @apply bg-warning;
+      }
+    }
+
+    .card {
+      @apply bg-white px-10 py-14 rounded-3xl flex flex-col justify-between gap-16;
+      .profiler-wrapper {
+        @apply flex items-center gap-3;
+        .profile {
+          @apply rounded-full overflow-hidden w-20 h-20;
+        }
+
+        .data-wrapper {
+          @apply flex flex-col gap-3;
+        }
+      }
+    }
+  }
+}
+
+.workshop-g {
+  @apply py-20;
+  .workshop-g-swiper {
+    @apply pb-9;
+    .swiper-pagination-bullet-active {
+      @apply bg-warning;
+    }
+
+    @apply w-full h-full overflow-hidden mt-20;
+    .card-wrapper {
+      @apply flex flex-col gap-14;
+      .card {
+        @apply overflow-hidden rounded-3xl;
+        aspect-ratio: 1.273;
+      }
+    }
+
+    &.m-wrapper {
+      @apply hidden;
+    }
+  }
+}
+
+.hero {
+  .hero-wrapper {
+    @apply flex-col;
+
+    .content-wrapper {
+      @apply h-full flex-1;
+      .btn-wrapper {
+        @apply hidden;
+      }
+    }
+  }
+
+  .icon-wrapper {
+    @apply mt-auto relative bg-light-300;
+    padding: 4.75rem 0;
+
+    .wrapper {
+      @apply flex justify-between items-center gap-6;
+      .sub-wrapper {
+        @apply flex items-center gap-4;
+        .icon {
+          @apply flex items-center justify-center w-16 h-16 border border-grey-250 rounded-full;
+          svg {
+            @apply w-8 h-8 min-w-8;
+          }
+        }
+
+        .data-wrapper {
+          @apply flex-col flex gap-1;
+        }
+      }
+    }
+  }
+}
+
+.breadcrumb {
+  @apply flex items-center gap-4;
+  svg {
+    @apply fill-white stroke-white -rotate-90;
+  }
+}
+
+@media (max-width: 1536px) {
+  .lighting-wrapper {
+    padding-top: 8.75rem;
+    padding-bottom: 8.75rem;
+
+    .right-content-wrapper {
+      gap: 5rem;
+      max-width: 50rem;
+
+      .up-wrapper {
+        @apply gap-12;
+      }
+    }
+
+    .down-wrapper {
+      padding: 4.5rem 4.5rem 1.5rem;
+
+      .cards-wrapper {
+        gap: 8rem;
+
+        .card {
+          .number-content-wrapper {
+            gap: 4rem;
+
+            .font-number {
+              font-size: 5.5rem;
+
+              .plus {
+                font-size: 3.25rem;
+              }
+            }
+          }
+
+          &:first-child {
+            padding-right: 8rem;
+          }
+        }
+      }
+    }
+
+    .left-content-wrapper {
+      max-width: 40rem;
+      height: 40rem;
+
+      .card-img-wrapper {
+        &.card-img-wrapper-1 {
+          max-width: 31.25rem;
+        }
+
+        &.card-img-wrapper-2 {
+          max-width: 20rem;
+        }
+      }
+    }
+  }
+
+  .course-details-exclusive {
+    .card-wrapper {
+      margin-top: 6.25rem;
+
+      .card {
+        @apply rounded-2xl px-8 py-12;
+        .img {
+          @apply w-14;
+        }
+      }
+    }
+  }
+
+  .course-details-master {
+    padding: 9rem 0;
+
+    .content-wrapper {
+      max-width: 40rem;
+      gap: 5rem;
+    }
+  }
+
+  .workshop-reviews {
+    .workshop-swiper {
+      margin-top: 6.875rem;
+
+      .card {
+        @apply px-8 py-12 gap-14;
+        .profiler-wrapper {
+          .profile {
+            @apply w-16 h-16;
+          }
+        }
+      }
+    }
+  }
+
+  .workshop-g {
+    .workshop-g-swiper {
+      @apply mt-16;
+      .card-wrapper {
+        @apply gap-10;
+      }
+    }
+  }
+
+  .hero {
+    .icon-wrapper {
+      padding: 4.25rem 0;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .lighting-wrapper {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+
+    .wrapper {
+      @apply gap-8;
+    }
+
+    .right-content-wrapper {
+      gap: 3rem;
+      max-width: 34.375rem;
+
+      .up-wrapper {
+        @apply gap-10;
+      }
+    }
+
+    .down-wrapper {
+      padding: 4rem;
+
+      .cards-wrapper {
+        gap: 5rem;
+
+        .card {
+          .number-content-wrapper {
+            gap: 3rem;
+
+            .font-number {
+              @apply -mr-12;
+              font-size: 5rem;
+
+              .plus {
+                font-size: 3rem;
+              }
+            }
+          }
+
+          &:first-child {
+            padding-right: 5rem;
+          }
+        }
+      }
+    }
+
+    .left-content-wrapper {
+      @apply relative w-full;
+      max-width: 37.5rem;
+      height: 37.5rem;
+
+      .card-img-wrapper {
+        &.card-img-wrapper-1 {
+          z-index: 1;
+          max-width: 27.5rem;
+        }
+
+        &.card-img-wrapper-2 {
+          @apply w-full top-0 left-0;
+          max-width: 16.875rem;
+        }
+      }
+    }
+  }
+  .course-details-exclusive {
+    .card-wrapper {
+      margin-top: 80px;
+
+      .card {
+        @apply rounded-2xl p-10;
+        .img {
+          @apply w-12;
+        }
+
+        .text {
+          @apply mt-4 mb-6;
+        }
+      }
+    }
+  }
+  .course-details-master {
+    padding: 7.5rem 0;
+
+    .content-wrapper {
+      gap: 64px;
+    }
+  }
+  .workshop-reviews {
+    .workshop-swiper {
+      margin-top: 100px;
+
+      .card {
+        @apply p-10 gap-10;
+        .profiler-wrapper {
+          .profile {
+            @apply w-16 h-16;
+          }
+        }
+      }
+    }
+  }
+  .workshop-g {
+    .workshop-g-swiper {
+      .card-wrapper {
+        @apply gap-6;
+      }
+    }
+  }
+  .hero {
+    .icon-wrapper {
+      padding: 4rem 0;
+
+      .wrapper {
+        @apply gap-4;
+        .sub-wrapper {
+          @apply gap-2.5;
+          .icon {
+            @apply w-12 h-12 min-w-12;
+            svg {
+              @apply w-6 h-6 min-w-6;
+            }
+          }
+
+          .data-wrapper {
+            .description {
+              font-size: 16px;
+            }
+
+            .sub-heading {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .lighting-wrapper {
+    .right-content-wrapper {
+      .up-wrapper {
+        @apply gap-8;
+      }
+    }
+  }
+  .course-details-exclusive {
+    @apply py-16;
+    .card-wrapper {
+      margin-top: 64px;
+
+      .card {
+        @apply p-8;
+        .img {
+          @apply w-10;
+        }
+      }
+    }
+  }
+  .course-details-master {
+    padding: 6.25rem 0;
+
+    .content-wrapper {
+      gap: 56px;
+      max-width: 480px;
+    }
+  }
+  .workshop-reviews {
+    @apply py-16;
+
+    .workshop-swiper {
+      margin-top: 80px;
+
+      .card {
+        @apply p-8 gap-8;
+        .profiler-wrapper {
+          .profile {
+            @apply w-12 h-12;
+          }
+
+          .data-wrapper {
+            @apply gap-0;
+          }
+        }
+      }
+    }
+  }
+  .workshop-g {
+    @apply py-16;
+
+    .workshop-g-swiper {
+      @apply mt-16;
+      .card-wrapper {
+        @apply gap-6;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .lighting-wrapper {
+    @apply hidden;
+  }
+  .m-lighting-wrapper {
+    @apply block mx-auto;
+    max-width: 30rem;
+
+    .heading {
+      @apply text-center;
+    }
+
+    .img-wrapper {
+      @apply w-full my-8 mx-auto overflow-hidden rounded-xl;
+      max-width: 21.4375rem;
+      height: 15rem;
+    }
+
+    .info {
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 150%;
+      letter-spacing: 0;
+      text-align: center;
+      padding-bottom: 3.5rem;
+    }
+
+    .number-wrapper {
+      @apply flex flex-col;
+      gap: 4.5rem;
+
+      .card {
+        @apply mx-auto;
+
+        .description {
+          font-family: Inter;
+          font-weight: 500;
+          font-size: 1.25rem;
+          line-height: 150%;
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+  .course-details-exclusive {
+    @apply py-12;
+    .card-wrapper {
+      margin-top: 48px;
+
+      .card {
+        flex: 1 0 calc(50% - 10px);
+        @apply p-6;
+      }
+    }
+  }
+  .workshop-reviews {
+    @apply py-12;
+    .heading {
+      @apply text-center mx-auto;
+    }
+
+    .workshop-swiper {
+      margin-top: 64px;
+    }
+  }
+  .workshop-g {
+    @apply py-12;
+    .heading {
+      @apply text-center mx-auto;
+    }
+
+    .workshop-g-swiper {
+      @apply mt-12;
+
+      .card-wrapper {
+        .card {
+          aspect-ratio: 1.86;
+        }
+      }
+
+      &.m-wrapper {
+        @apply flex;
+      }
+
+      &.w-wrapper {
+        @apply hidden;
+      }
+    }
+  }
+  .hero {
+    .icon-wrapper {
+      padding: 3rem 0;
+
+      .wrapper {
+        @apply items-center justify-center flex-wrap;
+        .sub-wrapper {
+          @apply w-max;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .course-details-exclusive {
+    @apply py-10;
+    .heading {
+      @apply text-center;
+    }
+
+    .card-wrapper {
+      margin-top: 40px;
+
+      .card {
+        flex: 1 0 calc(100%);
+        @apply p-4;
+      }
+    }
+  }
+  .course-details-master {
+    padding: 6rem 0;
+
+    .content-wrapper {
+      gap: 32px;
+      max-width: 280px;
+    }
+  }
+  .workshop-reviews {
+    @apply py-10;
+    .workshop-swiper {
+      margin-top: 40px;
+
+      .card {
+        @apply py-8 px-6 gap-10;
+        .profiler-wrapper {
+          .profile {
+            @apply w-10 h-10;
+          }
+
+          .data-wrapper {
+            @apply gap-1.5;
+          }
+        }
+      }
+    }
+  }
+  .workshop-g {
+    @apply py-10;
+
+    .workshop-g-swiper {
+      margin-top: 40px;
+    }
+  }
+  .hero {
+    .hero-wrapper {
+      .content-wrapper {
+        .btn-wrapper {
+          @apply flex;
+        }
+      }
+    }
+
+    .icon-wrapper {
+      padding: 1.5rem 0;
+      @apply bg-transparent;
+
+      .wrapper {
+        gap: 1.875rem;
+
+        .sub-wrapper {
+          @apply w-max;
+          .icon {
+            @apply w-12 h-12;
+          }
+
+          .data-wrapper {
+            .description {
+              @apply text-sm text-grey-100;
+            }
+
+            .sub-heading {
+              @apply text-xs text-light-450;
+            }
+          }
+        }
+      }
+    }
+  }
+  .breadcrumb {
+    @apply hidden;
+  }
+}

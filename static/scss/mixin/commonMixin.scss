@@ -1,0 +1,84 @@
+@mixin weight {
+  &[data-weight='400'] {
+    @apply font-normal;
+  }
+  &[data-weight='500'] {
+    @apply font-medium;
+  }
+  &[data-weight='600'] {
+    @apply font-semibold;
+  }
+  &[data-weight='700'] {
+    @apply font-bold;
+  }
+  &[data-weight='800'] {
+    @apply font-extrabold;
+  }
+}
+
+@mixin justify {
+  &[data-justify='start'] {
+    @apply justify-start;
+  }
+  &[data-justify='center'] {
+    @apply justify-center;
+  }
+  &[data-justify='end'] {
+    @apply justify-end;
+  }
+  &[data-justify='arund'] {
+    @apply justify-around;
+  }
+  &[data-justify='between'] {
+    @apply justify-between;
+  }
+  &[data-justify='evenly'] {
+    @apply justify-evenly;
+  }
+}
+
+@mixin align {
+  &[data-align='center'] {
+    @apply text-center;
+  }
+  &[data-align='right'] {
+    @apply text-right;
+  }
+}
+
+@mixin line-height {
+  &[line-height='1'] {
+    line-height: 1;
+  }
+  &[line-height='1.2'] {
+    line-height: 1.2;
+  }
+  &[line-height='1.25'] {
+    line-height: 1.25;
+  }
+  &[line-height='1.3'] {
+    line-height: 1.333;
+  }
+  &[line-height='1.4'] {
+    line-height: 1.4;
+  }
+  &[line-height='1.5'] {
+    line-height: 1.5;
+  }
+  &[line-height='1.6'] {
+    line-height: 1.6;
+  }
+  &[line-height='1.67'] {
+    line-height: 1.667;
+  }
+  &[line-height='1.75'] {
+    line-height: 1.75;
+  }
+  &[line-height='1.75'] {
+    line-height: 1.75;
+  }
+  &[line-height='2'] {
+    line-height: 2;
+  }
+}
+

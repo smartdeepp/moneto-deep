@@ -1,0 +1,8 @@
+.idea
+node_modules/
+package-lock.json
+venv/
+.env
+db.sqlite3
+media/
+**/*__pycache__
