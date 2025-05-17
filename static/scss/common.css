@@ -2131,8 +2131,8 @@
 }
 
 .container {
-  @apply px-20 w-full mx-auto;
-  max-width: 120rem;
+  @apply px-20 w-full;
+  min-width: 100%;
 }
 
 .img-fluid,
@@ -2224,7 +2224,7 @@
 }
 
 .btn-wrapper {
-  @apply flex items-center gap-6 flex-wrap;
+  @apply flex items-center gap-6;
 }
 .btn-wrapper .btn {
   @apply px-10 flex-shrink-0 flex w-full rounded-full items-center justify-center uppercase;
@@ -2319,15 +2319,14 @@
 }
 @media (max-width: 1536px) {
   .container {
-    @apply mx-auto w-full px-16;
-    max-width: 1440px;
+    @apply w-full px-16;
   }
   .title {
     font-size: 6.25rem;
   }
   .heading {
     font-size: 4.75rem;
-    line-height: 1.2;
+    line-height: 1;
   }
   .c-heading {
     font-size: 3.75rem;
@@ -2351,8 +2350,7 @@
 }
 @media (max-width: 87.5rem) {
   .container {
-    @apply mx-auto w-full px-4;
-    max-width: 68.75rem;
+    @apply w-full px-4;
   }
   .title {
     font-size: 6rem;
@@ -2378,9 +2376,6 @@
   }
 }
 @media (max-width: 1200px) {
-  .container {
-    max-width: 1024px;
-  }
   #preloader .loader .preload-box {
     width: 10%;
   }
@@ -2412,9 +2407,6 @@
   }
 }
 @media (max-width: 992px) {
-  .container {
-    max-width: 800px;
-  }
   .marquee-animation {
     @apply mx-auto;
   }
@@ -2432,9 +2424,6 @@
   }
 }
 @media (max-width: 768px) {
-  .container {
-    max-width: 600px;
-  }
   .c-heading {
     font-size: 32px;
   }
@@ -2463,9 +2452,6 @@
   }
 }
 @media (max-width: 568px) {
-  .container {
-    max-width: 100%;
-  }
   .marquee-animation {
     @apply mx-auto;
   }
@@ -2507,6 +2493,7 @@
 }
 .swiper-slide {
   height: 100%;
+  width: auto;
 }
 .swiper-slide > div {
   height: 100%;

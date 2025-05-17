@@ -1,3 +1,11 @@
+#header {
+  background-color: #000 !important;
+
+  .wrapper {
+    flex-direction: row;
+  }
+}
+
 .contactus-wrapper {
   .left-content-wrapper {
     @apply w-full;
@@ -74,6 +82,7 @@
 .wrapper {
   @apply flex justify-between items-center gap-14;
   padding-bottom: 10.5625rem;
+  padding-top: 10rem;
 }
 
 .logo-wrapper {

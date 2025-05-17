@@ -169,47 +169,36 @@
         </div>
     </section>
     <section class="workshop-g">
-        <div class="container">
-            <div class="heading capitalize" data-color="g-500">{{ self.galley_heading|safe }}</div>
+        <div class="container full-width">
+            <div class="heading capitalize full-width-text" data-color="g-500">{{ self.galley_heading|safe }}</div>
             <div class="wrapper">
                 <div class="swiper workshop-g-swiper w-wrapper c-workshop-swiper ">
                     {% with total=page.galley_images|length %}
                         <div class="swiper-wrapper">
                             {% for block in page.galley_images %}
-                                {% if forloop.first or forloop.counter0|add:"0"|divisibleby:"2" %}
-                                    <div class="swiper-slide">
-                                    <div class="card-wrapper">
-                                {% endif %}
-
-                            {% if block.block_type == 'image' %}
-                                <div class="card">
-                                    <img src="{{ block.value.file.url }}" alt="Gallery Image" class="img-full">
-                                </div>
-                            {% endif %}
-
-                            {% if forloop.counter0|add:"1"|divisibleby:"2" or forloop.last %}
-                                </div>
-                                </div>
-                            {% endif %}
-                            {% endfor %}
-                        </div>
-                    {% endwith %}
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="swiper workshop-g-swiper m-wrapper c-workshop-swiper ">
-                    <div class="swiper-wrapper ">
-                        {% for image in self.galley_images %}
+                                
                             <div class="swiper-slide">
                                 <div class="card-wrapper">
-                                    <div class="card">
-                                        <img src="{{ image.value.file.url }}" alt="image" class="img-full">
-                                    </div>
+                                
+
+                                    {% if block.block_type == 'image' %}
+                                        <div class="card">
+                                            <img src="{{ block.value.file.url }}" alt="Gallery Image" class="img-full">
+                                        </div>
+                                    {% endif %}
+
+                            
                                 </div>
                             </div>
-                        {% endfor %}
-                    </div>
-                    <div class="swiper-pagination"></div>
+                            
+                            {% endfor %}
+                        </div>
+
+                       
+                    {% endwith %}
+                    
                 </div>
+               
             </div>
         </div>
     </section>
@@ -217,11 +206,9 @@
         <section class="workshop-reviews">
             <div class="container">
                 <div class="heading capitalize">{{ self.reviews_heading|safe }}</div>
-                <div class="workshop-swiper">
-                    <div class="swiper c-workshop-swiper">
-                        <div class="swiper-wrapper">
-                            {% for testimonial in self.testimonials %}
-                                <div class="swiper-slide">
+                <div class="workshop-swiper">   
+                        {% for testimonial in self.testimonials %}
+                                
                                     <div class="card">
                                         <div class="description"
                                              data-color="g-400">{{ testimonial.value.content }}</div>
@@ -238,11 +225,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            {% endfor %}
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
+                                
+                        {% endfor %}
                 </div>
             </div>
         </section>
@@ -298,22 +282,17 @@
             }
         });
         var swiper = new Swiper(".c-workshop-swiper", {
-            slidesPerView: 1,
-            spaceBetween: 16,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                993: {
-                    slidesPerView: 2,
-                    spaceBetween: 24,
-                },
-                1400: {
-                    slidesPerView: 3,
-                    spaceBetween: 56,
-                }
-            }
-        });
+  spaceBetween: 20,
+  centeredSlides: true,
+  speed: 6000,
+  autoplay: {
+    delay: 1,
+  },
+  loop: true,
+  slidesPerView:'auto',
+  allowTouchMove: false,
+  disableOnInteraction: true
+  
+});
     </script>
 {% endblock page_script %}

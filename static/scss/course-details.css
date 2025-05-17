@@ -36,6 +36,10 @@
   height: 14.625rem;
   flex: 1 0 25%;
 }
+.course-details-work .wrapper .img-wrapper .img .img-fluid {
+  height: auto;
+  width: auto;
+}
 .course-details-work .wrapper .content-wrapper {
   @apply text-right ml-auto;
   max-width: 39.8125rem;
@@ -79,12 +83,12 @@
   @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
 }
 .course-details-learn .flex-wrapper {
-  @apply mt-10 pt-10 border-t border-t-grey-100 flex items-start justify-between;
+  @apply mt-10 pt-10 border-t border-t-grey-100 flex items-center justify-between;
   margin-bottom: 6.25rem;
   gap: 4rem;
 }
 .course-details-learn .flex-wrapper .heading {
-  max-width: 41.25rem;
+  max-width: 51.25rem;
 }
 .course-details-learn .flex-wrapper .active-flex {
   @apply flex justify-end items-center gap-14;
@@ -162,7 +166,7 @@
   @apply fill-white stroke-white transition-all duration-300;
 }
 .course-details-faq .wrapper .faq-wrapper .faq.active .answer {
-  @apply text-grey-400;
+  color: #b0b0b0;
 }
 .course-details-faq .wrapper .faq-wrapper .faq.active .icon {
   @apply -rotate-180;
@@ -193,7 +197,7 @@
 }
 .course-details-mentorship .wrapper {
   @apply flex items-center;
-  gap: 2.5rem;
+  gap: 5rem;
 }
 .course-details-mentorship .wrapper .profile-data {
   width: 30rem;
@@ -259,7 +263,7 @@
   @apply hidden;
 }
 .course-details-testimonials .card.active {
-  flex: 10;
+  flex: 7;
 }
 .course-details-testimonials .card.active .content .f-heading {
   display: -webkit-box;
@@ -297,7 +301,8 @@
   @apply flex-col flex gap-14;
 }
 .course-details-certification .content-wrapper .left-content .img-wrapper {
-  @apply flex items-center justify-around mt-24;
+  @apply flex items-center mt-24;
+  gap: 4.5rem;
 }
 .course-details-certification .content-wrapper .left-content .img-wrapper img {
   max-height: 3.5rem;
@@ -498,9 +503,6 @@
   .course-details-faq .wrapper .content-wrapper {
     @apply gap-6;
   }
-  .course-details-faq .wrapper .content-wrapper .heading {
-    font-size: 4rem;
-  }
   .course-details-master {
     padding: 7.5rem 0;
   }
@@ -512,7 +514,6 @@
   }
   .course-details-learn .flex-wrapper .heading {
     max-width: 660px;
-    font-size: 4rem;
   }
   .course-details-learn .flex-wrapper .active-flex {
     @apply gap-10;
@@ -546,9 +547,6 @@
   .course-details-mentorship .wrapper .content-wrapper {
     @apply gap-10;
   }
-  .course-details-mentorship .wrapper .content-wrapper .heading {
-    font-size: 4rem;
-  }
   .course-details-mentorship .wrapper .content-wrapper .link-wrapper {
     @apply gap-4;
   }
@@ -558,9 +556,6 @@
   .course-details-certification .content-wrapper .left-content {
     max-width: 480px;
     @apply gap-8;
-  }
-  .course-details-certification .content-wrapper .left-content .heading {
-    font-size: 4rem;
   }
   .course-details-certification .content-wrapper .left-content .img-wrapper {
     @apply mt-16;
@@ -588,9 +583,6 @@
   }
   .hero .icon-wrapper .wrapper .sub-wrapper .data-wrapper .sub-heading {
     font-size: 1.125rem;
-  }
-  .course-details-testimonials .content-wrapper .heading {
-    font-size: 4rem;
   }
   .course-details-testimonials .card {
     height: 35rem;
@@ -687,9 +679,6 @@
   }
   .course-details-mentorship .wrapper .content-wrapper {
     @apply gap-10;
-  }
-  .course-details-mentorship .wrapper .content-wrapper .heading {
-    font-size: 4rem;
   }
   .course-details-mentorship .wrapper .content-wrapper .link-wrapper {
     @apply gap-4;
@@ -847,9 +836,6 @@
   .course-details-certification .content-wrapper .left-content {
     max-width: 100%;
     @apply text-center;
-  }
-  .course-details-certification .content-wrapper .left-content .heading {
-    font-size: 4rem;
   }
   .course-details-certification .content-wrapper .left-content .img-wrapper {
     @apply hidden;
@@ -1020,9 +1006,6 @@
   }
   .course-details-certification .content-wrapper .left-content {
     @apply gap-6;
-  }
-  .course-details-certification .content-wrapper .left-content .heading {
-    font-size: 4rem;
   }
   .course-details-certification .content-wrapper .left-content .img-wrapper {
     @apply hidden;

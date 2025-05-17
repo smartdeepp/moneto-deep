@@ -43,7 +43,7 @@
   .comited-width-wrapper {
     @apply w-full;
     max-width: 80.375rem; /* 1286px */
-    margin-bottom: 7.5rem; /* 120px */
+    margin-bottom: 4.5rem; /* 120px */
   }
 
   .comited-card-wrapper {
@@ -168,7 +168,7 @@
 
       .img-wrapper {
         @apply w-full overflow-hidden rounded-3xl relative;
-        height: 34.375rem; /* 550px */
+        height: 24.125rem; /* 386px */
       }
 
       .content-wrapper {
@@ -586,6 +586,64 @@
   &.active {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 1536px) {
+  .number-animation-wrapper {
+    @apply my-16;
+    .cards-wrapper {
+      .card {
+        .absolute-image-wrapper {
+          width: 8rem; /* 128px */
+        }
+      }
+    }
+  }
+
+  .selected-works-wrapper {
+    .right-selected-wrapper {
+      .selected-card-wrapper {
+        .selected-card {
+          height: 32.25rem;
+
+          .selected-content-wrapper {
+            .pill {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .commiitted-wrapper {
+    @apply py-16 my-16;
+    .comited-width-wrapper {
+      margin-bottom: 4.5rem; /* 100px */
+    }
+    .comited-card-wrapper {
+      .comited-card {
+        @apply py-12 px-8;
+
+        .comited-display-wrapper {
+          .comited-image-wrapper {
+            max-width: 11.25rem; /* 180px */
+          }
+        }
+      }
+    }
+  }
+  .course-details-master {
+    padding: 8.75rem 0; /* 140px */
+    .content-wrapper {
+      gap: 4.25rem; /* 68px */
+    }
+  }
+  .selected-works-wrapper {
+    .section-wrapper {
+      gap: 4.375rem; /* 70px */
+    }
   }
 }
 
@@ -1258,7 +1316,7 @@
         }
 
         .img-wrapper {
-          aspect-ratio: 1.786;
+          // aspect-ratio: 1.786;
 
           .pill {
             @apply hidden;
@@ -1348,7 +1406,7 @@
         }
 
         .img-wrapper {
-          aspect-ratio: 1.786;
+          // aspect-ratio: 1.786;
 
           .pill {
             @apply hidden;

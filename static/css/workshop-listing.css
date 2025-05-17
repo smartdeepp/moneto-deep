@@ -30,7 +30,6 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
   -moz-column-gap: 2rem;
        column-gap: 2rem;
   row-gap: 5rem;
@@ -149,7 +148,7 @@
   width: 100%;
   overflow: hidden;
   border-radius: 1.5rem;
-  max-height: 34.375rem;
+  max-height: 24.125rem;
 }
 
 .workshop-listing-wrapper .courses-wrapper .card .content-wrapper {
@@ -203,7 +202,7 @@
   }
 
   .workshop-listing-wrapper .card-wrapper .card .content-wrapper .description {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   .workshop-listing-wrapper .courses-wrapper {
@@ -215,7 +214,7 @@
   }
 
   .workshop-listing-wrapper .courses-wrapper .card .img-wrapper {
-    max-height: 31.25rem;
+    max-height: 24.125rem;
   }
 
   .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .sub-heading {

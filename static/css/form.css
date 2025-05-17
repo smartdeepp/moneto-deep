@@ -1,3 +1,11 @@
+#header {
+  background-color: #000 !important;
+}
+
+#header .wrapper {
+  flex-direction: row;
+}
+
 .contactus-wrapper .left-content-wrapper {
   width: 100%;
   max-width: 44rem;
@@ -97,6 +105,7 @@
   justify-content: space-between;
   gap: 3.5rem;
   padding-bottom: 10.5625rem;
+  padding-top: 10rem;
 }
 
 .logo-wrapper {

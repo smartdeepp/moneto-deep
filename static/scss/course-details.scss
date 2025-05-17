@@ -35,6 +35,11 @@
         @apply outline p-9 outline-1 outline-grey-100 flex items-center justify-center;
         height: 14.625rem;
         flex: 1 0 calc(25%);
+
+        .img-fluid {
+          height: auto;
+          width: auto;
+        }
       }
     }
 
@@ -89,12 +94,12 @@
   }
 
   .flex-wrapper {
-    @apply mt-10 pt-10 border-t border-t-grey-100 flex items-start justify-between;
+    @apply mt-10 pt-10 border-t border-t-grey-100 flex items-center justify-between;
     margin-bottom: 6.25rem;
     gap: 4rem;
 
     .heading {
-      max-width: 41.25rem;
+      max-width: 51.25rem;
     }
 
     .active-flex {
@@ -190,7 +195,7 @@
 
         &.active {
           .answer {
-            @apply text-grey-400;
+            color: #b0b0b0;
           }
 
           .icon {
@@ -230,7 +235,7 @@
   @apply bg-white;
   .wrapper {
     @apply flex items-center;
-    gap: 2.5rem;
+    gap: 5rem;
 
     .profile-data {
       width: 30rem;
@@ -311,7 +316,7 @@
     }
 
     &.active {
-      flex: 10;
+      flex: 7;
 
       .content {
         .f-heading {
@@ -357,7 +362,8 @@
       max-width: 43.75rem;
       @apply flex-col flex gap-14;
       .img-wrapper {
-        @apply flex items-center justify-around mt-24;
+        @apply flex items-center mt-24;
+        gap: 4.5rem;
         img {
           max-height: 3.5rem;
           max-width: unset;
@@ -629,7 +635,7 @@
       .content-wrapper {
         @apply gap-6;
         .heading {
-          font-size: 4rem;
+          // font-size: 4rem;
         }
       }
     }
@@ -647,7 +653,7 @@
 
       .heading {
         max-width: 660px;
-        font-size: 4rem;
+        // font-size: 4rem;
       }
 
       .active-flex {
@@ -689,7 +695,7 @@
       .content-wrapper {
         @apply gap-10;
         .heading {
-          font-size: 4rem;
+          // font-size: 4rem;
         }
 
         .link-wrapper {
@@ -705,7 +711,7 @@
         max-width: 480px;
         @apply gap-8;
         .heading {
-          font-size: 4rem;
+          // font-size: 4rem;
         }
 
         .img-wrapper {
@@ -751,7 +757,7 @@
   .course-details-testimonials {
     .content-wrapper {
       .heading {
-        font-size: 4rem;
+        // font-size: 4rem;
       }
     }
 
@@ -878,7 +884,7 @@
       .content-wrapper {
         @apply gap-10;
         .heading {
-          font-size: 4rem;
+          // font-size: 4rem;
         }
 
         .link-wrapper {
@@ -1074,7 +1080,7 @@
         max-width: 100%;
         @apply text-center;
         .heading {
-          font-size: 4rem;
+          // font-size: 4rem;
         }
 
         .img-wrapper {
@@ -1293,7 +1299,7 @@
       .left-content {
         @apply gap-6;
         .heading {
-          font-size: 4rem;
+          // font-size: 4rem;
         }
 
         .img-wrapper {

@@ -38,7 +38,7 @@
 .commiitted-wrapper .comited-width-wrapper {
   @apply w-full;
   max-width: 80.375rem; /* 1286px */
-  margin-bottom: 7.5rem; /* 120px */
+  margin-bottom: 4.5rem; /* 120px */
 }
 .commiitted-wrapper .comited-card-wrapper {
   @apply flex flex-wrap justify-center;
@@ -144,7 +144,7 @@
 }
 .ourcourse-listing-wrapper .courses-wrapper .card .img-wrapper {
   @apply w-full overflow-hidden rounded-3xl relative;
-  height: 34.375rem; /* 550px */
+  height: 24.125rem; /* 386px */
 }
 .ourcourse-listing-wrapper .courses-wrapper .card .content-wrapper {
   @apply flex flex-col gap-6;
@@ -477,6 +477,41 @@
   transform: translate3d(0, 0, 0);
 }
 
+@media (max-width: 1536px) {
+  .number-animation-wrapper {
+    @apply my-16;
+  }
+  .number-animation-wrapper .cards-wrapper .card .absolute-image-wrapper {
+    width: 8rem; /* 128px */
+  }
+  .selected-works-wrapper .right-selected-wrapper .selected-card-wrapper .selected-card {
+    height: 32.25rem;
+  }
+  .selected-works-wrapper .right-selected-wrapper .selected-card-wrapper .selected-card .selected-content-wrapper .pill {
+    font-size: 1rem;
+  }
+  .commiitted-wrapper {
+    @apply py-16 my-16;
+  }
+  .commiitted-wrapper .comited-width-wrapper {
+    margin-bottom: 4.5rem; /* 100px */
+  }
+  .commiitted-wrapper .comited-card-wrapper .comited-card {
+    @apply py-12 px-8;
+  }
+  .commiitted-wrapper .comited-card-wrapper .comited-card .comited-display-wrapper .comited-image-wrapper {
+    max-width: 11.25rem; /* 180px */
+  }
+  .course-details-master {
+    padding: 8.75rem 0; /* 140px */
+  }
+  .course-details-master .content-wrapper {
+    gap: 4.25rem; /* 68px */
+  }
+  .selected-works-wrapper .section-wrapper {
+    gap: 4.375rem; /* 70px */
+  }
+}
 @media (max-width: 1400px) {
   .number-animation-wrapper {
     @apply my-12;
@@ -974,9 +1009,6 @@
   .ourcourse-listing-wrapper .courses-wrapper .card .c-heading-wrapper {
     @apply flex items-center gap-2;
   }
-  .ourcourse-listing-wrapper .courses-wrapper .card .img-wrapper {
-    aspect-ratio: 1.786;
-  }
   .ourcourse-listing-wrapper .courses-wrapper .card .img-wrapper .pill {
     @apply hidden;
   }
@@ -1045,9 +1077,6 @@
   }
   .workshop-listing-wrapper .courses-wrapper .card .c-heading-wrapper {
     @apply flex items-center gap-2;
-  }
-  .workshop-listing-wrapper .courses-wrapper .card .img-wrapper {
-    aspect-ratio: 1.786;
   }
   .workshop-listing-wrapper .courses-wrapper .card .img-wrapper .pill {
     @apply hidden;

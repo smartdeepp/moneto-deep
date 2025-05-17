@@ -8,10 +8,15 @@
     @apply mt-10 pt-10 border-t border-t-grey-100 flex flex-col items-stretch gap-16;
     .flex-wrapper {
       @apply flex items-end justify-between gap-10 w-full;
+
+      .heading {
+        text-wrap: nowrap;
+      }
     }
 
     .sub-heading {
       @apply text-right;
+      max-width: 30rem;
     }
   }
 
@@ -43,6 +48,7 @@
 
     .sub-heading {
       @apply text-right;
+      max-width: 30rem;
     }
 
     .about-swiper {
@@ -194,6 +200,10 @@
       @apply flex items-start justify-between gap-20;
       .img-wrapper {
         @apply flex-1 overflow-hidden rounded-3xl;
+
+        .img-fluid {
+          height: 42rem;
+        }
       }
 
       .content {
@@ -386,6 +396,13 @@
 
       .grid-wrapper {
         @apply gap-16;
+
+        .img-wrapper {
+          .img-fluid {
+            height: 36rem;
+          }
+        }
+
         .content {
           max-width: 50%;
           gap: 8rem;

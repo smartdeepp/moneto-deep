@@ -153,6 +153,11 @@
 .workshop-reviews .workshop-swiper {
   @apply w-full h-full overflow-hidden;
   margin-top: 7.5rem;
+  display: grid;
+  overflow-x: auto;
+  grid-auto-columns: minmax(17rem, auto);
+  grid-auto-flow: column;
+  gap: 2rem;
 }
 .workshop-reviews .workshop-swiper .c-workshop-swiper {
   @apply pb-9;
@@ -176,6 +181,12 @@
 .workshop-g {
   @apply py-20;
 }
+.workshop-g .container {
+  padding-inline: 0;
+}
+.workshop-g .container .heading {
+  padding-inline: 5rem;
+}
 .workshop-g .workshop-g-swiper {
   @apply pb-9;
   @apply w-full h-full overflow-hidden mt-20;
@@ -189,6 +200,8 @@
 .workshop-g .workshop-g-swiper .card-wrapper .card {
   @apply overflow-hidden rounded-3xl;
   aspect-ratio: 1.273;
+  height: 25rem;
+  width: 35rem;
 }
 .workshop-g .workshop-g-swiper.m-wrapper {
   @apply hidden;
@@ -524,9 +537,6 @@
   .workshop-g .workshop-g-swiper.m-wrapper {
     @apply flex;
   }
-  .workshop-g .workshop-g-swiper.w-wrapper {
-    @apply hidden;
-  }
   .hero .icon-wrapper {
     padding: 3rem 0;
   }
@@ -563,9 +573,11 @@
   }
   .workshop-reviews .workshop-swiper {
     margin-top: 40px;
+    gap: 1rem;
   }
   .workshop-reviews .workshop-swiper .card {
-    @apply py-8 px-6 gap-10;
+    @apply gap-10;
+    padding: 1.5rem;
   }
   .workshop-reviews .workshop-swiper .card .profiler-wrapper .profile {
     @apply w-10 h-10;
@@ -578,6 +590,10 @@
   }
   .workshop-g .workshop-g-swiper {
     margin-top: 40px;
+  }
+  .workshop-g .workshop-g-swiper .card-wrapper .card {
+    height: 20rem;
+    width: 20rem;
   }
   .hero .hero-wrapper .content-wrapper .btn-wrapper {
     @apply flex;

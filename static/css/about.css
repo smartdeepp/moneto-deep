@@ -37,8 +37,13 @@
   gap: 2.5rem;
 }
 
+.about-brand .content-wrapper .flex-wrapper .heading {
+  text-wrap: nowrap;
+}
+
 .about-brand .content-wrapper .sub-heading {
   text-align: right;
+  max-width: 30rem;
 }
 
 .about-brand .grid-wrapper {
@@ -100,6 +105,7 @@
 
 .about-media .content .sub-heading {
   text-align: right;
+  max-width: 30rem;
 }
 
 .about-media .content .about-swiper {
@@ -354,6 +360,10 @@
   border-radius: 1.5rem;
 }
 
+.about-exp .content-wrapper .grid-wrapper .img-wrapper .img-fluid {
+  height: 42rem;
+}
+
 .about-exp .content-wrapper .grid-wrapper .content {
   max-width: 46.75rem;
   position: relative;
@@ -555,6 +565,10 @@
 
   .about-exp .content-wrapper .grid-wrapper {
     gap: 4rem;
+  }
+
+  .about-exp .content-wrapper .grid-wrapper .img-wrapper .img-fluid {
+    height: 36rem;
   }
 
   .about-exp .content-wrapper .grid-wrapper .content {
