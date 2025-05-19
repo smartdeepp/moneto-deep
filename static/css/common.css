@@ -3509,6 +3509,12 @@ video {
   font-family: "Inter Tight", sans-serif;
 }
 
+@media (max-width: 1536px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 .capitalize {
   text-transform: capitalize;
 }

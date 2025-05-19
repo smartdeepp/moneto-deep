@@ -16,6 +16,12 @@
   }
 }
 
+html {
+  @media (max-width: 1536px) {
+    font-size: 14px;
+  }
+}
+
 .capitalize {
   text-transform: capitalize;
 }
