@@ -242,7 +242,7 @@ img {
     background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
     padding-bottom: 5rem;
     padding-top: 7rem;
-    transform: translateY(-300%);
+    transform: translateX(300%);
     z-index: -2;
     transition: all 0.5s ease-in-out;
   }
@@ -261,7 +261,7 @@ img {
   }
 
   #header .wrapper .links_wrapper.active {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   #header .wrapper .burger {

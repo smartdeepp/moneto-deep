@@ -33,7 +33,7 @@
                     {% for card in cards %}
                         <div class="card">
                             <div class="c-heading-wrapper">
-                                <div class="sub-heading" data-weight="500">{{ card.heading }}</div>
+                                <div class="sub-heading" data-weight="500">{{ card.heading|safe }}</div>
                                 <div class="pill">{{ card.course_type }}</div>
                             </div>
                             <a href="{{ card.url }}" class="img-wrapper">

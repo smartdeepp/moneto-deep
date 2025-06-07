@@ -21,6 +21,7 @@
 
   .heading-wrapper {
     @apply mt-10 mb-20 flex justify-between items-end;
+    overflow: hidden;
     .heading {
       @apply flex flex-col;
     }

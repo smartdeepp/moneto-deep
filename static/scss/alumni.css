@@ -17,6 +17,7 @@
 }
 .alumni .heading-wrapper {
   @apply mt-10 mb-20 flex justify-between items-end;
+  overflow: hidden;
 }
 .alumni .heading-wrapper .heading {
   @apply flex flex-col;

@@ -24,18 +24,19 @@
             <button data-value="work" class="_alumni_tabs tab sub-heading capitalize">Work</button>
         </div>
         <div class="heading-wrapper">
-            <div class="heading capitalize" data-color="g-500">
+            <div class="heading capitalize anm_mod left" data-color="g-500" >
                 <span data-color="p-500">Faces Behinds</span>
                 The Frames
             </div>
-            <div class="sub-heading" data-color="g-600">Leading brands who trust <br/>
+            <div class="sub-heading anm_mod right" data-color="g-600">Leading brands who trust <br/>
                 us to shape the future of photography
             </div>
         </div>
-        <div class="content-wrapper">
+        <div class="content-wrapper ">
             <div data-value="team" class="_alumni_content_wrapper team-wrapper active">
                 {% for work in self.student_works  %}
-                    <div class="team">
+                    <div class="team" data-aos-anchor-placement="top-center" data-aos="fade-up"
+                         data-aos-duration="500">
                         <div class="img-wrapper">
                             <div class="img">
                                 <img src="{{ work.value.profile.file.url }}" alt="team image" class="img-full"/>
@@ -50,7 +51,8 @@
             </div>
             <div data-value="work" data-gap="xl" class="_alumni_content_wrapper work-wrapper">
                 {% for work in self.student_works  %}
-                    <div class="card">
+                <div class="card" data-aos-anchor-placement="top-center" data-aos="fade-up"
+                         data-aos-duration="500">
                     <img src="{{ work.value.work.file.url }}" alt="work image" class="img-full"/>
                     <div class="content">
                         <div class="info-wrapper">
@@ -80,6 +82,24 @@
         const value = $(this).data('value');
         $(`._alumni_content_wrapper[data-value="${value}"]`).addClass('active');
     });
+
+    AOS.init();
+   
+    $(window).scroll(function () {
+            $(".anm_mod").each(function () {
+                const position = $(this).offset().top;
+                const scroll = $(window).scrollTop();
+                const windowHeight = $(window).height();
+                if (scroll > position - windowHeight) {
+                    $(this).addClass("active");
+                }
+                if (scroll < 100) {
+                    $(this).removeClass("active");
+                }
+            });
+        });
+
+    
 </script>
 {% endblock page_script %}
 

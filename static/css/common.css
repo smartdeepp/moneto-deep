@@ -4026,4 +4026,23 @@ video {
   height: 100%;
 }
 
+.anm_mod {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  transition: all 1s ease;
+}
+
+.anm_mod.left {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.anm_mod.right {
+  transform: translate3d(100%, 0, 0);
+}
+
+.anm_mod.active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
 /*# sourceMappingURL=common.css.map */

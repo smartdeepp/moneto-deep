@@ -570,24 +570,24 @@
   }
 }
 
-.anm_mod {
-  opacity: 0;
-  transform: translate3d(0, 100%, 0);
-  transition: all 1s ease;
+// .anm_mod {
+//   opacity: 0;
+//   transform: translate3d(0, 100%, 0);
+//   transition: all 1s ease;
 
-  &.left {
-    transform: translate3d(-100%, 0, 0);
-  }
+//   &.left {
+//     transform: translate3d(-100%, 0, 0);
+//   }
 
-  &.right {
-    transform: translate3d(100%, 0, 0);
-  }
+//   &.right {
+//     transform: translate3d(100%, 0, 0);
+//   }
 
-  &.active {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
+//   &.active {
+//     opacity: 1;
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
 
 @media (max-width: 1536px) {
   .number-animation-wrapper {
