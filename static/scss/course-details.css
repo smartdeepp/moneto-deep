@@ -495,7 +495,11 @@
     @apply w-12;
   }
   .course-details-exclusive .card-wrapper .card .text {
-    @apply mt-4 mb-6;
+    @apply mt-4 mb-4;
+    font-size: 1.125rem;
+  }
+  .course-details-exclusive .card-wrapper .card .description {
+    font-size: 0.875rem;
   }
   .course-details-faq .wrapper {
     @apply gap-6;

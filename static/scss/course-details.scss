@@ -624,7 +624,12 @@
         }
 
         .text {
-          @apply mt-4 mb-6;
+          @apply mt-4 mb-4;
+          font-size: 1.125rem;
+        }
+
+        .description {
+          font-size: 0.875rem;
         }
       }
     }

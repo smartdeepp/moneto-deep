@@ -910,7 +910,12 @@
 
   .course-details-exclusive .card-wrapper .card .text {
     margin-top: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  .course-details-exclusive .card-wrapper .card .description {
+    font-size: 0.875rem;
   }
 
   .course-details-faq .wrapper {

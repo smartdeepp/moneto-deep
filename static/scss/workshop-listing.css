@@ -6,7 +6,7 @@
   @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
 }
 .workshop-listing-wrapper .heading-wrapper .w-heading {
-  @apply mt-10 border-t border-t-grey-700 pt-10 mb-20;
+  @apply pt-10 mb-20;
 }
 .workshop-listing-wrapper .card-wrapper {
   @apply flex flex-wrap items-center gap-x-8 gap-y-20;

@@ -2,6 +2,11 @@
   @apply h-full w-full relative flex flex-col;
   min-height: 100vh;
 
+  &.hero-half {
+    // HALF HEIGHT
+    min-height: 70vh;
+  }
+
   .z-index-wrapper {
     z-index: 1;
 

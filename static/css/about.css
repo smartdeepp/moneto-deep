@@ -1,6 +1,15 @@
 .about-brand {
+  background-color: black;
+  margin-bottom: 5rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
+}
+
+.about-brand .container .brand-title {
+  color: #4bf1c5;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .about-brand .pill {
@@ -41,9 +50,18 @@
   text-wrap: nowrap;
 }
 
+.about-brand .content-wrapper .flex-wrapper .heading p {
+  color: white;
+}
+
+.about-brand .content-wrapper .flex-wrapper .heading p b {
+  color: #4bf1c5;
+}
+
 .about-brand .content-wrapper .sub-heading {
   text-align: right;
   max-width: 30rem;
+  color: white;
 }
 
 .about-brand .grid-wrapper {
@@ -60,7 +78,7 @@
   padding: 2rem;
   outline-style: solid;
   outline-width: 1px;
-  outline-color: #BEBEBE;
+  outline-color: #666666;
   aspect-ratio: 1;
 }
 

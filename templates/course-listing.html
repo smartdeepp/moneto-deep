@@ -6,7 +6,7 @@
 {% endblock page_css %}
 
 {% block content %}
-    <section class="hero">
+    <section class="hero hero-half">
         <div class="hero-img-wrapper">
             <img src="{{ self.image.file.url }}" alt="hero image" class="img-full"/>
         </div>
@@ -20,10 +20,10 @@
     <section class="workshop-listing-wrapper">
         <div class="container">
             <div class="heading-wrapper">
-                <div class="marquee-animation">
+                <!-- <div class="marquee-animation">
                     <div class="name static-name">Courses</div>
                     <div class="name ab-name">Courses</div>
-                </div>
+                </div> -->
                 <div class="w-heading heading capitalize" data-lh="1">
                     Explore <br/> <span data-color="p-500">Our Courses</span>
                 </div>
@@ -65,4 +65,56 @@
             {% endif %}
         </div>
     </section>
+    <section class="workshop-g">
+        <div class="container full-width">
+            <div class="heading capitalize full-width-text" data-color="g-500">{{ self.galley_heading|safe }}</div>
+            <div class="wrapper">
+                <div class="swiper workshop-g-swiper w-wrapper c-workshop-swiper ">
+                    {% with total=page.galley_images|length %}
+                        <div class="swiper-wrapper">
+                            {% for block in page.galley_images %}
+                                
+                            <div class="swiper-slide">
+                                <div class="card-wrapper">
+                                
+
+                                    {% if block.block_type == 'image' %}
+                                        <div class="card">
+                                            <img src="{{ block.value.file.url }}" alt="Gallery Image" class="img-full">
+                                        </div>
+                                    {% endif %}
+
+                            
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                        </div>
+
+                       
+                    {% endwith %}
+                    
+                </div>
+               
+            </div>
+        </div>
+    </section>
 {% endblock content %}
+
+
+{% block page_script %}
+    <script>
+        var swiper = new Swiper(".c-workshop-swiper", {
+            spaceBetween: 20,
+            centeredSlides: true,
+            speed: 6000,
+            autoplay: {
+                delay: 1,
+            },
+            loop: true,
+            slidesPerView:'auto',
+            allowTouchMove: false,
+            disableOnInteraction: true
+        });
+    </script>
+{% endblock page_script %}

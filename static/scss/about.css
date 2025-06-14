@@ -1,5 +1,13 @@
 .about-brand {
+  background-color: black;
+  margin-bottom: 5rem;
   @apply py-20;
+}
+.about-brand .container .brand-title {
+  color: #4bf1c5;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 .about-brand .pill {
   @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
@@ -13,16 +21,23 @@
 .about-brand .content-wrapper .flex-wrapper .heading {
   text-wrap: nowrap;
 }
+.about-brand .content-wrapper .flex-wrapper .heading p {
+  color: white;
+}
+.about-brand .content-wrapper .flex-wrapper .heading p b {
+  color: #4bf1c5;
+}
 .about-brand .content-wrapper .sub-heading {
   @apply text-right;
   max-width: 30rem;
+  color: white;
 }
 .about-brand .grid-wrapper {
   @apply flex flex-wrap justify-center;
 }
 .about-brand .grid-wrapper .card {
   flex: 0 0 16.6666666667%;
-  @apply outline outline-1 outline-grey-100 flex items-center justify-center p-8;
+  @apply outline outline-1 outline-[#666666] flex items-center justify-center p-8;
   aspect-ratio: 1;
 }
 .about-brand .grid-wrapper .card img {
