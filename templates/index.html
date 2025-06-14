@@ -17,13 +17,14 @@
             <div class="content-wrapper" data-aos="fade-up" data-aos-duration="1500" data-gap="2xl">
                 <h1 class="title capitalize" data-color="l-400">{{ self.heading|safe }}</h1>
                 <p class="description" data-color="l-400">{{ self.description }} ad</p>
-                {#                <div class="btn-wrapper z-index-wrapper" data-mt="xxs" data-justify="center">#}
-                {#                    <a href="/" class="btn" data-variant="primary">Enroll now</a>#}
-                {#                </div>#}
+                                <div class="btn-wrapper z-index-wrapper" data-mt="xxs" data-justify="center">
+                                    <a href="/" class="btn" data-variant="primary">Enroll now</a>
+                                </div>
             </div>
         </div>
         <div class="icon-wrapper">
             <div class="container wrapper">
+                <div class="icon-wrapper-title">Our Students work at</div>
                 <div class="upeer-wrapper">
                     <div class="sub-wrapper">
                         <img src="{% static 'images/air_india_express_logo.png' %}" alt="alumni image"
@@ -38,6 +39,7 @@
     </section>
     <section class="index-main-wrapper">
         <div class="company-logo-wrapper">
+            <div class="company-logo-title">Our Students Work At</div>
             <div class="container relative-10">
                 <div class="grid-wrapper">
                     {% for image in self.Brand_images %}

@@ -5,6 +5,10 @@
 .hero .z-index-wrapper {
   z-index: 1;
 }
+.hero .z-index-wrapper .btn {
+  font-family: Inter Tight, serif;
+  font-weight: 600;
+}
 .hero .hero-img-wrapper {
   @apply h-full w-full left-0 top-0 absolute;
 }
