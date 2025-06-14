@@ -87,6 +87,50 @@
   max-height: 100%;
 }
 
+.workshop-g {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.workshop-g .container {
+  padding-inline: 0;
+}
+
+.workshop-g .container .heading {
+  padding-inline: 5rem;
+}
+
+.workshop-g .workshop-g-swiper {
+  padding-bottom: 2.25rem;
+  margin-top: 5rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.workshop-g .workshop-g-swiper .swiper-pagination-bullet-active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 59 77 / var(--tw-bg-opacity, 1));
+}
+
+.workshop-g .workshop-g-swiper .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.workshop-g .workshop-g-swiper .card-wrapper .card {
+  overflow: hidden;
+  border-radius: 1.5rem;
+  aspect-ratio: 1.273;
+  height: 25rem;
+  width: 35rem;
+}
+
+.workshop-g .workshop-g-swiper.m-wrapper {
+  display: none;
+}
+
 .about-media .pill {
   width: -moz-max-content;
   width: max-content;
@@ -500,6 +544,83 @@
   background-color: rgb(235 59 77 / var(--tw-bg-opacity, 1));
 }
 
+.number-animation-wrapper {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.number-animation-wrapper .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.number-animation-wrapper .cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.number-animation-wrapper .cards-wrapper .card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(190 190 190 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  width: calc(25% - 1.25rem);
+  /* 20px */
+  padding: 3.75rem;
+  /* 60px */
+}
+
+.number-animation-wrapper .cards-wrapper .card .card-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8.875rem;
+  /* 142px */
+}
+
+.number-animation-wrapper .cards-wrapper .card .card-content-wrapper .number-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.number-animation-wrapper .cards-wrapper .card .card-content-wrapper .number-content-wrapper .heading {
+  font-weight: 700;
+}
+
+.number-animation-wrapper .cards-wrapper .card .absolute-image-wrapper {
+  position: absolute;
+  top: 50%;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  right: -10%;
+  z-index: 1;
+  width: 10.0625rem;
+  /* 161px */
+}
+
+.number-animation-wrapper .cards-wrapper .card:hover {
+  border-style: none;
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity, 1));
+}
+
+.number-animation-wrapper .cards-wrapper .card:hover .card-content-wrapper .number-content-wrapper {
+  --tw-text-opacity: 1;
+  color: rgb(235 59 77 / var(--tw-text-opacity, 1));
+}
+
 @media (max-width: 1536px) {
   .about-brand .content-wrapper .flex-wrapper .heading {
     font-size: 4.5rem;
@@ -605,11 +726,43 @@
   .about-exp .content-wrapper .grid-wrapper .content .point .wrapper .name {
     font-size: 2.25rem;
   }
+
+  .number-animation-wrapper {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .number-animation-wrapper .cards-wrapper .card .absolute-image-wrapper {
+    width: 8rem;
+    /* 128px */
+  }
+
+  .workshop-g .workshop-g-swiper {
+    margin-top: 4rem;
+  }
+
+  .workshop-g .workshop-g-swiper .card-wrapper {
+    gap: 2.5rem;
+  }
 }
 
 @media (max-width: 1400px) {
   .about-brand .content-wrapper .flex-wrapper .heading {
     font-size: 4rem;
+  }
+
+  .number-animation-wrapper {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .number-animation-wrapper .cards-wrapper .card .absolute-image-wrapper {
+    width: 6.25rem;
+    /* 100px */
+  }
+
+  .workshop-g .workshop-g-swiper .card-wrapper {
+    gap: 1.5rem;
   }
 
   .about-media .content .flex-wrapper .heading {
@@ -733,6 +886,24 @@
     font-size: 3rem;
   }
 
+  .number-animation-wrapper {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .workshop-g {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .workshop-g .workshop-g-swiper {
+    margin-top: 4rem;
+  }
+
+  .workshop-g .workshop-g-swiper .card-wrapper {
+    gap: 1.5rem;
+  }
+
   .about-media {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -854,6 +1025,45 @@
   .about-brand .content-wrapper .grid-wrapper .card {
     flex: 0 0 20%;
     padding: 1.5rem;
+  }
+
+  .number-animation-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .number-animation-wrapper .cards-wrapper .card {
+    width: calc(49% - 5px);
+    padding: 2.5rem;
+    /* 40px */
+  }
+
+  .number-animation-wrapper .cards-wrapper .card .card-content-wrapper {
+    gap: 5rem;
+    /* 80px */
+  }
+
+  .workshop-g {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .workshop-g .heading {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .workshop-g .workshop-g-swiper {
+    margin-top: 3rem;
+  }
+
+  .workshop-g .workshop-g-swiper .card-wrapper .card {
+    aspect-ratio: 1.86;
+  }
+
+  .workshop-g .workshop-g-swiper.m-wrapper {
+    display: flex;
   }
 
   .about-media {
@@ -1076,6 +1286,48 @@
   .about-brand .content-wrapper .grid-wrapper .card {
     flex: 0 0 33%;
     padding: 0.75rem;
+  }
+
+  .workshop-g {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .workshop-g .workshop-g-swiper {
+    margin-top: 40px;
+  }
+
+  .workshop-g .workshop-g-swiper .card-wrapper .card {
+    height: 20rem;
+    width: 20rem;
+  }
+
+  .number-animation-wrapper {
+    margin-top: 3rem;
+  }
+
+  .number-animation-wrapper .cards-wrapper {
+    gap: 0.5rem;
+  }
+
+  .number-animation-wrapper .cards-wrapper .card {
+    width: 100%;
+    padding: 1.625rem;
+    /* 26px */
+  }
+
+  .number-animation-wrapper .cards-wrapper .card .card-content-wrapper .note {
+    display: none;
+  }
+
+  .number-animation-wrapper .cards-wrapper .card .card-content-wrapper .number-content-wrapper {
+    text-align: center;
+  }
+
+  .number-animation-wrapper .cards-wrapper .card .absolute-image-wrapper {
+    right: -6%;
+    width: 4rem;
+    /* 64px */
   }
 
   .about-media {

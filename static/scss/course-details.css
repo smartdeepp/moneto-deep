@@ -217,76 +217,6 @@
   @apply flex items-center gap-8;
 }
 
-.course-details-testimonials {
-  @apply py-20;
-}
-.course-details-testimonials .pill {
-  @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
-}
-.course-details-testimonials .content-wrapper {
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
-  @apply border-t border-t-grey-100 flex-col flex items-stretch gap-16;
-}
-.course-details-testimonials .card {
-  height: 40rem;
-  @apply flex-1 transition-all duration-300 rounded-3xl flex gap-5 overflow-hidden relative;
-}
-.course-details-testimonials .card .img {
-  @apply h-full w-full;
-}
-.course-details-testimonials .card .content {
-  @apply absolute flex p-10 flex-col gap-14 justify-end left-0 top-0 h-full w-full;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-}
-.course-details-testimonials .card .content .f-heading {
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 120%;
-  @apply text-white hidden;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-}
-.course-details-testimonials .card .content .data-wrapper {
-  @apply flex items-center justify-center;
-}
-.course-details-testimonials .card .content .data-wrapper .info-wrapper {
-  @apply flex-col gap-1 hidden;
-}
-.course-details-testimonials .card .content .data-wrapper .icon {
-  max-width: 4.625rem;
-  @apply block;
-}
-.course-details-testimonials .card .content .data-wrapper .icon-hover {
-  max-width: 12.5rem;
-  @apply hidden;
-}
-.course-details-testimonials .card.active {
-  flex: 7;
-}
-.course-details-testimonials .card.active .content .f-heading {
-  display: -webkit-box;
-}
-.course-details-testimonials .card.active .content .data-wrapper {
-  @apply justify-between;
-}
-.course-details-testimonials .card.active .content .data-wrapper .info-wrapper {
-  @apply flex;
-}
-.course-details-testimonials .card.active .content .data-wrapper .icon {
-  @apply hidden;
-}
-.course-details-testimonials .card.active .content .data-wrapper .icon-hover {
-  @apply block;
-}
-.course-details-testimonials .flex-wrapper {
-  @apply flex gap-5;
-}
-.course-details-testimonials .swiper-js {
-  @apply h-full w-full overflow-hidden hidden;
-}
-
 .course-details-certification {
   @apply py-20;
 }
@@ -393,6 +323,37 @@
   @apply w-full;
 }
 
+.workshop-reviews {
+  @apply py-20 bg-light-300;
+}
+.workshop-reviews .workshop-swiper {
+  @apply w-full h-full overflow-hidden;
+  margin-top: 7.5rem;
+  display: grid;
+  overflow-x: auto;
+  grid-auto-columns: minmax(17rem, auto);
+  grid-auto-flow: column;
+  gap: 2rem;
+}
+.workshop-reviews .workshop-swiper .c-workshop-swiper {
+  @apply pb-9;
+}
+.workshop-reviews .workshop-swiper .c-workshop-swiper .swiper-pagination-bullet-active {
+  @apply bg-warning;
+}
+.workshop-reviews .workshop-swiper .card {
+  @apply bg-white px-10 py-14 rounded-3xl flex flex-col justify-between gap-16;
+}
+.workshop-reviews .workshop-swiper .card .profiler-wrapper {
+  @apply flex items-center gap-3;
+}
+.workshop-reviews .workshop-swiper .card .profiler-wrapper .profile {
+  @apply rounded-full overflow-hidden w-20 h-20;
+}
+.workshop-reviews .workshop-swiper .card .profiler-wrapper .data-wrapper {
+  @apply flex flex-col gap-3;
+}
+
 @media (max-width: 96rem) {
   .course-details .wrapper {
     gap: 5rem;
@@ -408,6 +369,15 @@
   }
   .course-details .wrapper .img-wrapper {
     max-width: 37.5rem;
+  }
+  .workshop-reviews .workshop-swiper {
+    margin-top: 6.875rem;
+  }
+  .workshop-reviews .workshop-swiper .card {
+    @apply px-8 py-12 gap-14;
+  }
+  .workshop-reviews .workshop-swiper .card .profiler-wrapper .profile {
+    @apply w-16 h-16;
   }
   .course-details-work .wrapper .img-wrapper .img {
     height: 13.75rem;
@@ -442,9 +412,6 @@
   .course-details-mentorship .wrapper .content-wrapper {
     @apply gap-12;
   }
-  .course-details-testimonials .card {
-    height: 37.5rem;
-  }
   .course-details-certification .content-wrapper .left-content {
     max-width: 40.625rem;
   }
@@ -474,6 +441,15 @@
   .course-details .wrapper .img-wrapper {
     @apply rounded-2xl;
     max-width: 26.25rem;
+  }
+  .workshop-reviews .workshop-swiper {
+    margin-top: 100px;
+  }
+  .workshop-reviews .workshop-swiper .card {
+    @apply p-10 gap-10;
+  }
+  .workshop-reviews .workshop-swiper .card .profiler-wrapper .profile {
+    @apply w-16 h-16;
   }
   .course-details-work .wrapper .img-wrapper {
     @apply flex flex-wrap;
@@ -588,40 +564,6 @@
   .hero .icon-wrapper .wrapper .sub-wrapper .data-wrapper .sub-heading {
     font-size: 1.125rem;
   }
-  .course-details-testimonials .card {
-    height: 35rem;
-    @apply rounded-2xl;
-  }
-  .course-details-testimonials .card .content {
-    @apply p-8 gap-10;
-  }
-  .course-details-testimonials .card .content .f-heading {
-    font-size: 32px;
-  }
-  .course-details-testimonials .card .content .data-wrapper .icon-hover {
-    max-width: 10rem;
-  }
-  .course-details-testimonials .card:hover {
-    flex: 10;
-  }
-  .course-details-testimonials .card:hover .content .f-heading {
-    @apply block;
-  }
-  .course-details-testimonials .card:hover .content .data-wrapper {
-    @apply justify-between;
-  }
-  .course-details-testimonials .card:hover .content .data-wrapper .info-wrapper {
-    @apply flex;
-  }
-  .course-details-testimonials .card:hover .content .data-wrapper .icon {
-    @apply hidden;
-  }
-  .course-details-testimonials .card:hover .content .data-wrapper .icon-hover {
-    @apply block;
-  }
-  .course-details-testimonials .flex-wrapper {
-    @apply gap-3;
-  }
 }
 @media (max-width: 1200px) {
   .course-details {
@@ -635,6 +577,21 @@
   }
   .course-details .wrapper .content-wrapper .points-wrapper .point {
     @apply gap-4;
+  }
+  .workshop-reviews {
+    @apply py-16;
+  }
+  .workshop-reviews .workshop-swiper {
+    margin-top: 80px;
+  }
+  .workshop-reviews .workshop-swiper .card {
+    @apply p-8 gap-8;
+  }
+  .workshop-reviews .workshop-swiper .card .profiler-wrapper .profile {
+    @apply w-12 h-12;
+  }
+  .workshop-reviews .workshop-swiper .card .profiler-wrapper .data-wrapper {
+    @apply gap-0;
   }
   .course-details-work {
     @apply py-20;
@@ -696,12 +653,6 @@
   .course-details-certification .content-wrapper .left-content .img-wrapper {
     @apply mt-6;
   }
-  .course-details-testimonials {
-    @apply py-16;
-  }
-  .course-details-testimonials .card {
-    height: 30rem;
-  }
 }
 @media (max-width: 992px) {
   .course-details {
@@ -716,6 +667,15 @@
   .course-details .wrapper .img-wrapper {
     @apply mx-auto;
     max-width: 35rem;
+  }
+  .workshop-reviews {
+    @apply py-12;
+  }
+  .workshop-reviews .heading {
+    @apply text-center mx-auto;
+  }
+  .workshop-reviews .workshop-swiper {
+    margin-top: 64px;
   }
   .course-details-work {
     @apply py-16;
@@ -859,35 +819,6 @@
   .hero .icon-wrapper .wrapper .sub-wrapper {
     @apply w-max;
   }
-  .course-details-testimonials {
-    @apply py-12;
-  }
-  .course-details-testimonials .pill {
-    @apply mx-auto;
-  }
-  .course-details-testimonials .content-wrapper {
-    @apply pt-0 border-t-0 flex-col justify-center items-center text-center gap-10;
-  }
-  .course-details-testimonials .flex-wrapper {
-    @apply hidden;
-  }
-  .course-details-testimonials .card {
-    height: 35rem;
-    @apply rounded-2xl;
-  }
-  .course-details-testimonials .card .content {
-    padding: 2rem;
-    gap: 2.5rem;
-  }
-  .course-details-testimonials .swiper-js {
-    @apply block;
-  }
-  .course-details-testimonials .swiper-js .c-swiper {
-    @apply pb-9;
-  }
-  .course-details-testimonials .swiper-js .c-swiper .swiper-pagination-bullet-active {
-    @apply bg-warning;
-  }
 }
 @media (max-width: 768px) {
   .course-details-mentorship {
@@ -912,9 +843,6 @@
   .course-details-mentorship .wrapper .content-wrapper .description {
     @apply text-center;
   }
-  .course-details-testimonials .card {
-    height: 30rem;
-  }
   .course-main-wrapper .floating-btn-wrapper,
   .course-main-wrapper .floating-tabs-wrapper {
     @apply flex;
@@ -938,6 +866,23 @@
   }
   .course-details .wrapper .img-wrapper {
     @apply hidden;
+  }
+  .workshop-reviews {
+    @apply py-10;
+  }
+  .workshop-reviews .workshop-swiper {
+    margin-top: 40px;
+    gap: 1rem;
+  }
+  .workshop-reviews .workshop-swiper .card {
+    @apply gap-10;
+    padding: 1.5rem;
+  }
+  .workshop-reviews .workshop-swiper .card .profiler-wrapper .profile {
+    @apply w-10 h-10;
+  }
+  .workshop-reviews .workshop-swiper .card .profiler-wrapper .data-wrapper {
+    @apply gap-1.5;
   }
   .course-details-work {
     @apply py-12;
@@ -1022,23 +967,6 @@
   }
   .breadcrumb {
     @apply hidden;
-  }
-  .course-details-testimonials {
-    @apply py-10;
-  }
-  .course-details-testimonials .pill {
-    @apply mx-auto text-sm px-4 py-2;
-  }
-  .course-details-testimonials .content-wrapper {
-    margin-top: 2rem;
-    gap: 1.5rem;
-  }
-  .course-details-testimonials .card {
-    height: 16.625rem;
-  }
-  .course-details-testimonials .card .content {
-    padding: 1rem;
-    gap: 2rem;
   }
   .hero .hero-wrapper .content-wrapper .btn-wrapper {
     @apply flex;

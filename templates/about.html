@@ -38,6 +38,31 @@
             </div>
         </div>
     </section>
+    <section class="number-animation-wrapper">
+        <div class="container">
+            <div class="heading capitalize">{{ self.who_are_we_heading|safe }}</div>
+            <div class="cards-wrapper level">
+                {% for point in self.who_are_we_points %}
+                    <div class="card">
+                        {% if point.value.image %}
+                            <div class="absolute-image-wrapper">
+                                <img src="{{ point.value.image.file.url }}" alt="alumni image"
+                                     class="img-fluid"/>
+                            </div>
+                        {% endif %}
+                        <div class="card-content-wrapper">
+                            <p class="note">0{{ forloop.counter }}/</p>
+                            <div class="number-content-wrapper">
+                                <p class="heading"><span class="js-count-up"
+                                                         data-count="{{ point.value.value }}">0</span>+</p>
+                                <p class="description">{{ point.value.heading }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
     <section class="about-exp">
         <div class="container">
             <div class="marquee-animation">
@@ -141,6 +166,42 @@
             </div>
         </div>
     </section>
+
+     <section class="workshop-g">
+        <div class="container full-width">
+            <div class="heading capitalize full-width-text" data-color="g-500">{{ self.galley_heading|safe }}</div>
+            <div class="wrapper">
+                <div class="swiper workshop-g-swiper w-wrapper c-workshop-swiper ">
+                    {% with total=page.galley_images|length %}
+                        <div class="swiper-wrapper">
+                            {% for block in page.galley_images %}
+                                
+                            <div class="swiper-slide">
+                                <div class="card-wrapper">
+                                
+
+                                    {% if block.block_type == 'image' %}
+                                        <div class="card">
+                                            <img src="{{ block.value.file.url }}" alt="Gallery Image" class="img-full">
+                                        </div>
+                                    {% endif %}
+
+                            
+                                </div>
+                            </div>
+                            
+                            {% endfor %}
+                        </div>
+
+                       
+                    {% endwith %}
+                    
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
     {% if self.articles %}
         <section class="about-media">
             <div class="container">
@@ -205,6 +266,53 @@
                     slidesPerView: 2,
                     spaceBetween: 56,
                 }
+            }
+        });
+
+        var swiper = new Swiper(".c-workshop-swiper", {
+            spaceBetween: 20,
+            centeredSlides: true,
+            speed: 6000,
+            autoplay: {
+                delay: 1,
+            },
+            loop: true,
+            slidesPerView:'auto',
+            allowTouchMove: false,
+            disableOnInteraction: true
+        });
+
+        AOS.init();
+        var a = 0;
+        $(window).scroll(function () {
+
+            var oTop = $('.level').offset().top - window.innerHeight;
+            if (a == 0 && $(window).scrollTop() > oTop) {
+                $('.js-count-up').each(function () {
+                    var $this = $(this),
+                        countTo = $this.attr('data-count');
+                    const nonNumbers = countTo.match(/\D/g)?.join('') || '';
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                            countNum: countTo
+                        },
+
+                        {
+
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function () {
+                                $this.text(Math.floor(this.countNum) + nonNumbers);
+                            },
+                            complete: function () {
+                                $this.text(this.countNum + nonNumbers);
+                                //alert('finished');
+                            }
+
+                        });
+                });
+                a = 1;
             }
         });
     </script>

@@ -76,6 +76,35 @@
   @apply ml-auto;
 }
 
+.workshop-g {
+  @apply pb-20 pt-0;
+}
+.workshop-g .container {
+  padding-inline: 0;
+}
+.workshop-g .container .heading {
+  padding-inline: 5rem;
+}
+.workshop-g .workshop-g-swiper {
+  @apply pb-9;
+  @apply w-full h-full overflow-hidden mt-20;
+}
+.workshop-g .workshop-g-swiper .swiper-pagination-bullet-active {
+  @apply bg-warning;
+}
+.workshop-g .workshop-g-swiper .card-wrapper {
+  @apply flex flex-col gap-14;
+}
+.workshop-g .workshop-g-swiper .card-wrapper .card {
+  @apply overflow-hidden rounded-3xl;
+  aspect-ratio: 1.273;
+  height: 25rem;
+  width: 35rem;
+}
+.workshop-g .workshop-g-swiper.m-wrapper {
+  @apply hidden;
+}
+
 @media (max-width: 1536px) {
   .workshop-listing-wrapper {
     margin-bottom: 6.875rem;
@@ -120,6 +149,12 @@
     font-size: 1.25rem;
     height: 3.25rem;
     width: 13.75rem;
+  }
+  .workshop-g .workshop-g-swiper {
+    @apply mt-16;
+  }
+  .workshop-g .workshop-g-swiper .card-wrapper {
+    @apply gap-10;
   }
 }
 @media (max-width: 1400px) {
@@ -180,6 +215,9 @@
     height: 3rem;
     width: 12.5rem;
   }
+  .workshop-g .workshop-g-swiper .card-wrapper {
+    @apply gap-6;
+  }
 }
 @media (max-width: 992px) {
   .workshop-listing-wrapper {
@@ -199,6 +237,21 @@
   }
   .workshop-listing-wrapper .courses-wrapper .card {
     @apply grid-cols-1;
+  }
+  .workshop-g {
+    @apply pb-12 pt-0;
+  }
+  .workshop-g .heading {
+    @apply text-center mx-auto;
+  }
+  .workshop-g .workshop-g-swiper {
+    @apply mt-12;
+  }
+  .workshop-g .workshop-g-swiper .card-wrapper .card {
+    aspect-ratio: 1.86;
+  }
+  .workshop-g .workshop-g-swiper.m-wrapper {
+    @apply flex;
   }
 }
 @media (max-width: 568px) {
@@ -260,6 +313,16 @@
   }
   .workshop-listing-wrapper .courses-wrapper .card .content-wrapper .flex-wrapper .btn-wrapper .btn {
     @apply w-full flex-1 max-w-full;
+  }
+  .workshop-g {
+    @apply pb-10 pt-0;
+  }
+  .workshop-g .workshop-g-swiper {
+    margin-top: 40px;
+  }
+  .workshop-g .workshop-g-swiper .card-wrapper .card {
+    height: 20rem;
+    width: 20rem;
   }
 }
 

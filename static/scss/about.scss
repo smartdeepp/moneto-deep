@@ -55,6 +55,40 @@
   }
 }
 
+.workshop-g {
+  .container {
+    padding-inline: 0;
+
+    .heading {
+      padding-inline: 5rem;
+    }
+  }
+
+  @apply py-20;
+  .workshop-g-swiper {
+    @apply pb-9;
+    .swiper-pagination-bullet-active {
+      @apply bg-warning;
+    }
+
+    @apply w-full h-full overflow-hidden mt-20;
+
+    .card-wrapper {
+      @apply flex flex-col gap-14;
+      .card {
+        @apply overflow-hidden rounded-3xl;
+        aspect-ratio: 1.273;
+        height: 25rem;
+        width: 35rem;
+      }
+    }
+
+    &.m-wrapper {
+      @apply hidden;
+    }
+  }
+}
+
 .about-media {
   .pill {
     @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-primary;
@@ -312,6 +346,51 @@
   }
 }
 
+.number-animation-wrapper {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  @apply my-20;
+  .cards-wrapper {
+    @apply flex flex-wrap justify-center gap-5;
+    .card {
+      @apply rounded-3xl overflow-hidden bg-light relative  border border-solid border-grey-100 transition-all duration-300;
+      width: calc(25% - 1.25rem); /* 20px */
+      padding: 3.75rem; /* 60px */
+
+      .card-content-wrapper {
+        @apply flex flex-col justify-between;
+        gap: 8.875rem; /* 142px */
+
+        .number-content-wrapper {
+          @apply flex flex-col gap-2;
+          .heading {
+            @apply font-bold;
+          }
+        }
+      }
+
+      .absolute-image-wrapper {
+        @apply absolute top-1/2 -translate-y-1/2;
+        right: -10%;
+        z-index: 1;
+        width: 10.0625rem; /* 161px */
+      }
+
+      &:hover {
+        @apply bg-light-300  border-none;
+        .card-content-wrapper {
+          .number-content-wrapper {
+            @apply text-warning;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 1536px) {
   .about-brand {
     .content-wrapper {
@@ -444,6 +523,24 @@
       }
     }
   }
+  .number-animation-wrapper {
+    @apply my-16;
+    .cards-wrapper {
+      .card {
+        .absolute-image-wrapper {
+          width: 8rem; /* 128px */
+        }
+      }
+    }
+  }
+  .workshop-g {
+    .workshop-g-swiper {
+      @apply mt-16;
+      .card-wrapper {
+        @apply gap-10;
+      }
+    }
+  }
 }
 
 @media (max-width: 1400px) {
@@ -453,6 +550,23 @@
         .heading {
           font-size: 4rem;
         }
+      }
+    }
+  }
+  .number-animation-wrapper {
+    @apply my-12;
+    .cards-wrapper {
+      .card {
+        .absolute-image-wrapper {
+          width: 6.25rem; /* 100px */
+        }
+      }
+    }
+  }
+  .workshop-g {
+    .workshop-g-swiper {
+      .card-wrapper {
+        @apply gap-6;
       }
     }
   }
@@ -596,6 +710,19 @@
       }
     }
   }
+  .number-animation-wrapper {
+    @apply my-10;
+  }
+  .workshop-g {
+    @apply py-16;
+
+    .workshop-g-swiper {
+      @apply mt-16;
+      .card-wrapper {
+        @apply gap-6;
+      }
+    }
+  }
   .about-media {
     @apply py-16;
     .content {
@@ -717,6 +844,43 @@
           flex: 0 0 calc(20%);
           @apply p-6;
         }
+      }
+    }
+  }
+  .number-animation-wrapper {
+    @apply my-8;
+    .cards-wrapper {
+      .card {
+        width: calc(49% - 5px);
+        padding: 2.5rem; /* 40px */
+
+        .card-content-wrapper {
+          gap: 5rem; /* 80px */
+        }
+      }
+    }
+  }
+  .workshop-g {
+    @apply py-12;
+    .heading {
+      @apply text-center mx-auto;
+    }
+
+    .workshop-g-swiper {
+      @apply mt-12;
+
+      .card-wrapper {
+        .card {
+          aspect-ratio: 1.86;
+        }
+      }
+
+      &.m-wrapper {
+        @apply flex;
+      }
+
+      &.w-wrapper {
+        // @apply hidden;
       }
     }
   }
@@ -884,6 +1048,45 @@
         .card {
           flex: 0 0 calc(33%);
           @apply p-3;
+        }
+      }
+    }
+  }
+  .workshop-g {
+    @apply py-10;
+
+    .workshop-g-swiper {
+      margin-top: 40px;
+
+      .card-wrapper {
+        .card {
+          height: 20rem;
+          width: 20rem;
+        }
+      }
+    }
+  }
+  .number-animation-wrapper {
+    @apply mt-12;
+    .cards-wrapper {
+      @apply gap-2;
+      .card {
+        @apply w-full;
+        padding: 1.625rem; /* 26px */
+
+        .card-content-wrapper {
+          .note {
+            @apply hidden;
+          }
+
+          .number-content-wrapper {
+            @apply text-center;
+          }
+        }
+
+        .absolute-image-wrapper {
+          right: -6%;
+          width: 4rem; /* 64px */
         }
       }
     }

@@ -283,6 +283,13 @@ class About(BasePage):
     article_description = TextField(_('Description'), max_length=2000)
     articles = StreamField([('article', Article())], use_json_field=True, null=True, blank=True)
 
+    who_are_we_heading = RichTextField(_('Heading'), max_length=255)
+    who_are_we_images = StreamField([('image', ImageChooserBlock())], use_json_field=True, min_num=3)
+    who_are_we_points = StreamField([('point', WhoAreWePoints())], use_json_field=True, min_num=3)
+
+    galley_heading = RichTextField(_('Heading'), max_length=255)
+    galley_images = StreamField([('image', ImageChooserBlock())], use_json_field=True, min_num=6, max_num=6)
+
     content_panels = Page.content_panels + [
         MultiFieldPanel(
             [
@@ -339,6 +346,23 @@ class About(BasePage):
             heading="Main Section",
             classname="collapsed",
         ),
+        MultiFieldPanel(
+            [
+                FieldPanel('who_are_we_heading'),
+                # FieldPanel('who_are_we_images'),
+                FieldPanel('who_are_we_points'),
+            ],
+            heading="Who Are We Section",
+            classname="collapsed",
+        ),
+        MultiFieldPanel(
+            [
+                FieldPanel('galley_heading'),
+                FieldPanel('galley_images'),
+            ],
+            heading="Main Section",
+            classname="collapsed",
+        ),
     ]
 
     class Meta:
@@ -352,12 +376,24 @@ class CourseListing(BasePage):
     parent_page_types = ["Home"]
     max_count = 1
 
+    galley_heading = RichTextField(_('Heading'), max_length=255)
+    galley_images = StreamField([('image', ImageChooserBlock())], use_json_field=True, min_num=6, max_num=6)
+
+
     content_panels = Page.content_panels + [
         MultiFieldPanel(
             [
                 FieldPanel('heading'),
                 FieldPanel('description'),
                 FieldPanel('image'),
+            ],
+            heading="Main Section",
+            classname="collapsed",
+        ),
+        MultiFieldPanel(
+            [
+                FieldPanel('galley_heading'),
+                FieldPanel('galley_images'),
             ],
             heading="Main Section",
             classname="collapsed",

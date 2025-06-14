@@ -45,6 +45,35 @@
   max-height: 100%;
 }
 
+.workshop-g {
+  @apply py-20;
+}
+.workshop-g .container {
+  padding-inline: 0;
+}
+.workshop-g .container .heading {
+  padding-inline: 5rem;
+}
+.workshop-g .workshop-g-swiper {
+  @apply pb-9;
+  @apply w-full h-full overflow-hidden mt-20;
+}
+.workshop-g .workshop-g-swiper .swiper-pagination-bullet-active {
+  @apply bg-warning;
+}
+.workshop-g .workshop-g-swiper .card-wrapper {
+  @apply flex flex-col gap-14;
+}
+.workshop-g .workshop-g-swiper .card-wrapper .card {
+  @apply overflow-hidden rounded-3xl;
+  aspect-ratio: 1.273;
+  height: 25rem;
+  width: 35rem;
+}
+.workshop-g .workshop-g-swiper.m-wrapper {
+  @apply hidden;
+}
+
 .about-media .pill {
   @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-primary;
 }
@@ -260,6 +289,45 @@
   @apply bg-warning;
 }
 
+.number-animation-wrapper {
+  @apply my-20;
+}
+.number-animation-wrapper .container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.number-animation-wrapper .cards-wrapper {
+  @apply flex flex-wrap justify-center gap-5;
+}
+.number-animation-wrapper .cards-wrapper .card {
+  @apply rounded-3xl overflow-hidden bg-light relative border border-solid border-grey-100 transition-all duration-300;
+  width: calc(25% - 1.25rem); /* 20px */
+  padding: 3.75rem; /* 60px */
+}
+.number-animation-wrapper .cards-wrapper .card .card-content-wrapper {
+  @apply flex flex-col justify-between;
+  gap: 8.875rem; /* 142px */
+}
+.number-animation-wrapper .cards-wrapper .card .card-content-wrapper .number-content-wrapper {
+  @apply flex flex-col gap-2;
+}
+.number-animation-wrapper .cards-wrapper .card .card-content-wrapper .number-content-wrapper .heading {
+  @apply font-bold;
+}
+.number-animation-wrapper .cards-wrapper .card .absolute-image-wrapper {
+  @apply absolute top-1/2 -translate-y-1/2;
+  right: -10%;
+  z-index: 1;
+  width: 10.0625rem; /* 161px */
+}
+.number-animation-wrapper .cards-wrapper .card:hover {
+  @apply bg-light-300 border-none;
+}
+.number-animation-wrapper .cards-wrapper .card:hover .card-content-wrapper .number-content-wrapper {
+  @apply text-warning;
+}
+
 @media (max-width: 1536px) {
   .about-brand .content-wrapper .flex-wrapper .heading {
     font-size: 4.5rem;
@@ -339,10 +407,31 @@
   .about-exp .content-wrapper .grid-wrapper .content .point .wrapper .name {
     font-size: 2.25rem;
   }
+  .number-animation-wrapper {
+    @apply my-16;
+  }
+  .number-animation-wrapper .cards-wrapper .card .absolute-image-wrapper {
+    width: 8rem; /* 128px */
+  }
+  .workshop-g .workshop-g-swiper {
+    @apply mt-16;
+  }
+  .workshop-g .workshop-g-swiper .card-wrapper {
+    @apply gap-10;
+  }
 }
 @media (max-width: 1400px) {
   .about-brand .content-wrapper .flex-wrapper .heading {
     font-size: 4rem;
+  }
+  .number-animation-wrapper {
+    @apply my-12;
+  }
+  .number-animation-wrapper .cards-wrapper .card .absolute-image-wrapper {
+    width: 6.25rem; /* 100px */
+  }
+  .workshop-g .workshop-g-swiper .card-wrapper {
+    @apply gap-6;
   }
   .about-media .content .flex-wrapper .heading {
     font-size: 4rem;
@@ -433,6 +522,18 @@
   .about-brand .content-wrapper .flex-wrapper .heading {
     font-size: 3rem;
   }
+  .number-animation-wrapper {
+    @apply my-10;
+  }
+  .workshop-g {
+    @apply py-16;
+  }
+  .workshop-g .workshop-g-swiper {
+    @apply mt-16;
+  }
+  .workshop-g .workshop-g-swiper .card-wrapper {
+    @apply gap-6;
+  }
   .about-media {
     @apply py-16;
   }
@@ -513,6 +614,31 @@
   .about-brand .content-wrapper .grid-wrapper .card {
     flex: 0 0 20%;
     @apply p-6;
+  }
+  .number-animation-wrapper {
+    @apply my-8;
+  }
+  .number-animation-wrapper .cards-wrapper .card {
+    width: calc(49% - 5px);
+    padding: 2.5rem; /* 40px */
+  }
+  .number-animation-wrapper .cards-wrapper .card .card-content-wrapper {
+    gap: 5rem; /* 80px */
+  }
+  .workshop-g {
+    @apply py-12;
+  }
+  .workshop-g .heading {
+    @apply text-center mx-auto;
+  }
+  .workshop-g .workshop-g-swiper {
+    @apply mt-12;
+  }
+  .workshop-g .workshop-g-swiper .card-wrapper .card {
+    aspect-ratio: 1.86;
+  }
+  .workshop-g .workshop-g-swiper.m-wrapper {
+    @apply flex;
   }
   .about-media {
     @apply py-12;
@@ -637,6 +763,36 @@
   .about-brand .content-wrapper .grid-wrapper .card {
     flex: 0 0 33%;
     @apply p-3;
+  }
+  .workshop-g {
+    @apply py-10;
+  }
+  .workshop-g .workshop-g-swiper {
+    margin-top: 40px;
+  }
+  .workshop-g .workshop-g-swiper .card-wrapper .card {
+    height: 20rem;
+    width: 20rem;
+  }
+  .number-animation-wrapper {
+    @apply mt-12;
+  }
+  .number-animation-wrapper .cards-wrapper {
+    @apply gap-2;
+  }
+  .number-animation-wrapper .cards-wrapper .card {
+    @apply w-full;
+    padding: 1.625rem; /* 26px */
+  }
+  .number-animation-wrapper .cards-wrapper .card .card-content-wrapper .note {
+    @apply hidden;
+  }
+  .number-animation-wrapper .cards-wrapper .card .card-content-wrapper .number-content-wrapper {
+    @apply text-center;
+  }
+  .number-animation-wrapper .cards-wrapper .card .absolute-image-wrapper {
+    right: -6%;
+    width: 4rem; /* 64px */
   }
   .about-media {
     @apply py-10;

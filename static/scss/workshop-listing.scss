@@ -93,6 +93,40 @@
   }
 }
 
+.workshop-g {
+  .container {
+    padding-inline: 0;
+
+    .heading {
+      padding-inline: 5rem;
+    }
+  }
+
+  @apply pb-20 pt-0;
+  .workshop-g-swiper {
+    @apply pb-9;
+    .swiper-pagination-bullet-active {
+      @apply bg-warning;
+    }
+
+    @apply w-full h-full overflow-hidden mt-20;
+
+    .card-wrapper {
+      @apply flex flex-col gap-14;
+      .card {
+        @apply overflow-hidden rounded-3xl;
+        aspect-ratio: 1.273;
+        height: 25rem;
+        width: 35rem;
+      }
+    }
+
+    &.m-wrapper {
+      @apply hidden;
+    }
+  }
+}
+
 @media (max-width: 1536px) {
   .workshop-listing-wrapper {
     margin-bottom: 6.875rem;
@@ -152,6 +186,15 @@
             }
           }
         }
+      }
+    }
+  }
+
+  .workshop-g {
+    .workshop-g-swiper {
+      @apply mt-16;
+      .card-wrapper {
+        @apply gap-10;
       }
     }
   }
@@ -231,6 +274,14 @@
       }
     }
   }
+
+  .workshop-g {
+    .workshop-g-swiper {
+      .card-wrapper {
+        @apply gap-6;
+      }
+    }
+  }
 }
 
 @media (max-width: 992px) {
@@ -260,6 +311,31 @@
     .courses-wrapper {
       .card {
         @apply grid-cols-1;
+      }
+    }
+  }
+
+  .workshop-g {
+    @apply pb-12 pt-0;
+    .heading {
+      @apply text-center mx-auto;
+    }
+
+    .workshop-g-swiper {
+      @apply mt-12;
+
+      .card-wrapper {
+        .card {
+          aspect-ratio: 1.86;
+        }
+      }
+
+      &.m-wrapper {
+        @apply flex;
+      }
+
+      &.w-wrapper {
+        // @apply hidden;
       }
     }
   }
@@ -335,6 +411,20 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+  .workshop-g {
+    @apply pb-10 pt-0;
+
+    .workshop-g-swiper {
+      margin-top: 40px;
+
+      .card-wrapper {
+        .card {
+          height: 20rem;
+          width: 20rem;
         }
       }
     }

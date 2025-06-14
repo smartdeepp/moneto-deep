@@ -142,6 +142,65 @@
                 </div>
             </div>
         </section>
+         <section class="course-details-learn">
+            <div class="container">
+                <div class="heading-wrapper">
+                    <div class="marquee-animation">
+                        <div class="name static-name">Course Breakdown</div>
+                        <div class="name ab-name">Course Breakdown</div>
+                    </div>
+                    <div class="flex-wrapper">
+                        <div class="heading capitalize">{{ self.breakdown_heading|safe }}</div>
+                        <div class="active-flex">
+                            <div class="learn description" data-color="g-400" data-weight="500">
+                                {{ self.breakdown_description }}
+                            </div>
+                            <div class="img-wrapper">
+                                {% for image in self.breakdown_images %}
+                                    <img src="{{ image.value.file.url }}" alt="image" class="img-full">
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-wrapper">
+                    {% for point in self.breakdown_points %}
+                        <div class="faq __faq">
+                            <div class="left-content">
+                                <div class="sub-heading" data-color="g-350" data-weight="600">
+                                    Day {{ forloop.counter }}</div>
+                                <div class="c-heading capitalize">{{ point.value.heading }}
+                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12.4912 13.5332L16.5673 9.67145C16.6415 9.59427 16.7313 9.53198 16.8313 9.48825C16.9314 9.44453 17.0396 9.42027 17.1498 9.41691C17.2599 9.41355 17.3696 9.43115 17.4724 9.46868C17.5752 9.5062 17.6691 9.56289 17.7483 9.63539C17.8276 9.70788 17.8907 9.79471 17.934 9.89073C17.9772 9.98674 17.9996 10.09 18 10.1944C18.0003 10.2988 17.9786 10.4022 17.936 10.4984C17.8934 10.5947 17.8309 10.6819 17.7521 10.7549L17.7321 10.7739L13.0741 15.188C12.9196 15.3343 12.7102 15.4165 12.4917 15.4165C12.2733 15.4165 12.0638 15.3343 11.9093 15.188L7.25138 10.775C7.17359 10.7038 7.11136 10.6187 7.06825 10.5247C7.02513 10.4307 7.00199 10.3296 7.00012 10.2271C6.99826 10.1247 7.01772 10.0229 7.05739 9.92751C7.09706 9.83217 7.15616 9.74516 7.23132 9.67145C7.30648 9.59775 7.39623 9.53879 7.49545 9.49794C7.59466 9.4571 7.70139 9.43517 7.80955 9.4334C7.91771 9.43164 8.02518 9.45007 8.12581 9.48765C8.22645 9.52524 8.31829 9.58123 8.39609 9.65244L8.41615 9.67145L12.4912 13.5332Z"
+                                              stroke-width="0.75"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="right-content">
+                                <div class="description" data-color="g-400"
+                                     data-weight="500">{{ point.value.description }}</div>
+
+                                {% if point.value.points %}
+                                    <div class="points-wrapper">
+                                        {% for p in point.value.points %}
+                                            <div class="point description" data-color="g-400" data-weight="500">
+                                                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M26.6672 13.333V8.33301L31.6672 3.33301L33.3339 6.66634L36.6672 8.33301L31.6672 13.333H26.6672ZM26.6672 13.333L20.0006 19.9996M36.6673 19.9997C36.6673 29.2044 29.2054 36.6663 20.0007 36.6663C10.7959 36.6663 3.33398 29.2044 3.33398 19.9997C3.33398 10.7949 10.7959 3.33301 20.0007 3.33301M28.334 19.9997C28.334 24.602 24.603 28.333 20.0007 28.333C15.3983 28.333 11.6673 24.602 11.6673 19.9997C11.6673 15.3973 15.3983 11.6663 20.0007 11.6663"
+                                                          stroke="#000000" stroke-width="2.5" stroke-linecap="round"
+                                                          stroke-linejoin="round"/>
+                                                </svg>
+                                                {{ p }}</div>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
         <section class="course-details-exclusive">
             <div class="container">
                 <div class="heading capitalize" data-color="g-500">{{ self.from_heading|safe }}</div>
@@ -187,6 +246,7 @@
                 </div>
             </div>
         </section>
+        
         <section class="course-details-mentorship">
             <div class="container wrapper">
                 <div class="profile-data">
@@ -247,65 +307,39 @@
                 </div>
             </div>
         </section>
-        <section class="course-details-learn">
-            <div class="container">
-                <div class="heading-wrapper">
-                    <div class="marquee-animation">
-                        <div class="name static-name">Course Breakdown</div>
-                        <div class="name ab-name">Course Breakdown</div>
-                    </div>
-                    <div class="flex-wrapper">
-                        <div class="heading capitalize">{{ self.breakdown_heading|safe }}</div>
-                        <div class="active-flex">
-                            <div class="learn description" data-color="g-400" data-weight="500">
-                                {{ self.breakdown_description }}
-                            </div>
-                            <div class="img-wrapper">
-                                {% for image in self.breakdown_images %}
-                                    <img src="{{ image.value.file.url }}" alt="image" class="img-full">
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-wrapper">
-                    {% for point in self.breakdown_points %}
-                        <div class="faq __faq">
-                            <div class="left-content">
-                                <div class="sub-heading" data-color="g-350" data-weight="600">
-                                    Day {{ forloop.counter }}</div>
-                                <div class="c-heading capitalize">{{ point.value.heading }}
-                                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12.4912 13.5332L16.5673 9.67145C16.6415 9.59427 16.7313 9.53198 16.8313 9.48825C16.9314 9.44453 17.0396 9.42027 17.1498 9.41691C17.2599 9.41355 17.3696 9.43115 17.4724 9.46868C17.5752 9.5062 17.6691 9.56289 17.7483 9.63539C17.8276 9.70788 17.8907 9.79471 17.934 9.89073C17.9772 9.98674 17.9996 10.09 18 10.1944C18.0003 10.2988 17.9786 10.4022 17.936 10.4984C17.8934 10.5947 17.8309 10.6819 17.7521 10.7549L17.7321 10.7739L13.0741 15.188C12.9196 15.3343 12.7102 15.4165 12.4917 15.4165C12.2733 15.4165 12.0638 15.3343 11.9093 15.188L7.25138 10.775C7.17359 10.7038 7.11136 10.6187 7.06825 10.5247C7.02513 10.4307 7.00199 10.3296 7.00012 10.2271C6.99826 10.1247 7.01772 10.0229 7.05739 9.92751C7.09706 9.83217 7.15616 9.74516 7.23132 9.67145C7.30648 9.59775 7.39623 9.53879 7.49545 9.49794C7.59466 9.4571 7.70139 9.43517 7.80955 9.4334C7.91771 9.43164 8.02518 9.45007 8.12581 9.48765C8.22645 9.52524 8.31829 9.58123 8.39609 9.65244L8.41615 9.67145L12.4912 13.5332Z"
-                                              stroke-width="0.75"/>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="right-content">
-                                <div class="description" data-color="g-400"
-                                     data-weight="500">{{ point.value.description }}</div>
 
-                                {% if point.value.points %}
-                                    <div class="points-wrapper">
-                                        {% for p in point.value.points %}
-                                            <div class="point description" data-color="g-400" data-weight="500">
-                                                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M26.6672 13.333V8.33301L31.6672 3.33301L33.3339 6.66634L36.6672 8.33301L31.6672 13.333H26.6672ZM26.6672 13.333L20.0006 19.9996M36.6673 19.9997C36.6673 29.2044 29.2054 36.6663 20.0007 36.6663C10.7959 36.6663 3.33398 29.2044 3.33398 19.9997C3.33398 10.7949 10.7959 3.33301 20.0007 3.33301M28.334 19.9997C28.334 24.602 24.603 28.333 20.0007 28.333C15.3983 28.333 11.6673 24.602 11.6673 19.9997C11.6673 15.3973 15.3983 11.6663 20.0007 11.6663"
-                                                          stroke="#000000" stroke-width="2.5" stroke-linecap="round"
-                                                          stroke-linejoin="round"/>
-                                                </svg>
-                                                {{ p }}</div>
-                                        {% endfor %}
+
+        {% if self.testimonials %}
+        <section class="workshop-reviews">
+            <div class="container">
+                <div class="heading capitalize">{{ self.testimonial_heading|safe }}</div>
+                <div class="workshop-swiper">   
+                        {% for testimonial in self.testimonials %}
+                                
+                                    <div class="card">
+                                        <div class="description"
+                                             data-color="g-400">{{ testimonial.value.content }}</div>
+                                        <div class="profiler-wrapper">
+                                            <div class="profile">
+                                                <img src="{{ testimonial.value.profile.file.url }}" alt="image"
+                                                     class="img-full">
+                                            </div>
+                                            <div class="data-wrapper">
+                                                <p class="description capitalize"
+                                                   data-weight="500">{{ testimonial.value.name }}</p>
+                                                <p class="note capitalize"
+                                                   data-color="g-400">{{ testimonial.value.role }}</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                {% endif %}
-                            </div>
-                        </div>
-                    {% endfor %}
+                                
+                        {% endfor %}
                 </div>
             </div>
         </section>
-        {% if self.testimonials %}
+    {% endif %}
+       
+        <!-- {% if self.testimonials %}
             <section class="course-details-testimonials">
                 <div class="container">
                     <div class="marquee-animation">
@@ -380,7 +414,7 @@
                     </div>
                 </div>
             </section>
-        {% endif %}
+        {% endif %} -->
         <Section class="course-details-faq">
             <div class="container wrapper">
                 <div class="content-wrapper">

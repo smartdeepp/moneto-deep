@@ -260,95 +260,95 @@
   }
 }
 
-.course-details-testimonials {
-  @apply py-20;
-  .pill {
-    @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
-  }
+// .course-details-testimonials {
+//   @apply py-20;
+//   .pill {
+//     @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
+//   }
 
-  .content-wrapper {
-    margin-top: 2.5rem;
-    padding-top: 2.5rem;
-    @apply border-t border-t-grey-100 flex-col flex items-stretch gap-16;
-  }
+//   .content-wrapper {
+//     margin-top: 2.5rem;
+//     padding-top: 2.5rem;
+//     @apply border-t border-t-grey-100 flex-col flex items-stretch gap-16;
+//   }
 
-  .card {
-    height: 40rem;
-    @apply flex-1 transition-all duration-300 rounded-3xl flex gap-5 overflow-hidden relative;
-    .img {
-      @apply h-full w-full;
-    }
+//   .card {
+//     height: 40rem;
+//     @apply flex-1 transition-all duration-300 rounded-3xl flex gap-5 overflow-hidden relative;
+//     .img {
+//       @apply h-full w-full;
+//     }
 
-    .content {
-      @apply absolute flex p-10 flex-col gap-14 justify-end left-0 top-0 h-full w-full;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0.8) 100%
-      );
+//     .content {
+//       @apply absolute flex p-10 flex-col gap-14 justify-end left-0 top-0 h-full w-full;
+//       background: linear-gradient(
+//         180deg,
+//         rgba(0, 0, 0, 0) 0%,
+//         rgba(0, 0, 0, 0.8) 100%
+//       );
 
-      .f-heading {
-        font-weight: 600;
-        font-size: 2rem;
-        line-height: 120%;
-        @apply text-white hidden;
-        overflow: hidden;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-      }
+//       .f-heading {
+//         font-weight: 600;
+//         font-size: 2rem;
+//         line-height: 120%;
+//         @apply text-white hidden;
+//         overflow: hidden;
+//         -webkit-line-clamp: 3;
+//         -webkit-box-orient: vertical;
+//       }
 
-      .data-wrapper {
-        @apply flex items-center justify-center;
-        .info-wrapper {
-          @apply flex-col gap-1 hidden;
-        }
+//       .data-wrapper {
+//         @apply flex items-center justify-center;
+//         .info-wrapper {
+//           @apply flex-col gap-1 hidden;
+//         }
 
-        .icon {
-          max-width: 4.625rem;
-          @apply block;
-        }
+//         .icon {
+//           max-width: 4.625rem;
+//           @apply block;
+//         }
 
-        .icon-hover {
-          max-width: 12.5rem;
-          @apply hidden;
-        }
-      }
-    }
+//         .icon-hover {
+//           max-width: 12.5rem;
+//           @apply hidden;
+//         }
+//       }
+//     }
 
-    &.active {
-      flex: 7;
+//     &.active {
+//       flex: 7;
 
-      .content {
-        .f-heading {
-          display: -webkit-box;
-        }
+//       .content {
+//         .f-heading {
+//           display: -webkit-box;
+//         }
 
-        .data-wrapper {
-          @apply justify-between;
-          .info-wrapper {
-            @apply flex;
-          }
+//         .data-wrapper {
+//           @apply justify-between;
+//           .info-wrapper {
+//             @apply flex;
+//           }
 
-          .icon {
-            @apply hidden;
-          }
+//           .icon {
+//             @apply hidden;
+//           }
 
-          .icon-hover {
-            @apply block;
-          }
-        }
-      }
-    }
-  }
+//           .icon-hover {
+//             @apply block;
+//           }
+//         }
+//       }
+//     }
+//   }
 
-  .flex-wrapper {
-    @apply flex gap-5;
-  }
+//   .flex-wrapper {
+//     @apply flex gap-5;
+//   }
 
-  .swiper-js {
-    @apply h-full w-full overflow-hidden hidden;
-  }
-}
+//   .swiper-js {
+//     @apply h-full w-full overflow-hidden;
+//   }
+// }
 
 .course-details-certification {
   @apply py-20;
@@ -470,6 +470,40 @@
   }
 }
 
+.workshop-reviews {
+  @apply py-20 bg-light-300;
+  .workshop-swiper {
+    @apply w-full h-full overflow-hidden;
+    margin-top: 7.5rem;
+    display: grid;
+    overflow-x: auto;
+    grid-auto-columns: minmax(17rem, auto);
+    grid-auto-flow: column;
+    gap: 2rem;
+
+    .c-workshop-swiper {
+      @apply pb-9;
+      .swiper-pagination-bullet-active {
+        @apply bg-warning;
+      }
+    }
+
+    .card {
+      @apply bg-white px-10 py-14 rounded-3xl flex flex-col justify-between gap-16;
+      .profiler-wrapper {
+        @apply flex items-center gap-3;
+        .profile {
+          @apply rounded-full overflow-hidden w-20 h-20;
+        }
+
+        .data-wrapper {
+          @apply flex flex-col gap-3;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 96rem) {
   .course-details {
     .wrapper {
@@ -489,6 +523,21 @@
 
       .img-wrapper {
         max-width: 37.5rem;
+      }
+    }
+  }
+
+  .workshop-reviews {
+    .workshop-swiper {
+      margin-top: 6.875rem;
+
+      .card {
+        @apply px-8 py-12 gap-14;
+        .profiler-wrapper {
+          .profile {
+            @apply w-16 h-16;
+          }
+        }
       }
     }
   }
@@ -544,11 +593,11 @@
     }
   }
 
-  .course-details-testimonials {
-    .card {
-      height: 37.5rem;
-    }
-  }
+  // .course-details-testimonials {
+  //   .card {
+  //     height: 37.5rem;
+  //   }
+  // }
 
   .course-details-certification {
     .content-wrapper {
@@ -595,6 +644,20 @@
       .img-wrapper {
         @apply rounded-2xl;
         max-width: 26.25rem;
+      }
+    }
+  }
+  .workshop-reviews {
+    .workshop-swiper {
+      margin-top: 100px;
+
+      .card {
+        @apply p-10 gap-10;
+        .profiler-wrapper {
+          .profile {
+            @apply w-16 h-16;
+          }
+        }
       }
     }
   }
@@ -759,61 +822,61 @@
       }
     }
   }
-  .course-details-testimonials {
-    .content-wrapper {
-      .heading {
-        // font-size: 4rem;
-      }
-    }
+  // .course-details-testimonials {
+  //   .content-wrapper {
+  //     .heading {
+  //       // font-size: 4rem;
+  //     }
+  //   }
 
-    .card {
-      height: 35rem;
-      @apply rounded-2xl;
+  //   .card {
+  //     height: 35rem;
+  //     @apply rounded-2xl;
 
-      .content {
-        @apply p-8 gap-10;
+  //     .content {
+  //       @apply p-8 gap-10;
 
-        .f-heading {
-          font-size: 32px;
-        }
+  //       .f-heading {
+  //         font-size: 32px;
+  //       }
 
-        .data-wrapper {
-          .icon-hover {
-            max-width: 10rem;
-          }
-        }
-      }
+  //       .data-wrapper {
+  //         .icon-hover {
+  //           max-width: 10rem;
+  //         }
+  //       }
+  //     }
 
-      &:hover {
-        flex: 10;
+  //     &:hover {
+  //       flex: 10;
 
-        .content {
-          .f-heading {
-            @apply block;
-          }
+  //       .content {
+  //         .f-heading {
+  //           @apply block;
+  //         }
 
-          .data-wrapper {
-            @apply justify-between;
-            .info-wrapper {
-              @apply flex;
-            }
+  //         .data-wrapper {
+  //           @apply justify-between;
+  //           .info-wrapper {
+  //             @apply flex;
+  //           }
 
-            .icon {
-              @apply hidden;
-            }
+  //           .icon {
+  //             @apply hidden;
+  //           }
 
-            .icon-hover {
-              @apply block;
-            }
-          }
-        }
-      }
-    }
+  //           .icon-hover {
+  //             @apply block;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
 
-    .flex-wrapper {
-      @apply gap-3;
-    }
-  }
+  //   .flex-wrapper {
+  //     @apply gap-3;
+  //   }
+  // }
 }
 
 @media (max-width: 1200px) {
@@ -833,6 +896,28 @@
       }
     }
   }
+
+  .workshop-reviews {
+    @apply py-16;
+
+    .workshop-swiper {
+      margin-top: 80px;
+
+      .card {
+        @apply p-8 gap-8;
+        .profiler-wrapper {
+          .profile {
+            @apply w-12 h-12;
+          }
+
+          .data-wrapper {
+            @apply gap-0;
+          }
+        }
+      }
+    }
+  }
+
   .course-details-work {
     @apply py-20;
     .wrapper {
@@ -910,12 +995,12 @@
       }
     }
   }
-  .course-details-testimonials {
-    @apply py-16;
-    .card {
-      height: 30rem;
-    }
-  }
+  // .course-details-testimonials {
+  //   @apply py-16;
+  //   .card {
+  //     height: 30rem;
+  //   }
+  // }
 }
 
 @media (max-width: 992px) {
@@ -933,6 +1018,16 @@
         @apply mx-auto;
         max-width: 35rem;
       }
+    }
+  }
+  .workshop-reviews {
+    @apply py-12;
+    .heading {
+      @apply text-center mx-auto;
+    }
+
+    .workshop-swiper {
+      margin-top: 64px;
     }
   }
   .course-details-work {
@@ -1115,40 +1210,40 @@
       }
     }
   }
-  .course-details-testimonials {
-    @apply py-12;
-    .pill {
-      @apply mx-auto;
-    }
+  // .course-details-testimonials {
+  //   @apply py-12;
+  //   .pill {
+  //     @apply mx-auto;
+  //   }
 
-    .content-wrapper {
-      @apply pt-0 border-t-0 flex-col justify-center items-center text-center gap-10;
-    }
+  //   .content-wrapper {
+  //     @apply pt-0 border-t-0 flex-col justify-center items-center text-center gap-10;
+  //   }
 
-    .flex-wrapper {
-      @apply hidden;
-    }
+  //   .flex-wrapper {
+  //     @apply hidden;
+  //   }
 
-    .card {
-      height: 35rem;
-      @apply rounded-2xl;
+  //   .card {
+  //     height: 35rem;
+  //     @apply rounded-2xl;
 
-      .content {
-        padding: 2rem;
-        gap: 2.5rem;
-      }
-    }
+  //     .content {
+  //       padding: 2rem;
+  //       gap: 2.5rem;
+  //     }
+  //   }
 
-    .swiper-js {
-      @apply block;
-      .c-swiper {
-        @apply pb-9;
-        .swiper-pagination-bullet-active {
-          @apply bg-warning;
-        }
-      }
-    }
-  }
+  //   .swiper-js {
+  //     @apply block;
+  //     .c-swiper {
+  //       @apply pb-9;
+  //       .swiper-pagination-bullet-active {
+  //         @apply bg-warning;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @media (max-width: 768px) {
@@ -1178,11 +1273,11 @@
       }
     }
   }
-  .course-details-testimonials {
-    .card {
-      height: 30rem;
-    }
-  }
+  // .course-details-testimonials {
+  //   .card {
+  //     height: 30rem;
+  //   }
+  // }
   .course-main-wrapper {
     .floating-btn-wrapper,
     .floating-tabs-wrapper {
@@ -1216,6 +1311,29 @@
       }
     }
   }
+
+  .workshop-reviews {
+    @apply py-10;
+    .workshop-swiper {
+      margin-top: 40px;
+      gap: 1rem;
+
+      .card {
+        @apply gap-10;
+        padding: 1.5rem;
+        .profiler-wrapper {
+          .profile {
+            @apply w-10 h-10;
+          }
+
+          .data-wrapper {
+            @apply gap-1.5;
+          }
+        }
+      }
+    }
+  }
+
   .course-details-work {
     @apply py-12;
     .wrapper {
@@ -1325,26 +1443,26 @@
   .breadcrumb {
     @apply hidden;
   }
-  .course-details-testimonials {
-    @apply py-10;
-    .pill {
-      @apply mx-auto text-sm px-4 py-2;
-    }
+  // .course-details-testimonials {
+  //   @apply py-10;
+  //   .pill {
+  //     @apply mx-auto text-sm px-4 py-2;
+  //   }
 
-    .content-wrapper {
-      margin-top: 2rem;
-      gap: 1.5rem;
-    }
+  //   .content-wrapper {
+  //     margin-top: 2rem;
+  //     gap: 1.5rem;
+  //   }
 
-    .card {
-      height: 16.625rem;
+  //   .card {
+  //     height: 16.625rem;
 
-      .content {
-        padding: 1rem;
-        gap: 2rem;
-      }
-    }
-  }
+  //     .content {
+  //       padding: 1rem;
+  //       gap: 2rem;
+  //     }
+  //   }
+  // }
   .hero {
     .hero-wrapper {
       .content-wrapper {
