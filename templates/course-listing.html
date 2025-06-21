@@ -10,7 +10,7 @@
         <div class="hero-img-wrapper">
             <img src="{{ self.image.file.url }}" alt="hero image" class="img-full"/>
         </div>
-        <div class="container hero-wrapper">
+        <div class="container hero-wrapper" data-aos="fade-up" data-aos-duration="2000">
             <div class="content-wrapper" data-gap="2xl">
                 <h1 class="title capitalize" data-color="l-400">{{ self.heading|safe }}</h1>
                 <p class="description" data-color="l-400">{{ self.description }}</p>
@@ -24,14 +24,14 @@
                     <div class="name static-name">Courses</div>
                     <div class="name ab-name">Courses</div>
                 </div> -->
-                <div class="w-heading heading capitalize" data-lh="1">
+                <div class="w-heading heading capitalize anm_mod left" data-lh="1">
                     Explore <br/> <span data-color="p-500">Our Courses</span>
                 </div>
             </div>
             {% if cards %}
                 <div class="courses-wrapper">
                     {% for card in cards %}
-                        <div class="card">
+                        <div class="card" data-aos="fade-up" data-aos-duration="2000">
                             <div class="c-heading-wrapper">
                                 <div class="sub-heading" data-weight="500">{{ card.heading|safe }}</div>
                                 <div class="pill">{{ card.course_type }}</div>
@@ -67,11 +67,11 @@
     </section>
     <section class="workshop-g">
         <div class="container full-width">
-            <div class="heading capitalize full-width-text" data-color="g-500">{{ self.galley_heading|safe }}</div>
-            <div class="wrapper">
+            <div class="heading capitalize full-width-text anm_mod left" data-color="g-500">{{ self.galley_heading|safe }}</div>
+            <div class="wrapper" data-aos="fade-up" data-aos-duration="2000">
                 <div class="swiper workshop-g-swiper w-wrapper c-workshop-swiper ">
                     {% with total=page.galley_images|length %}
-                        <div class="swiper-wrapper">
+                        <div class="swiper-wrapper" >
                             {% for block in page.galley_images %}
                                 
                             <div class="swiper-slide">

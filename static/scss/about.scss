@@ -1,6 +1,7 @@
 .about-brand {
   background-color: black;
   margin-bottom: 5rem;
+  overflow: hidden;
 
   .container {
     .brand-title {
@@ -90,6 +91,7 @@
 }
 
 .about-media {
+  overflow: hidden;
   .pill {
     @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-primary;
   }
@@ -236,6 +238,7 @@
 
 .about-exp {
   @apply py-20;
+  overflow: hidden;
   .pill {
     @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
   }

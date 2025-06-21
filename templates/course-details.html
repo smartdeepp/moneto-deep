@@ -24,11 +24,11 @@
                     </svg>
                     <p class="caption" data-color="l-500">Course Details</p>
                 </div>
-                <h1 class="heading capitalize" data-color="l-500">{{ self.heading|safe }}</h1>
-                <div class="btn-wrapper">
+                <h1 class="heading capitalize" data-aos="fade-up" data-aos-duration="2000" data-color="l-500">{{ self.heading|safe }}</h1>
+                <div class="btn-wrapper" data-aos="fade-up" data-aos-duration="2000">
                     <a href="{{ self.course_url }}" class="btn" data-variant="primary">ENROLL NOW</a>
                 </div>
-                <div class="date-wrapper">
+                <div class="date-wrapper" data-aos="fade-up" data-aos-duration="2000">
                     <div class="description" data-color="g-250">Start Date</div>
                     <div data-weight="600" data-color="l-500" class="sub-heading">{{ self.course_stating_date }}</div>
                 </div>
@@ -109,10 +109,10 @@
         <section class="course-details" id="1">
             <div class="container wrapper">
                 <div class="content-wrapper">
-                    <div class="heading-wrapper heading capitalize">Key <span data-color="p-500">Takeaways</span></div>
+                    <div class="heading-wrapper heading capitalize anm_mod left">Key <span data-color="p-500">Takeaways</span></div>
                     <div class="points-wrapper">
                         {% for point in self.points %}
-                            <div class="point description">
+                            <div class="point description anm_mod left">
                                 <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M26.6672 13.333V8.33301L31.6672 3.33301L33.3339 6.66634L36.6672 8.33301L31.6672 13.333H26.6672ZM26.6672 13.333L20.0006 19.9996M36.6673 19.9997C36.6673 29.2044 29.2054 36.6663 20.0007 36.6663C10.7959 36.6663 3.33398 29.2044 3.33398 19.9997C3.33398 10.7949 10.7959 3.33301 20.0007 3.33301M28.334 19.9997C28.334 24.602 24.603 28.333 20.0007 28.333C15.3983 28.333 11.6673 24.602 11.6673 19.9997C11.6673 15.3973 15.3983 11.6663 20.0007 11.6663"
                                           stroke="#6C33D9" stroke-width="2.5" stroke-linecap="round"
@@ -123,21 +123,21 @@
                         {% endfor %}
                     </div>
                 </div>
-                <div class="img-wrapper">
+                <div class="img-wrapper" data-aos="fade-up" data-aos-duration="2000">
                     <img src="{{ self.key_image.file.url }}" alt="image" class="img-full">
                 </div>
             </div>
         </section>
         <section class="course-details-work">
             <div class="container wrapper">
-                <div class="img-wrapper">
+                <div class="img-wrapper" data-aos="fade-up" data-aos-duration="2000">
                     {% for logo in self.brand_images %}
                         <div class="img">
                             <img src="{{ logo.value.file.url }}" class="img-fluid" alt="image"/>
                         </div>
                     {% endfor %}
                 </div>
-                <div class="content-wrapper heading capitalize">Our <span data-color="w-500">Alumni</span> Work With the
+                <div class="content-wrapper heading capitalize anm_mod right">Our <span data-color="w-500">Alumni</span> Work With the
                     Best
                 </div>
             </div>
@@ -150,8 +150,8 @@
                         <div class="name ab-name">Course Breakdown</div>
                     </div>
                     <div class="flex-wrapper">
-                        <div class="heading capitalize">{{ self.breakdown_heading|safe }}</div>
-                        <div class="active-flex">
+                        <div class="heading capitalize anm_mod left">{{ self.breakdown_heading|safe }}</div>
+                        <div class="active-flex anm_mod right">
                             <div class="learn description" data-color="g-400" data-weight="500">
                                 {{ self.breakdown_description }}
                             </div>
@@ -165,7 +165,7 @@
                 </div>
                 <div class="faq-wrapper">
                     {% for point in self.breakdown_points %}
-                        <div class="faq __faq">
+                        <div class="faq __faq" data-aos="fade-up" data-aos-duration="2000">
                             <div class="left-content">
                                 <div class="sub-heading" data-color="g-350" data-weight="600">
                                     Day {{ forloop.counter }}</div>
@@ -203,10 +203,10 @@
 
         <section class="course-details-exclusive">
             <div class="container">
-                <div class="heading capitalize" data-color="g-500">{{ self.from_heading|safe }}</div>
+                <div class="heading capitalize anm_mod left" data-color="g-500">{{ self.from_heading|safe }}</div>
                 <div class="card-wrapper">
                     {% for point in self.key_highlight %}
-                        <div class="card">
+                        <div class="card" data-aos="fade-up" data-aos-duration="2000">
                             <div class="img">
                                 <img src="{{ point.value.icon.file.url }}" alt="image" class="img-fluid">
                             </div>
@@ -225,15 +225,15 @@
                 </div>
                 <div class="content-wrapper">
                     <div class="left-content">
-                        <div class="heading capitalize">{{ self.certificate_heading|safe }}</div>
-                        <div class="description" data-color="g-400">{{ self.certificate_description }}</div>
-                        <div class="img-wrapper">
+                        <div class="heading capitalize anm_mod left" >{{ self.certificate_heading|safe }}</div>
+                        <div class="description anm_mod left" data-color="g-400">{{ self.certificate_description }}</div>
+                        <div class="img-wrapper anm_mod left">
                             {% for image in self.certificate_icons %}
                                 <img src="{{ image.value.file.url }}" alt="img" class="img-fluid">
                             {% endfor %}
                         </div>
                     </div>
-                    <div class="right-content">
+                    <div class="right-content" data-aos="fade-up" data-aos-duration="2000">
                         <div class="img-wrapper">
                             <img src="{{ self.certificate_image.file.url }}" alt="image" class="img-full">
                         </div>
@@ -250,14 +250,14 @@
         <section class="course-details-mentorship">
             <div class="container wrapper">
                 <div class="profile-data">
-                    <div class="profile">
+                    <div class="profile"data-aos="fade-up" data-aos-duration="2000">
                         <img class="img-full" src="{{ self.mentor_image.file.url }}" alt="image"/>
                     </div>
                     <div class="heading-wrapper">
-                        <div class="heading capitalize">Mentorship From A
+                        <div class="heading capitalize anm_mod right">Mentorship From A
                             <span data-color="p-500">{{ self.mentor_name }}</span>
                         </div>
-                        <div class="link-wrapper">
+                        <div class="link-wrapper anm_mod right">
                             {% if self.mentor_instagram %}
                                 <a href="{{ self.mentor_instagram }}">
                                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
@@ -278,13 +278,13 @@
                             {% endif %}
                         </div>
                     </div>
-                    `
+                    
                 </div>
                 <div class="content-wrapper">
-                    <div class="heading">Mentorship from
+                    <div class="heading anm_mod right">Mentorship from
                         a <span data-color="p-500">{{ self.mentor_name }}</span></div>
-                    <p class="description" data-color="g-400">{{ self.mentor_description }}</p>
-                    <div class="link-wrapper">
+                    <p class="description anm_mod right" data-color="g-400">{{ self.mentor_description }}</p>
+                    <div class="link-wrapper anm_mod right">
                         {% if self.mentor_instagram %}
                             <a href="{{ self.mentor_instagram }}">
                                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
@@ -312,11 +312,11 @@
         {% if self.testimonials %}
         <section class="workshop-reviews">
             <div class="container">
-                <div class="heading capitalize">{{ self.testimonial_heading|safe }}</div>
+                <div class="heading capitalize anm_mod left">{{ self.testimonial_heading|safe }}</div>
                 <div class="workshop-swiper">   
                         {% for testimonial in self.testimonials %}
                                 
-                                    <div class="card">
+                                    <div class="card" data-aos="fade-up" data-aos-duration="2000">
                                         <div class="description"
                                              data-color="g-400">{{ testimonial.value.content }}</div>
                                         <div class="profiler-wrapper">
@@ -418,13 +418,13 @@
         <Section class="course-details-faq">
             <div class="container wrapper">
                 <div class="content-wrapper">
-                    <div class="heading capitalize" data-color="l-500">Frequently Asked Questions</div>
-                    <div class="description" data-color="g-200">You can Contact Us if your question isn’t listed here
+                    <div class="heading capitalize anm_mod left" data-color="l-500">Frequently Asked Questions</div>
+                    <div class="description anm_mod left" data-color="g-200">You can Contact Us if your question isn’t listed here
                     </div>
                 </div>
-                <div class="faq-wrapper">
+                <div class="faq-wrapper" data-aos="fade-up" data-aos-duration="2000">
                     {% for faq in self.faqs %}
-                        <div class="faq _faq">
+                        <div class="faq _faq" >
                             <div class="heading-wrapper">
                                 <div class="question description" data-color="l-500">{{ faq.value.question }}</div>
                                 <div class="icon">
@@ -445,7 +445,7 @@
             <div class="img-wrapper">
                 <img src="{% static 'images/ripple.png' %}" alt="image" class="img-full">
             </div>
-            <div class="container">
+            <div class="container" data-aos="fade-up" data-aos-duration="2000">
                 <div class="content-wrapper">
                     <div class="heading capitalize"><span data-color="s-500">Master</span>
                         Photography

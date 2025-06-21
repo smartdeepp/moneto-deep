@@ -10,7 +10,7 @@
             <img src="{{ self.image.file.url }}" alt="hero image" class="img-full"/>
         </div>
         <div class="container hero-wrapper">
-            <div class="content-wrapper" data-gap="2xl">
+            <div class="content-wrapper" data-aos="fade-up" data-aos-duration="1500" data-gap="2xl">
                 <h1 class="title capitalize" data-color="l-400">{{ self.heading|safe }}</h1>
                 <p class="description" data-color="l-400">{{ self.description }}</p>
             </div>
@@ -23,13 +23,13 @@
                     <div class="name static-name">Workshops</div>
                     <div class="name ab-name">Workshops</div>
                 </div>
-                <div class="w-heading heading capitalize" data-lh="1">
+                <div class="w-heading heading capitalize anm_mod left" data-lh="1">
                     Upcoming <span data-color="p-500">Workshops</span>
                 </div>
             </div>
             <div class="card-wrapper">
                 {% for d in detail %}
-                    <a href="{{ d.url }}" class="card">
+                    <a href="{{ d.url }}" class="card" data-aos="fade-up" data-aos-duration="1500">
                         <div class="img-wrapper">
                             <img src="{% static 'images/alumni.png' %}" alt="workshop image" class="img-full"/>
                             <div class="pill">{{ d.course_type }}</div>

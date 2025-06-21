@@ -1,6 +1,7 @@
 .lighting-wrapper {
   padding-top: 9.75rem;
   padding-bottom: 9.75rem;
+  overflow: hidden;
 }
 .lighting-wrapper .wrapper {
   @apply flex justify-between items-center gap-10;

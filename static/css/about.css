@@ -1,6 +1,7 @@
 .about-brand {
   background-color: black;
   margin-bottom: 5rem;
+  overflow: hidden;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -129,6 +130,10 @@
 
 .workshop-g .workshop-g-swiper.m-wrapper {
   display: none;
+}
+
+.about-media {
+  overflow: hidden;
 }
 
 .about-media .pill {
@@ -369,6 +374,7 @@
 .about-exp {
   padding-top: 5rem;
   padding-bottom: 5rem;
+  overflow: hidden;
 }
 
 .about-exp .pill {

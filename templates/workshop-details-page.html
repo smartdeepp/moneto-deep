@@ -10,7 +10,7 @@
             <img src="{{ self.image.file.url }}" alt="hero image" class="img-full"/>
         </div>
         <div class="container hero-wrapper">
-            <div class="content-wrapper" data-gap="2xl">
+            <div class="content-wrapper" data-aos="fade-up" data-aos-duration="1500" data-gap="2xl">
                 <div class="breadcrumb">
                     <a class="caption" data-color="l-500" href="{{ home_page.url }}">Home</a>
                     <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@
         </div>
         <div class="icon-wrapper">
             <div class="container wrapper">
-                <div class="sub-wrapper">
+                <div class="sub- wrapper">
                     <div class="icon">
                         <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M6.66699 4L2.66699 8M29.3337 8L25.3337 4M8.00033 25.3333L5.33366 28M24.0003 25.3333L26.667 28M16.0003 28C18.8293 28 21.5424 26.8762 23.5428 24.8758C25.5432 22.8754 26.667 20.1623 26.667 17.3333C26.667 14.5044 25.5432 11.7912 23.5428 9.79086C21.5424 7.79047 18.8293 6.66667 16.0003 6.66667C13.1713 6.66667 10.4582 7.79047 8.45785 9.79086C6.45747 11.7912 5.33366 14.5044 5.33366 17.3333C5.33366 20.1623 6.45747 22.8754 8.45785 24.8758C10.4582 26.8762 13.1713 28 16.0003 28Z"
@@ -97,7 +97,7 @@
     </section>
     <section class="lighting-wrapper">
         <div class="container wrapper">
-            <div class="left-content-wrapper">
+            <div class="left-content-wrapper" data-aos="fade-up" data-aos-duration="1500">
                 <div class="card-img-wrapper-1 card-img-wrapper">
                     <img class="img-full" src="{{ self.info_main_image.file.url }}" alt="">
                 </div>
@@ -106,14 +106,14 @@
                 </div>
             </div>
             <div class="right-content-wrapper">
-                <div class="up-wrapper">
+                <div class="up-wrapper anm_mod right">
                     <h4 class="heading capitalize">{{ self.info_heading|safe }}</h4>
                     <p class="description" data-color="g-400">{{ self.info_description }}</p>
                 </div>
                 <div class="down-wrapper">
-                    <div class="cards-wrapper level ">
+                    <div class="cards-wrapper level">
                         {% for card in self.info_sub_value %}
-                            <div class="card">
+                            <div class="card" data-aos="fade-up" data-aos-duration="1500">
                                 <div class="number-content-wrapper">
                                     <div class="font-number" data-color="p-500">
                                         <span class="js-count-up"
@@ -154,10 +154,10 @@
     </div>
     <section class="course-details-exclusive">
         <div class="container">
-            <div class="heading capitalize" data-color="g-500">{{ self.from_heading|safe }}</div>
+            <div class="heading capitalize anm_mod left" data-color="g-500">{{ self.from_heading|safe }}</div>
             <div class="card-wrapper">
                 {% for card in self.key_highlight %}
-                    <div class="card">
+                    <div class="card" data-aos="fade-up" data-aos-duration="2000">
                         <div class="img">
                             <img src="{{ card.value.icon.file.url }}" alt="image" class="img-fluid">
                         </div>
@@ -170,8 +170,8 @@
     </section>
     <section class="workshop-g">
         <div class="container full-width">
-            <div class="heading capitalize full-width-text" data-color="g-500">{{ self.galley_heading|safe }}</div>
-            <div class="wrapper">
+            <div class="heading capitalize full-width-text anm_mod left" data-color="g-500">{{ self.galley_heading|safe }}</div>
+            <div class="wrapper" data-aos="fade-up" data-aos-duration="1500">
                 <div class="swiper workshop-g-swiper w-wrapper c-workshop-swiper ">
                     {% with total=page.galley_images|length %}
                         <div class="swiper-wrapper">
@@ -205,11 +205,11 @@
     {% if self.testimonials %}
         <section class="workshop-reviews">
             <div class="container">
-                <div class="heading capitalize">{{ self.reviews_heading|safe }}</div>
+                <div class="heading capitalize anm_mod left">{{ self.reviews_heading|safe }}</div>
                 <div class="workshop-swiper">   
                         {% for testimonial in self.testimonials %}
                                 
-                                    <div class="card">
+                                    <div class="card" data-aos="fade-up" data-aos-duration="1500">
                                         <div class="description"
                                              data-color="g-400">{{ testimonial.value.content }}</div>
                                         <div class="profiler-wrapper">
@@ -236,7 +236,7 @@
             <img src="{% static 'images/ripple.png' %}" alt="image" class="img-full">
         </div>
         <div class="container">
-            <div class="content-wrapper">
+            <div class="content-wrapper" data-aos="fade-up" data-aos-duration="1500">
                 <div class="heading capitalize"><span data-color="s-500">Master</span>
                     Photography
                 </div>

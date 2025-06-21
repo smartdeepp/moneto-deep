@@ -42,6 +42,7 @@
 }
 
 .course-details-work {
+  overflow: hidden;
   padding: 7.5rem 0;
 }
 
@@ -141,6 +142,7 @@
 }
 
 .course-details-learn {
+  overflow: hidden;
   --tw-bg-opacity: 1;
   background-color: rgb(242 242 242 / var(--tw-bg-opacity, 1));
   padding-top: 5rem;
@@ -270,6 +272,7 @@
 }
 
 .course-details-faq {
+  overflow: hidden;
   --tw-bg-opacity: 1;
   background-color: rgb(14 14 14 / var(--tw-bg-opacity, 1));
   padding: 6rem 0;
@@ -380,6 +383,7 @@
 }
 
 .course-details-mentorship {
+  overflow: hidden;
   padding: 7.5rem 0;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));

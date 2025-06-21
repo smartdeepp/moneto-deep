@@ -3,3 +3,26 @@
 <script src="{% static 'js/swiper.js' %}" type="text/javascript"></script>
 <script src="{% static 'js/jquery.js' %}" type="text/javascript"></script>
 <script src="{% static 'js/index.js' %}" type="text/javascript"></script>
+
+
+<script>
+   
+
+    AOS.init();
+   
+    $(window).scroll(function () {
+            $(".anm_mod").each(function () {
+                const position = $(this).offset().top;
+                const scroll = $(window).scrollTop();
+                const windowHeight = $(window).height();
+                if (scroll > position - windowHeight) {
+                    $(this).addClass("active");
+                }
+                if (scroll < 100) {
+                    $(this).removeClass("active");
+                }
+            });
+        });
+
+    
+</script>

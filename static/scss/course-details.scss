@@ -25,6 +25,7 @@
 }
 
 .course-details-work {
+  overflow: hidden;
   padding: 7.5rem 0;
 
   .wrapper {
@@ -88,6 +89,7 @@
 }
 
 .course-details-learn {
+  overflow: hidden;
   @apply py-20 bg-light-300;
   .pill {
     @apply uppercase px-6 py-4 w-max rounded-full outline outline-2 outline-warning;
@@ -164,6 +166,7 @@
 }
 
 .course-details-faq {
+  overflow: hidden;
   @apply bg-dark-400;
   padding: 6rem 0;
   .wrapper {
@@ -231,6 +234,7 @@
 }
 
 .course-details-mentorship {
+  overflow: hidden;
   padding: 7.5rem 0;
   @apply bg-white;
   .wrapper {

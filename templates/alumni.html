@@ -11,7 +11,7 @@
         <img src="{{ self.image.file.url }}" alt="hero image" class="img-full"/>
     </div>
     <div class="container hero-wrapper">
-        <div class="content-wrapper" data-gap="2xl">
+        <div class="content-wrapper"  data-aos="fade-up" data-aos-duration="1500" data-gap="2xl">
             <h1 class="title capitalize" data-color="l-400">{{ self.heading|safe }}</h1>
             <p class="description" data-color="l-400">{{ self.description }}</p>
         </div>
@@ -49,7 +49,7 @@
                     </div>
                 {% endfor %}
             </div>
-            <div data-value="work" data-gap="xl" class="_alumni_content_wrapper work-wrapper">
+            <div data-value="work" data-gap="xl" class="_alumni_content_wrapper work-wrapper ">
                 {% for work in self.student_works  %}
                 <div class="card" data-aos-anchor-placement="top-center" data-aos="fade-up"
                          data-aos-duration="500">
